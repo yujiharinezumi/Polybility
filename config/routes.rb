@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  root 'posts#index'
+
+  resources :posts
+  # resources :users
 
   devise_for :users
-  root 'posts#index' 
-  resources :posts
+  # , controllers:{
+  #         registrations: 'users/registrations'
+  # }
 
 
   if Rails.env.development?
