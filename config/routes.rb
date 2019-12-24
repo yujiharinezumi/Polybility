@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  root 'posts#index'
+  root 'tops#index'
 
   resources :posts
-  # resources :users
 
-  devise_for :users
-  # , controllers:{
-  #         registrations: 'users/registrations'
-  # }
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+}
+
+resources :users,only: [:index,:show]
+
 
 
   if Rails.env.development?

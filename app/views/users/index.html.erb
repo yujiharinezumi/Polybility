@@ -1,0 +1,20 @@
+<h1>ユーザー一覧</h1>
+
+<table>
+  <tr>
+    <th>アイコン</th>
+    <th>ユーザー名</th>
+  </tr>
+
+  <% @users.each do |user| %>
+  <tr>
+    <% if user.icon.url %>
+    <td><%= image_tag user.icon.url %></td>
+    <% end %>
+    <td><%= user.name %></td>
+
+    <td><%= link_to '詳細を確認する', user_path(user.id) %></td>
+  </tr>
+
+  <% end %>
+</table>
