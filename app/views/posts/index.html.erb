@@ -1,8 +1,5 @@
 <h1>投稿一覧</h1>
 
-<p><%= notice %></p>
-
-
 <table>
   <tr>
     <th>タイトル</th>
@@ -14,7 +11,7 @@
     <td><%= post.title %></td>
     <td><%= post.content %></td>
     <td><%= image_tag post.image.url %></td>
-    
+
     <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
     <td><%= link_to '投稿を編集する', edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' } %></td>
     <td><%= link_to '投稿を削除する', post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
