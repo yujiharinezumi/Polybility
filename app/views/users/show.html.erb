@@ -1,7 +1,9 @@
 <h2>プロフィール</h2>
-
+<% if @user.icon.url %>
 <p>アイコン : <%= image_tag @user.icon.url %></p>
-
+<% end %>
 <p>名前 : <%= @user.name %></p>
+
+<%= link_to 'プロフィールを編集する', edit_user_registration_url %>
 
 <%= link_to 'ユーザー一覧に戻る', users_path %>
