@@ -1,9 +1,14 @@
-<ul>
   <% comments.each do |comment| %>
     <% if comment.id.present? %>
-      <li>
-        <p><%= comment.content %></p>
-      </li>
-    <% end %>
+
+    <p><%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
+      <% if comment.user == current_user%>
+      <span>
+        <%= link_to '__x', post_comment_path(comment.post_id, comment.id), method: :delete, remote: true %>
+      </span>
+      <% end %>
+      </p>
+      <p>コメント:<%= comment.content %></p>
+
+      <% end %>
   <% end %>
-</ul>

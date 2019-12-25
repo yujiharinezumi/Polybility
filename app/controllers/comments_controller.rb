@@ -1,7 +1,9 @@
 class CommentsController < ApplicationController
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
+    @comment.user_id = current_user.id
 
 
     respond_to do |format|
@@ -14,16 +16,28 @@ class CommentsController < ApplicationController
    end
 
 
+   def edit
+
+   end
+
+   def update
+
+   end
+
+
    def destroy
      @post = Post.find(params[:post_id])
-     @comment = @post.comments.build(comment_params)
+     @comment = @post.comments.find(params[:id])
 
      respond_to do |format|
-        @comment.destroy
-        
-      end
+       if current_user.id == @comment.user.id
+          @comment.destroy
+          format.js { render :index }
+        else
+          format.html { redirect_to post_path(@post), notice: '削除できませんでした...' }
+        end
 
-
+     end
 
    end
 
