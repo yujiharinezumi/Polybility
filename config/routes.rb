@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'tops#index'
 
   resources :posts
+  resources :favorites, only: [:create, :destroy]
 
   devise_for :users, controllers: {
     registrations: 'users/registrations'
