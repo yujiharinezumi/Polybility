@@ -22,6 +22,7 @@ class PostsController < ApplicationController
 
   def show
     @favorite = current_user.favorites.find_by(post_id: @post.id )
+    @favorite_count = Favorite.where(post_id: @post.id).count
   end
 
   def edit
