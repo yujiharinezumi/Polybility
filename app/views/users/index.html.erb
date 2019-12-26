@@ -4,6 +4,10 @@
   <tr>
     <th>アイコン</th>
     <th>ユーザー名</th>
+    <th>出身国</th>
+    <th>母国語</th>
+    <th>勉強している言語</th>
+    <th>趣味</th>
   </tr>
 
   <% @users.each do |user| %>
@@ -12,6 +16,11 @@
     <td><%= image_tag user.icon.url %></td>
     <% end %>
     <td><%= user.name %></td>
+    <td><%= user.country %></td>
+    <td><%= user.native_language %></td>
+    <td><%= user.learning_language %></td>
+    <td><%= user.hobby %></td>
+
 
     <td><%= link_to '詳細を確認する', user_path(user.id) %></td>
   </tr>
