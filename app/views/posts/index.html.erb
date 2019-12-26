@@ -1,5 +1,8 @@
-<h1>投稿一覧</h1>
-
+<% if current_user.try(:admin?) %>
+   <h1>投稿一覧(管理者ページ)</h1>
+<% else %>
+  <h1>投稿一覧</h1>
+<% end %>
 <table>
   <tr>
     <th>ユーザー名</th>

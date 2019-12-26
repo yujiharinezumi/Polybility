@@ -70,3 +70,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'devise'
+
+gem 'rails_admin', '~> 2.0'
