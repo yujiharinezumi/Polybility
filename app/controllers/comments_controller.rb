@@ -17,10 +17,20 @@ class CommentsController < ApplicationController
 
 
    def edit
-
+     @post = Post.find(params[:post_id])
+     @comment = @post.comments.find(:id)
    end
 
    def update
+      @comment = @article.comments.find(params[:id])
+
+      respond_to do
+        if @comment.update(comment_params)
+          format.js { render :index}
+        else
+          format.js { render :errors }
+        end
+      end
 
    end
 
