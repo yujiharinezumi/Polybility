@@ -2,13 +2,21 @@
     <% if comment.id.present? %>
 
     <p><%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
-      <% if comment.user == current_user%>
+      <% if comment.user == current_user %>
       <span>
         <%= link_to '__x', post_comment_path(comment.post_id, comment.id), method: :delete, remote: true %>
       </span>
       <% end %>
       </p>
       <p>コメント:<%= comment.content %></p>
+
+
+      <% if user_signed_in? %>
+        <% if comment.user_id == current_user.id %>
+            <%= link_to '編集', edit_post_comment_path(comment.post_id, comment.id), remote:true %>
+        <% end %>
+
+      <% end %>
 
       <% end %>
   <% end %>
