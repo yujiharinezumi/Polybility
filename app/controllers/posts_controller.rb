@@ -21,6 +21,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comments = @post.comments
+    @comment = @post.comments.build
   end
 
   def edit
@@ -32,13 +34,13 @@ class PostsController < ApplicationController
     else
       render :edit
     end
-
+  end
 
     def destroy
       @post.destroy
       redirect_to posts_path, notice:"投稿を削除しました！"
     end
-  end
+
 
 
   def check_user

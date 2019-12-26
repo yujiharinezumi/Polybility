@@ -7,4 +7,15 @@
 <%= link_to '編集する', edit_post_path(@post) %>
 <%= link_to '削除する', post_path(@post), method: :delete %>
 <% end %>
+
+<p>コメント一覧</p>
+
+<div id="comments_area">
+  <%= render partial: 'comments/index', locals: { comments: @comments, post: @post } %>
+</div>
+
+<%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+
+
+
 <%= link_to '投稿一覧に戻る', posts_path %>

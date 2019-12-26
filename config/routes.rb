@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'tops#index'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   devise_for :users, controllers: {
     registrations: 'users/registrations'
