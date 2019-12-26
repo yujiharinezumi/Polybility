@@ -10,4 +10,10 @@ class Post < ApplicationRecord
 
   validates :title, presence: true
   validates :content, presence: true
+
+
+
+  # def favorited_by?(user) #いいねしているかどうか
+  #   favorites.where(user_id: user.id).exists?
+  # end
 end
