@@ -1,0 +1,12 @@
+<%= form_with(model: [post, comment]) do |form| %>
+  <p id="error-massage"></p>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :content, class: "input", id: "edit_comment" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "編集する" %>
+  </div>
+<% end %>

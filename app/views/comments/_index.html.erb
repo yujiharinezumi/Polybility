@@ -1,0 +1,16 @@
+  <% comments.each do |comment| %>
+    <% if comment.id.present? %>
+
+    <p><%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
+      <% if comment.user == current_user %>
+
+      <% end %>
+      </p>
+      <p>コメント:<%= comment.content %></p>
+        <% if comment.user_id == current_user.id %>
+            <%# <%= link_to '編集', edit_post_comment_path(comment.post_id, comment.id), remote:true %> %>
+
+            <%= link_to '削除', post_comment_path(comment.post_id, comment.id), method: :delete, remote: true %>
+        <% end %>
+      <% end %>
+  <% end %>
