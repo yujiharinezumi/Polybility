@@ -10,21 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_12_25_050427) do
-
-ActiveRecord::Schema.define(version: 2019_12_25_145016) do
-
+ActiveRecord::Schema.define(version: 2019_12_26_061003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-
-  create_table "favorites", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
 
   create_table "comments", force: :cascade do |t|
     t.bigint "post_id"
@@ -34,7 +23,13 @@ ActiveRecord::Schema.define(version: 2019_12_25_145016) do
     t.bigint "user_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
@@ -57,6 +52,12 @@ ActiveRecord::Schema.define(version: 2019_12_25_145016) do
     t.datetime "updated_at", null: false
     t.string "name", default: "", null: false
     t.string "icon"
+    t.integer "age", default: 0
+    t.integer "gender", default: 0
+    t.string "country", default: ""
+    t.string "native_language", default: ""
+    t.string "learning_language", default: ""
+    t.string "hobby", default: ""
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
