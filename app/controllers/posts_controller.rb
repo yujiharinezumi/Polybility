@@ -21,8 +21,13 @@ class PostsController < ApplicationController
   end
 
   def show
+
+    @favorite = current_user.favorites.find_by(post_id: @post.id )
+    @favorite_count = Favorite.where(post_id: @post.id).count
+    
     @comments = @post.comments
     @comment = @post.comments.build
+
   end
 
   def edit
