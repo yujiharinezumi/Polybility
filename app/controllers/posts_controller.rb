@@ -21,13 +21,10 @@ class PostsController < ApplicationController
   end
 
   def show
-
     @favorite = current_user.favorites.find_by(post_id: @post.id )
     @favorite_count = Favorite.where(post_id: @post.id).count
-    
     @comments = @post.comments
     @comment = @post.comments.build
-
   end
 
   def edit
@@ -41,10 +38,10 @@ class PostsController < ApplicationController
     end
   end
 
-    def destroy
-      @post.destroy
-      redirect_to posts_path, notice:"投稿を削除しました！"
-    end
+  def destroy
+    @post.destroy
+    redirect_to posts_path, notice:"投稿を削除しました！"
+  end
 
 
 
