@@ -5,12 +5,19 @@
   <%= f.label :hobby_cont, "趣味の検索" %>
   <%= f.search_field :hobby_cont %>
 
-  <div class="actions"><%= f.submit "検索" %></div>
-<% end %>
+  <%= f.label :native_language_cont, "母国語の検索" %>
+  <%= f.search_field :native_language_cont %>
 
-<% if @results.any? %>
+  <%= f.label :learning_language_cont, "学習言語の検索" %>
+  <%= f.search_field :learning_language_cont %>
+
+  <div class="actions"><%= f.submit "検索",name:'search' %></div>
+<% end %>
 <p><%= link_to '検索を元に戻す', users_path %></p>
-  <% @results.each do |result| %>
+
+
+<div class="flex-container">
+<% @results.each do |result| %>
   <div class="f-container">
     <div class="profile-card">
       <div class="profile-card__inner">
@@ -30,5 +37,5 @@
       </div>
     </div>
   </div>
-  <% end %>
 <% end %>
+</div>

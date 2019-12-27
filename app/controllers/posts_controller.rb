@@ -43,14 +43,11 @@ class PostsController < ApplicationController
     redirect_to posts_path, notice:"投稿を削除しました！"
   end
 
-
-
   def check_user
     if @post.user.id != current_user.id
       redirect_to posts_path, notice:"権限がありません！"
     end
   end
-
 
   private
 
@@ -61,6 +58,4 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
-
-
 end
