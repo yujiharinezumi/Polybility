@@ -8,44 +8,27 @@
   <div class="actions"><%= f.submit "検索" %></div>
 <% end %>
 
-
 <% if @results.any? %>
+<p><%= link_to '検索を元に戻す', users_path %></p>
   <% @results.each do |result| %>
-     <p><%= image_tag result.icon.url%></p>
-     <p><%= result.name %></p>
-     <p><%= result.age %></p>
-     <p><%= result.gender %></p>
-     <p><%= result.country %></p>
-     <p><%= result.native_language %></p>
-     <p><%= result.learning_language %></p>
-     <p><%= result.hobby %></p>
-     <p><%= link_to '詳細を確認する', user_path(result.id) %></p>
-     <%= link_to '元に戻す', users_path %>
-   <% end %>
+  <div class="f-container">
+    <div class="profile-card">
+      <div class="profile-card__inner">
+        <div class="profile-thumb">
+           <p><%= image_tag result.icon.url%></p>
+        </div>
+        <div class="profile-content">
+          <span class="profile-name"><%= result.name %></span>
+        </div>
+         <p>母国語:<%= result.native_language %></p>
+         <p>学習している言語:<%= result.learning_language %></p>
+         <p>趣味:<%= result.hobby %></p>
 
-<% else %>
-  <table>
-    <tr>
-      <th>アイコン</th>
-      <th>ユーザー名</th>
-      <th>出身国</th>
-      <th>母国語</th>
-      <th>勉強している言語</th>
-      <th>趣味</th>
-    </tr>
-
-    <% @users.each do |user| %>
-      <tr>
-        <% if user.icon.url %>
-          <td><%= image_tag user.icon.url %></td>
-        <% end %>
-        <td><%= user.name %></td>
-        <td><%= user.country %></td>
-        <td><%= user.native_language %></td>
-        <td><%= user.learning_language %></td>
-        <td><%= user.hobby %></td>
-        <td><%= link_to '詳細を確認する', user_path(user.id) %></td>
-      </tr>
-    <% end %>
-  </table>
+         <div class="profile-info">
+            <p><%= link_to '詳細を確認する', user_path(result.id) %></p>
+         </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
 <% end %>
