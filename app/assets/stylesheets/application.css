@@ -18,3 +18,22 @@
 .white {
   color: white;
 }
+
+.nav-icon {
+  border-radius: 50%;
+  width:10%;
+  height: auto;
+}
+
+.nav-right {
+  display: inline;
+  text-align: right;
+}
+
+
+.post-icon {
+  border-radius: 50%;
+  width:5%;
+  height: auto;
+  display: inline-block;
+}
