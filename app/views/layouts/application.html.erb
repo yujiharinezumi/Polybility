@@ -12,29 +12,13 @@
   </head>
 
   <body>
-    <%= link_to "ユーザー一覧", users_path %>
-     <% if user_signed_in? %>
-       <%= link_to "投稿一覧", posts_path %>
-       <%= link_to "お気に入り一覧", favorites_path %>
-       <%= link_to "#{current_user.name}さん", user_path(current_user.id) %>
-       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-     <% else %>
-       <%= link_to "新規登録", new_user_registration_path %>
-       <%= link_to "ログイン", new_user_session_path %>
-     <% end %>
 
-
-   <% if notice %>
-    <p class="alert alert-notice"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert alert-error"><%= alert %></p>
-  <% end %>
+  <%= render "layouts/navbar" %>
+  <%= render "layouts/notice" %>
 
   <div class="container">
     <%= yield %>
   </div>
-
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

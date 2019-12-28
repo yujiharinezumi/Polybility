@@ -13,31 +13,28 @@
 
   <div class="actions"><%= f.submit "検索",name:'search' %></div>
 <% end %>
-<p><%= link_to '検索を元に戻す', users_path %></p>
 
+  <p><%= link_to '検索を元に戻す', users_path %></p>
 
 <div class="flex-container">
-<% @results.each do |result| %>
-  <div class="f-container">
-    <div class="profile-card">
-      <div class="profile-card__inner">
-        <div class="profile-thumb">
-           <p><%= image_tag result.icon.url%></p>
+  <% @results.each do |result| %>
+    <% if result.id != current_user.id %>
+      <div class="f-container">
+        <div class="profile-card">
+          <div class="profile-card__inner">
+            <div class="profile-thumb">
+              <p><%=link_to image_tag(result.icon.url),user_path(result.id)%></p>
+            </div>
+            <div class="profile-content">
+              <span class="profile-name"><%= link_to result.name,user_path(result.id) %></span>
+            </div>
+           <p>母国語:<%= result.native_language %></p>
+           <p>学習している言語:<%= result.learning_language %></p>
+           <p>趣味:<%= result.hobby %></p>
+           <%= render 'follow_form', user: result %>
+          </div>
         </div>
-        <div class="profile-content">
-          <span class="profile-name"><%= result.name %></span>
-        </div>
-         <p>母国語:<%= result.native_language %></p>
-         <p>学習している言語:<%= result.learning_language %></p>
-         <p>趣味:<%= result.hobby %></p>
-
-          <%= render 'follow_form', user: result %>
-
-         <div class="profile-info">
-            <p><%= link_to '詳細を確認する', user_path(result.id) %></p>
-         </div>
       </div>
-    </div>
-  </div>
-<% end %>
+    <% end %>
+  <% end %>
 </div>
