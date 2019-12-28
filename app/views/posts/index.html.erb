@@ -6,14 +6,18 @@
 
 <%= link_to '新規投稿する', new_post_path,class:"btn btn-success" %>
 
-<div class="containerb">
+<div class="flex-container">
   <div class="card" style="width: 18rem;">
       <% @posts.each do |post| %>
         <%= image_tag post.image.url %>
     <div class="card-body">
-      <h5 class="card-title"><%= post.user.name %></h5>
+      <h5 class="card-title"><%= link_to post.user.name,user_path(post.user.id) %></h5>
+      <%# <%= image_tag post.user.icon.url %> %>
       <p>title:<%= post.title %></p>
       <p class="card-text">content:<%=post.content %></p>
+
+    
+
       <p><%= link_to '詳細を確認する', post_path(post.id),class:"btn btn-info" %></p>
       <% if post.user.id == current_user.id %>
       <p><%= link_to '投稿を編集する', edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></p>

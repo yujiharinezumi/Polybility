@@ -31,6 +31,8 @@
          <p>学習している言語:<%= result.learning_language %></p>
          <p>趣味:<%= result.hobby %></p>
 
+          <%= render 'follow_form', user: result %>
+
          <div class="profile-info">
             <p><%= link_to '詳細を確認する', user_path(result.id) %></p>
          </div>
