@@ -16,6 +16,8 @@
 
 <p>趣味 : <%= @user.hobby %></p>
 
+<%= render 'stats' %>
+
 <% if current_user == @user %>
 <%= link_to 'プロフィールを編集する', edit_user_registration_url %>
 <% end %>
