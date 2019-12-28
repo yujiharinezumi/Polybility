@@ -16,7 +16,11 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
 }
 
-resources :users,only: [:index,:show]
+resources :users,only: [:index,:show] do
+  member do
+      get :following, :followers
+  end
+end
 
 
 
