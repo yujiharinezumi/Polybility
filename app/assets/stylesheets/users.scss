@@ -81,3 +81,35 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
+
+
+// signup
+
+//背景画像　画面いっぱいに
+.box {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: image-url("pic1.jpg");
+  position: relative;
+}
+
+//新規登録フォーム
+.box-container {
+  // background-color: white;
+  opacity: 0.7;
+  width: 40%;
+  height: 380px;
+  margin-left: auto;
+  text-align: center;
+  margin-top:100px;
+  margin-right: 50px;
+}
+
+.signup-text {
+  text-align: right;
+  margin-right:290px;
+  padding-top:100px;
+}

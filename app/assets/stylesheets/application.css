@@ -30,10 +30,27 @@
   text-align: right;
 }
 
-
+.navbar-nav .nav-link {
+  display: inline;
+}
 .post-icon {
   border-radius: 50%;
   width:5%;
   height: auto;
   display: inline-block;
+}
+
+/* footer */
+
+.footer{
+  background-color: #17A2B9;
+  height: 60px;
+  width: 100%;
+
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  padding-top:20px;
 }
