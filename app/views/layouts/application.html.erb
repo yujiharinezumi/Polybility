@@ -14,15 +14,16 @@
   <body>
 
   <%= render "layouts/navbar" %>
-  <%= render "layouts/notice" %>
+  <%= render "components/notice" %>
 
   <%# <div class="container"> %>
     <%= yield %>
   <%# </div> %>
 
-  <footer class="footer">
-    <p>Copyright © 2020 Polybility Yuji Sugaya.</p>
-  </footer>
+  <%= render "components/footer" %>
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
 
