@@ -33,7 +33,7 @@
         <% end %>
         <% if user_signed_in? %>
           <li class="nav-item nav-link nav-right ">
-             <%=link_to image_tag(current_user.icon.url,class:"nav-icon") %>
+             <%=link_to image_tag(current_user.icon.url,class:"nav-icon"),user_path(current_user.id) %>
           </li>
           <li class="nav-item nav-link ">
             <%= link_to "#{current_user.name}さん", user_path(current_user.id),class:"white" %>
@@ -45,7 +45,6 @@
           <li class="nav-item nav-link navbar-right ">
             <%= link_to "ゲストユーザーでログイン", users_guest_sign_in_path, method: :post,class:"white" %>
           </li>
-
         <% end %>
       </ul>
     </form>

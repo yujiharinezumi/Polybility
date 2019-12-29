@@ -1,8 +1,9 @@
 <% @user.followers.each do |user| %>
   <table>
     <tr>
-      <td>  <%= image_tag user.icon.url %> </td>
-      <td>  <%= link_to user.name,user_path(user) %></td>
+      <td><%= image_tag user.icon.url %></td>
+      <td><%= link_to user.name,user_path(user) %></td>
+      <td><%= link_to '詳細', user_path(user) %></td>
     </tr>
   </table>
 <% end %>

@@ -4,13 +4,13 @@
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= @user.errors.count %>件のエラーがあります。</h2>
-      <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
       </div>
-  </div>
+    </div>
   <% end %>
   <div class="user_name">
     <%= f.label :name %>
@@ -22,7 +22,5 @@
   </div>
   <%= f.submit %>
 <% end %>
-
-
 
 <%= link_to '投稿一覧画面にもどる', posts_path %>

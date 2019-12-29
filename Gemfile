@@ -66,15 +66,15 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
+#image upload
 gem 'carrierwave'
 gem 'mini_magick'
-
+#login system
 gem 'devise'
-
+#admin function
 gem 'rails_admin', '~> 2.0'
-
 gem 'cancancan'
-
+#sort function
 gem 'ransack'
-
+# labeling function
 gem 'acts-as-taggable-on', '~> 6.0'

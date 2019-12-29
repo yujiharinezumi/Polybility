@@ -9,7 +9,7 @@
 require "csv"
 
 CSV.foreach('db/csv/country.csv', headers: true) do |row|
-Country.create(
-  country: row['country']
-)
+  Country.create(
+    country: row['country']
+  )
 end

@@ -1,25 +1,21 @@
 <h2>プロフィール</h2>
+
 <% if @user.icon.url %>
-<p>アイコン : <%= image_tag @user.icon.url %></p>
+  <p>アイコン : <%= image_tag @user.icon.url %></p>
 <% end %>
+
 <p>名前 : <%= @user.name %></p>
-
 <p>年齢 : <%= @user.age %></p>
-
 <p>性別 : <%= @user.gender %></p>
-
 <p>出身国 : <%= @user.country %></p>
-
 <p>母国語 : <%= @user.native_language %></p>
-
 <p>勉強している言語 : <%= @user.learning_language %></p>
-
 <p>趣味 : <%= @user.hobby %></p>
 
 <%= render 'stats' %>
 
 <% if current_user == @user %>
-<%= link_to 'プロフィールを編集する', edit_user_registration_url %>
+  <%= link_to 'プロフィールを編集する', edit_user_registration_url %>
 <% end %>
 
 <%= link_to 'ユーザー一覧に戻る', users_path %>

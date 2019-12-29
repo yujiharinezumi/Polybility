@@ -3,13 +3,13 @@
   <div class="containerb">
     <div class="card" style="width: 18rem;">
       <% @favorites.each do |f| %>
-          <%= image_tag f.post.image.url %>
+        <%= image_tag f.post.image.url %>
       <div class="card-body">
         <h5 class="card-title"><%=link_to f.user.name,user_path(f.post.user.id) %></h5>
         <p>title:<%= f.post.title %></p>
         <p class="card-text">content:<%=f.post.content %></p>
-      </div>
         <p><%= link_to '詳細を確認する', post_path(f.post.id),class:"btn btn-info" %></p>
+      </div>
     </div>
   </div>
 

@@ -4,8 +4,8 @@
 <p>画像: <%= image_tag @post.image.url %></p>
 
 <% if current_user.id == @post.user.id %>
-<%= link_to '編集する', edit_post_path(@post) %>
-<%= link_to '削除する', post_path(@post), method: :delete %>
+  <%= link_to '編集する', edit_post_path(@post) %>
+  <%= link_to '削除する', post_path(@post), method: :delete %>
 <% end %>
 
 <p>お気に入りの数:<%= @favorite_count %></p>
@@ -15,7 +15,6 @@
     <%= link_to 'お気に入りする', favorites_path(post_id: @post.id), method: :post %>
   <% end %>
 
-
 <p>コメント一覧</p>
 
 <div id="comments_area">
@@ -23,8 +22,5 @@
 </div>
 
 <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
-
-
-
 
 <%= link_to '投稿一覧に戻る', posts_path %>

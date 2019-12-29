@@ -33,9 +33,7 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 
 # 使用gem一覧
 ## ログイン機能
-* Devise
-* devise-i18n
-* devise-i18n-views
+* devise
 * omniauth
 * omniauth-facebook(できれば使いたい)
 * omniauth-twitte(できれば使いたい)
