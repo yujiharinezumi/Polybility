@@ -6,39 +6,48 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item nav-link ">
-        <%= link_to "ユーザー一覧", users_path,class:"white" %>
-      </li>
       <% if user_signed_in? %>
-      <li class="nav-item nav-link">
-         <%= link_to "投稿一覧", posts_path,class:"white" %>
-      </li>
-      <li class="nav-item nav-link ">
-        <%= link_to "お気に入り一覧", favorites_path,class:"white" %>
-      </li>
-      <% end %>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <ul class="navbar-nav mr-auto">
-
-    <% if current_user.try(:admin?) %>
-        <li class="nav-item nav-link white">管理者</li>
-    <% end %>
-
-        <% if user_signed_in? %>
-        <li class="nav-item nav-link nav-right ">
-           <%=link_to image_tag(current_user.icon.url,class:"nav-icon") %>
-        </li>
         <li class="nav-item nav-link ">
-          <%= link_to "#{current_user.name}さん", user_path(current_user.id),class:"white" %>
+          <%= link_to "ユーザー一覧", users_path,class:"white" %>
         </li>
         <li class="nav-item nav-link">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"white" %>
+           <%= link_to "投稿一覧", posts_path,class:"white" %>
         </li>
-            <% end %>
+        <li class="nav-item nav-link ">
+          <%= link_to "お気に入り一覧", favorites_path,class:"white" %>
+        </li>
+      <% else %>
+        <li class="nav-item nav-link ">
+          <%= link_to "新規登録", new_user_registration_path,class:"white" %>
+        </li>
+        <li class="nav-item nav-link ">
+          <%= link_to "ログイン", new_user_session_path,class:"white" %>
+        </li>
+      <% end %>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto">
+        <% if current_user.try(:admin?) %>
+          <li class="nav-item nav-link white">管理者</li>
+        <% end %>
+        <% if user_signed_in? %>
+          <li class="nav-item nav-link nav-right ">
+             <%=link_to image_tag(current_user.icon.url,class:"nav-icon") %>
+          </li>
+          <li class="nav-item nav-link ">
+            <%= link_to "#{current_user.name}さん", user_path(current_user.id),class:"white" %>
+          </li>
+          <li class="nav-item nav-link">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"white" %>
+          </li>
+        <% else %>
+          <li class="nav-item nav-link navbar-right ">
+            <%= link_to "ゲストユーザーでログイン", users_guest_sign_in_path, method: :post,class:"white" %>
+          </li>
+
+        <% end %>
       </ul>
-      <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
     </form>
   </div>
 </nav>
