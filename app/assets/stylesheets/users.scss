@@ -19,12 +19,12 @@ p {
 
 .profile-card:before{
  width:120%;
- height:100px;
+ height:254px;
  content:"";
- transform:skew(15deg,10deg);
+ transform:skew(-5deg,42deg);
  background: #FFD1AE; /*斜め背景の色*/
  position:  absolute;
- top:-15%;
+ top:-30%;
  left:-10%;
  z-index: 0;
 }
@@ -99,7 +99,7 @@ p {
 //新規登録フォーム
 .box-container {
   // background-color: white;
-  opacity: 0.7;
+  opacity: 0.8;
   width: 40%;
   height: 380px;
   margin-left: auto;
@@ -123,6 +123,7 @@ p {
   height:auto;
 }
 
+// ログインフォーム
 .box2 {
     width: 100vw;
     height: 100vh;
