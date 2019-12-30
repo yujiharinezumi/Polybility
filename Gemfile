@@ -52,6 +52,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener_web'
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -78,3 +79,7 @@ gem 'cancancan'
 gem 'ransack'
 # labeling function
 gem 'acts-as-taggable-on', '~> 6.0'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'

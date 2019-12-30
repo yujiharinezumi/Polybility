@@ -5,7 +5,7 @@ class UsersController < ApplicationController
      if params[:search]
        @users = User.ransack(params[:q])
     else
-      @users = User.all.all.includes(:tags)
+      @users = User.all.includes(:tags)
     end
   end
 
