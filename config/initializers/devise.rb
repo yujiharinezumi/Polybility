@@ -298,7 +298,7 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
 
    config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], scope: 'email', info_fields: 'email'
-   config.omniauth :facebook, ENV['GOOGLE_CLIENT_ID'], ENV['wC3MbaICq_5CED7fmArTzkYY'], scope: 'email', info_fields: 'email'
+   config.omniauth :google, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], scope: 'email', info_fields: 'email', skip_jwt: true
 
 
 
