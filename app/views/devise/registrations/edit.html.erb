@@ -1,4 +1,5 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="pr-edit-container">
 <div class="form-horizontal" role="form">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -9,7 +10,7 @@
     <div class="form-group">
       <div class="field">
         <%= f.label :name%><br />
-        <%= f.text_field :name, autofocus: true,class:"form-control"  %>
+        <%= f.text_field :name, autofocus: true,class:"form-control",placeholder:"name"   %>
       </div
       <div class="field">
         <%= f.label :age%><br />
@@ -23,30 +24,30 @@
 
       <div class="field">
         <%= f.label :country%><br />
-        <%= f.text_field :country, autofocus: true,class:"form-control"  %>
+        <%= f.text_field :country, autofocus: true,class:"form-control",placeholder:"country" %>
         <%# <%= f.select :country,@countries.country,class:"form-control" %> %>
       </div>
 
 
       <div class="field">
         <%= f.label :native_language%><br />
-        <%= f.text_field :native_language, autofocus: true ,class:"form-control" %>
+        <%= f.text_field :native_language, autofocus: true ,class:"form-control",placeholder:"language"  %>
       </div>
 
       <div class="field">
         <%= f.label :learning_language%><br />
-        <%= f.text_field :learning_language, autofocus: true ,class:"form-control" %>
+        <%= f.text_field :learning_language, autofocus: true ,class:"form-control",placeholder:"language"  %>
       </div>
 
       <div class="field">
         <%= f.label :hobby%><br />
-        <%= f.text_field :hobby, autofocus: true,class:"form-control"  %>
+        <%= f.text_field :hobby, autofocus: true,class:"form-control",placeholder:"hobby"   %>
       </div>
 
-      <div class="field form-group form-group-lg">
-        <%= f.label :tag_list, class: "sr-only control-label" %>
-        <%= text_field_tag 'users[tag_list]', @user.tag_list.join(","), class: "form-control" %>
-      </div>
+      <!-- <div class="field form-group form-group-lg">
+        <%# <%= f.label :tag_list, class: "sr-only control-label" %> %>
+        <%# <%= text_field_tag 'users[tag_list]', @user.tag_list.join(","), class: "form-control" %> %>
+      </div> -->
 
 
       <div class="field">
@@ -73,14 +74,17 @@
       </div>
     </div>
 
-    <div class="actions">
+
+    <div class="actions field">
       <%= f.submit "Update" %>
     </div>
   <% end %>
+
+    <div class="field">
+  <h3>Cancel my account</h3>
+  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <%= link_to "Back", :back %>
+  </div>
 </div>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>

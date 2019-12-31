@@ -16,6 +16,7 @@ p .profile-card {
   margin:10px;
   padding:30px;
   margin-left: 40px;
+  border-radius: 30px;
 }
 
 .profile-card:before{
@@ -136,4 +137,56 @@ p .profile-card {
     background-position: center;
     background-image: image-url("pic2.jpg");
     position: relative;
+}
+
+//user show view
+.pr-container {
+  background-color: #ffeaea;
+  width:70%;
+  height:750px;
+  position: relative;
+  left:210px;
+  border-radius: 30px;
+  box-shadow: 0 0 8px #fdb8b8;
+
+}
+.stats {
+  text-align: center;
+}
+.pr-icon {
+  max-height: 400px;
+  padding-top:40px;
+  border-radius: 30%
+}
+
+.pr-container p {
+  text-align: center;
+}
+
+.pr-container span {
+  text-align: center;
+}
+
+
+// edit view
+.pr-edit-container {
+  position: relative;
+  background-color: #ffeaea;
+  width:70%;
+  height:1090px;
+  left:210px;
+  box-shadow: 0 0 8px #fdb8b8;
+  border-radius: 30px;
+
+}
+
+.pr-edit-container .form-control {
+  width: 70%;
+  margin-left:130px;
+}
+
+.pr-edit-container .field {
+  text-align: center;
+  margin:10px;
+
 }

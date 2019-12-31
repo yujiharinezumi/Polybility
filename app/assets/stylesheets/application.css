@@ -18,10 +18,15 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+
+body {
+  position: relative;
+  padding-bottom: 70px;
+}
+
 .alert{
 
 }
-
 
 .white {
   color: white;
@@ -29,8 +34,8 @@
 
 .nav-icon {
   border-radius: 50%;
-  width:10%;
-  height: auto;
+  width:9%;
+  height: 25px;
 }
 
 .nav-right {
@@ -54,6 +59,10 @@
   background-color: #FFC109;
   height: 60px;
   width: 100%;
+  border-radius: 50px;
+   position: fixed;
+  bottom:0;
+
 
 }
 

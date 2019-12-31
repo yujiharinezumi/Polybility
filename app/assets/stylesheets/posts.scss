@@ -21,6 +21,7 @@
   padding:10px;
   margin-left:380px;
   margin-bottom:40px;
+  border-radius: 10%;
 }
 
 .post-card:before{
@@ -39,6 +40,7 @@
  position: relative;
  width:240px;
  left:170px;
+
 }
 
 .post-thumb{
@@ -52,6 +54,7 @@
     margin-right: auto;
     margin-top: 20px;
     background: #ffc492;
+   border-radius: 10%;
 }
 
 .post-thumb img{
