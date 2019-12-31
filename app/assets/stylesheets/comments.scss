@@ -1,3 +1,37 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.balloon1{
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #ffd557;
+  margin-left: 110px;          /* 左に余白を設ける */
+  width:70%;
+}
+/* 画像 - 絶対配置で左上に配置 */
+.balloon1 .icon{
+  position: absolute;
+  left: -110px;
+  top: 0;
+}
+/* 三角アイコン */
+.balloon1::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 20px;
+  border-right: 15px solid #ffd557;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+
+.form p {
+  text-align: center;
+}

@@ -6,10 +6,11 @@
 
       <% end %>
       </p>
-      <p>コメント:<%= comment.content %></p>
+      <div class="balloon1">    <!-- <div class="icon"><%= image_tag comment.user.icon.url %></div> -->
+         <%= comment.content %>
+      </div> %>
         <% if comment.user_id == current_user.id %>
             <%# <%= link_to '編集', edit_post_comment_path(comment.post_id, comment.id), remote:true %> %>
-
             <%= link_to '削除', post_comment_path(comment.post_id, comment.id), method: :delete, remote: true %>
         <% end %>
       <% end %>

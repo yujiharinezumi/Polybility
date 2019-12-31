@@ -9,6 +9,7 @@
 // }
 
 
+// posts index view
 .post-card{
   height: 550px;
   width: 100%;
@@ -19,7 +20,7 @@
   overflow: hidden;
   margin:30px;
   padding:10px;
-  margin-left:380px;
+  margin-left:440px;
   margin-bottom:40px;
   border-radius: 10%;
 }
@@ -53,7 +54,7 @@
     margin-left: -10px;
     margin-right: auto;
     margin-top: 20px;
-    background: #ffc492;
+    background: #FFE9A6;
    border-radius: 10%;
 }
 
@@ -82,6 +83,30 @@
   text-align: center;
 }
 
+.post-icon {
+  background-color:white;
+}
+
+//post show views
+
+.post-show-container {
+  position: relative;
+  background-color: white;
+  width:60%;
+  height:500px;
+  left:280px;
+  box-shadow: 0 0 8px #fdb8b8;
+  border-radius: 30px;
+}
+
+.show-img img {
+  text-align: center;
+  margin-top:20px;
+}
+
+.post-show-container p{
+  text-align: center;
+}
 
 
 // .flex-container {

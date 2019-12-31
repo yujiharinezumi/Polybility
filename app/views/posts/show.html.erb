@@ -1,19 +1,25 @@
 <h1>投稿詳細画面</h1>
+
+<div class="post-show-container">
+  <div class="show-img">
+    <p><%= image_tag @post.image.url %></p>
+  </div>
 <p>タイトル: <%= @post.title %></p>
 <p>内容: <%= @post.content %></p>
-<p>画像: <%= image_tag @post.image.url %></p>
-
-<% if current_user.id == @post.user.id %>
-  <%= link_to '編集する', edit_post_path(@post) %>
-  <%= link_to '削除する', post_path(@post), method: :delete %>
-<% end %>
 
 <p>お気に入りの数:<%= @favorite_count %></p>
   <% if @favorite.present? %>
-    <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete %>
+    <p><%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete %></p>
   <% else %>
-    <%= link_to 'お気に入りする', favorites_path(post_id: @post.id), method: :post %>
+    <p><%= link_to 'お気に入りする', favorites_path(post_id: @post.id), method: :post %></p>
   <% end %>
+
+<% if current_user.id == @post.user.id %>
+  <p><%= link_to '編集する', edit_post_path(@post) %></p>
+  <p><%= link_to '削除する', post_path(@post), method: :delete %></p>
+<% end %>
+
+</div>
 
 <p>コメント一覧</p>
 
