@@ -4,12 +4,12 @@
 
 
 
-/*========= base ===========*/
-
-html {
-  margin: 0;
-  padding:0;
-}
+// /*========= base ===========*/
+//
+// html {
+//   margin: 0;
+//   padding:0;
+// }
 //
 // body {
 //   margin: 0;
@@ -20,31 +20,31 @@ html {
 //   line-height: 2.0;
 // }
 
-h2,h3,h4,h5 {
+.top-content-wrapper h2,h3,h4,h5 {
   margin: 0;
   padding: 0;
 }
 
-img {
+.top-content-wrapper img {
   width: 100%;
   vertical-align: bottom;
 }
 
-ul,li,dl,dt,dd {
+.top-content-wrapper ul,li,dl,dt,dd {
   margin:0;
   padding:0;
   list-style: none;
 }
 
-p {
+.top-content-wrapperp {
   margin: 0 0 1em 0;
 }
 
-a {
+.top-content-wrapper a {
   text-decoration: none;
   color: #000;
 }
-a:hover {
+.top-content-wrapper a:hover {
   transition: .3s;
   opacity: 0.6;
 }
@@ -54,7 +54,7 @@ section {
 }
 
 .whole {
-  // background-color: #FFF1E6;
+  // background-color: white;
   position: relative;
   height: 3200px;
 }
