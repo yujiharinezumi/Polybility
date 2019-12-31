@@ -12,6 +12,9 @@ class User < ApplicationRecord
 
   acts_as_taggable
 
+  enum gender: { 回答しない: 0, 男性: 1, 女性: 2}
+  # enum country: {}
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

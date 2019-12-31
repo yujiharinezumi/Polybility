@@ -6,33 +6,28 @@
 
 <%= link_to '新規投稿する', new_post_path,class:"btn btn-success" %>
 
-<div>
+
+
+
   <% @posts.each do |post| %>
-    <% if post.id != current_user.id %>
-      <div>
-        <div>
-          <div>
-            <div>
-              <p><%=link_to image_tag(post.image.url),post_path(post.id)%></p>
+      <div class="f-container">
+        <div class="post-card">
+          <div class="post-card__inner">
+            <div class="post-thumb">
+                <p><%=link_to image_tag(post.image.url),post_path(post.id)%></p>
             </div>
-            <div>
-              <p>
-                <%= link_to image_tag(post.user.icon.url,class:"post-icon"),user_path(post.user.id) %>
-                <%= link_to post.user.name,user_path(post.user.id) %>
-              </p>
-              <p>title:<%= post.title %></p>
-              <p>content:<%= post.content %></p>
+            <div class="post-content">
+              <%= link_to image_tag(post.user.icon.url,class:"post-icon"),user_path(post.user.id) %>
+              <%= link_to post.user.name,user_path(post.user.id) %>
             </div>
-            <div>
-              <p><%= link_to '詳細を確認する', post_path(post.id),class:"btn btn-info" %></p>
-              <% if post.user.id == current_user.id %>
-                <p><%= link_to '投稿を編集する', edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></p>
-                <p><%= link_to '投稿を削除する', post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class:"btn btn-info" %></p>
-              <% end %>
-            </div>
+            <p>title:<%= post.title %></p>
+            <p>content:<%= post.content %></p>
           </div>
+            <span><%= link_to '詳細', post_path(post.id),class:"btn btn-info" %></span>
+          <% if post.user.id == current_user.id %>
+            <span><%= link_to '投稿を編集する', edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></span>
+            <span><%= link_to '投稿を削除する', post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class:"btn btn-info" %></span>
+          <% end %>
         </div>
       </div>
-    <% end %>
   <% end %>
-</div>

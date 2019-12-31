@@ -18,13 +18,15 @@
 
       <div class="field">
         <%= f.label :gender%><br />
-        <%= f.text_field :gender, autofocus: true ,class:"form-control" %>
+         <%= f.select :gender, User.genders, {include_blank: '性別'} %>
       </div>
 
       <div class="field">
         <%= f.label :country%><br />
-        <%= f.text_field :country, autofocus: true ,class:"form-control" %>
+        <%= f.text_field :country, autofocus: true,class:"form-control"  %>
+        <%# <%= f.select :country,@countries.country,class:"form-control" %> %>
       </div>
+
 
       <div class="field">
         <%= f.label :native_language%><br />

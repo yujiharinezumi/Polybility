@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // プロフィールカード
-p {
+p .profile-card {
   text-align: center;
 }
 .profile-card{
@@ -13,19 +13,20 @@ p {
   background: #fdf8ea; /*背景の色*/
   box-shadow: 0px 1px 3px rgba(0,0,0,.18);
   overflow: hidden;
-  margin:30px;
+  margin:10px;
   padding:30px;
+  margin-left: 40px;
 }
 
 .profile-card:before{
- width:120%;
- height:254px;
+ width:135%;
+ height:257px;
  content:"";
  transform:skew(-5deg,42deg);
  background: #FFD1AE; /*斜め背景の色*/
  position:  absolute;
  top:-30%;
- left:-10%;
+ left:-15%;
  z-index: 0;
 }
 
@@ -81,6 +82,9 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
+//------ここまで
+
+
 
 
 // signup
