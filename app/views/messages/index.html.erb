@@ -5,17 +5,19 @@
 <div class="ui segment">
   <% @messages.each do |message| %>
     <% if message.body.present? %>
-      <div class="item">
+    <% if current_user.id == message.user.id %>
+        <div class="balloon3">
+    <% else %>
+      <div class="balloon4">
+    <% end %>
         <div class="content">
           <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
           <div class="list">
-            <div class="item">
               <i class="right triangle icon"></i>
               <%= message.body %> /
               <% if message.user == current_user %>
                 <%= message.read ? '既読' : '未読' %>
               <% end %>
-            </div>
           </div>
         </div>
       </div>
@@ -29,6 +31,6 @@
   </div>
     <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
   <div>
-    <%= f.submit "メッセージを送る" %>
+    <%= f.submit "メッセージを送る",class:"btn btn-warning" %>
   </div>
 <% end %>

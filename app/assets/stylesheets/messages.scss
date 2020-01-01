@@ -1,3 +1,75 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.balloon3 {
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #fd8d2fba;
+  width:50%;
+  margin-left:200px;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+
+.balloon3 .icon{
+  position: absolute;
+  left: -110px;
+  top: 0;
+}
+
+.balloon3::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 20px;
+  border-right: 15px solid #fd8d2fba;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+
+.balloon4{
+  margin-bottom: 20px;
+  margin-left:600px;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #f5cc50c4;
+  margin-right: 110px;          /* 右に余白を設ける */
+  width:50%;
+
+}
+
+.balloon4 .icon{
+  position: absolute;
+  right: -110px;
+  top: 0;
+}
+
+.balloon4::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -15px;
+  top: 20px;
+  border-left: 15px solid #f5cc50c4;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+
+
+.comment-area {
+  width:50%;
+
+}
