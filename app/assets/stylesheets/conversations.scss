@@ -1,3 +1,27 @@
 // Place all the styles related to the Conversations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.conversation-icon {
+  max-height: 250px;
+  border-radius: 50%;
+  border:solid 3px #ffd6a6;
+  background-color: white;
+}
+
+.conversation-p{
+  text-align: center;
+  font-size: 20px;
+
+}
+
+.conversation-parent{
+  display: flex;
+}
+
+.conversation-chilidren{
+  width:30%;
+  margin:auto;
+  margin-top:30px;
+}
