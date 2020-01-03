@@ -13,7 +13,7 @@
         <div class="content">
           <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
           <div class="list">
-              <i class="right triangle icon"></i>
+                 <div><%= link_to image_tag(message.user.icon.url,class:"icon"),user_path(message.user.id) %></div>
               <%= message.body %> /
               <% if message.user == current_user %>
                 <%= message.read ? '既読' : '未読' %>
@@ -26,11 +26,13 @@
 </div>
 
 <%= form_with(model: [@conversation, @message]) do |f| %>
-  <div class="field">
+<div class="message-form">
+  <div>
     <%= f.text_area :body, class: "form-control" %>
   </div>
     <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-  <div>
+  <div class="m-button">
     <%= f.submit "メッセージを送る",class:"btn btn-warning" %>
   </div>
+</div>
 <% end %>

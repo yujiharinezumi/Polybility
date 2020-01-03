@@ -93,7 +93,7 @@
   position: relative;
   background-color: white;
   width:60%;
-  height:500px;
+  height:600px;
   left:280px;
   box-shadow: 0 0 8px #fdb8b8;
   border-radius: 30px;
@@ -102,6 +102,8 @@
 .show-img img {
   text-align: center;
   margin-top:20px;
+   max-width: 300px;
+  object-fit: contain;
 }
 
 .post-show-container p{

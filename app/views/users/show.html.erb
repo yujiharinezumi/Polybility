@@ -1,26 +1,45 @@
 <h2>プロフィール</h2>
 
-
 <div class="pr-container">
   <div class="pr-icon">
     <p><%= image_tag @user.icon.url %></p>
   </div>
-
-
   <div class="pr-text">
-  <p><%= render 'stats' %></p>
-  <p>名前 : <%= @user.name %></p>
-  <p>年齢 : <%= @user.age %></p>
-  <p>性別 : <%= @user.gender %></p>
-  <p>出身国 : <%= @user.country %></p>
-  <p>母国語 : <%= @user.native_language %></p>
-  <p>勉強している言語 : <%= @user.learning_language %></p>
-  <p>趣味 : <%= @user.hobby %></p>
+    <p><%= render 'stats' %></p>
+    <p>名前 : <%= @user.name %></p>
+    <p>年齢 : <%= @user.age %></p>
+    <p>性別 : <%= @user.gender %></p>
+    <p>出身国 : <%= @user.country %></p>
+    <p>母国語 : <%= @user.native_language %></p>
+    <p>勉強している言語 : <%= @user.learning_language %></p>
+    <p>趣味 : <%= @user.hobby %></p>
   </div>
-
 
   <% if current_user == @user %>
     <p><%= link_to 'プロフィールを編集する', edit_user_registration_url %></p>
   <% end %>
   <p><%= link_to 'ユーザー一覧に戻る', users_path %></p>
 </div>
+
+<% @users.each do |user| %>
+<div class="f-container">
+  <div class="post-card">
+    <div class="post-card__inner">
+      <div class="post-thumb">
+        <% if user.image.url %>
+          <p><%=link_to image_tag(user.image.url),post_path(user.id)%></p>
+        <% end %>
+      </div>
+      <div class="post-content">
+        <p>title:<%= user.title %></p>
+        <p>content:<%= user.content %></p>
+        <span><%= link_to '詳細', post_path(user.id),class:"btn btn-info" %></span>
+        <% if @user == current_user %>
+          <span><%= link_to '投稿を編集する', edit_post_path(user.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></span>
+          <span><%= link_to '投稿を削除する', post_path(user.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class:"btn btn-info" %></span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

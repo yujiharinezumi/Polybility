@@ -15,17 +15,14 @@
  *= require_self
  */
 
-@import 'font-awesome-sprockets';
+/* fontawsomeの読み込み */
+/* @import 'font-awesome-sprockets';
 @import 'font-awesome';
-
+ */
 
 body {
   position: relative;
   padding-bottom: 70px;
-}
-
-.alert{
-
 }
 
 .white {
