@@ -103,19 +103,21 @@ p .profile-card {
 
 //新規登録フォーム
 .box-container {
-  // background-color: white;
   opacity: 0.8;
   width: 40%;
   height: 380px;
   margin-left: auto;
   text-align: center;
-  margin-top:100px;
+  margin-top:50px;
   margin-right: 50px;
+}
+.box-container .field {
+  margin:10px;
 }
 
 .signup-text {
-  text-align: right;
-  margin-right:290px;
+  margin:auto;
+  width:10%
 
 }
 
@@ -124,8 +126,10 @@ p .profile-card {
 }
 
 #img_prev {
-  width:40%;
+  width:38%;
   height:auto;
+  max-height: 140px;
+
 }
 
 // ログインフォーム

@@ -10,6 +10,9 @@
 
 
 // posts index view
+
+
+
 .post-card{
   height: 550px;
   width: 100%;
@@ -37,11 +40,19 @@
  z-index: 0;
 }
 
+.post-button {
+  width:10%;
+  margin:auto;
+}
+
 .post-card__inner{
  position: relative;
  width:240px;
  left:170px;
+}
 
+.post-card__inner p {
+  text-align: center;
 }
 
 .post-thumb{
@@ -72,6 +83,8 @@
 .post-content{
   padding: 15px;
 }
+
+
 
 .profile-content span{
   display: block;

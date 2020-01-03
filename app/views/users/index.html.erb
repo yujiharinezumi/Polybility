@@ -33,7 +33,6 @@
            <p>母国語:<%= result.native_language %></p>
            <p>学習している言語:<%= result.learning_language %></p>
            <p>趣味:<%= result.hobby %></p>
-
            <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: result.id), method: :post %>
            <%= render 'follow_form', user: result %>
           </div>
