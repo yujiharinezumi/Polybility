@@ -4,8 +4,8 @@
   <div class="show-img">
     <p><%= image_tag @post.image.url %></p>
   </div>
-<p>タイトル: <%= @post.title %></p>
-<p>内容: <%= @post.content %></p>
+  <p><%= @post.title %></p>
+  <p><%= @post.content %></p>
 
 <p>お気に入りの数:<%= @favorite_count %></p>
   <% if @favorite.present? %>

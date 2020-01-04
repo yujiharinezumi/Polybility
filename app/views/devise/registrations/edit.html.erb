@@ -1,72 +1,71 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
-<div class="pr-edit-container">
-<div class="form-horizontal" role="form">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <div class="pr-edit-container">
+    <div class="form-horizontal" role="form">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
-    <div class="field">
-      <%= f.label :icon%><br />
-      <%= f.file_field :icon, autofocus: true  %>
-    </div>
-    <div class="form-group">
-      <div class="field">
-        <%= f.label :name%><br />
-        <%= f.text_field :name, autofocus: true,class:"form-control",placeholder:"name"   %>
-      </div
-      <div class="field">
-        <%= f.label :age%><br />
-        <%= f.number_field :age, autofocus: true,class:"form-control"  %>
-      </div>
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :icon%><br />
+          <%= f.file_field :icon, autofocus: true  %>
+        </div>
 
-      <div class="field">
-        <%= f.label :gender%><br />
-         <%= f.select :gender, User.genders, {include_blank: '性別'} %>
-      </div>
+        <div class="field">
+          <%= f.label :name%><br />
+          <%= f.text_field :name, autofocus: true,class:"form-control",placeholder:"name"   %>
+        </div>
 
-      <div class="field">
-        <%= f.label :country%><br />
-        <%= f.text_field :country, autofocus: true,class:"form-control",placeholder:"country" %>
-        <%# <%= f.select :country,@countries.country,class:"form-control" %> %>
-      </div>
+        <div class="field">
+          <%= f.label :age%><br />
+          <%= f.number_field :age, autofocus: true,class:"form-control"  %>
+        </div>
 
+        <div class="field">
+          <%= f.label :gender%><br />
+          <%= f.select :gender, User.genders, {include_blank: '性別'} %>
+        </div>
 
-      <div class="field">
-        <%= f.label :native_language%><br />
-        <%= f.text_field :native_language, autofocus: true ,class:"form-control",placeholder:"language"  %>
-      </div>
+        <div class="field">
+          <%= f.label :country%><br />
+          <%= f.text_field :country, autofocus: true,class:"form-control",placeholder:"country" %>
+          <%# <%= f.select :country,@countries.country,class:"form-control" %> %>
+        </div>
 
-      <div class="field">
-        <%= f.label :learning_language%><br />
-        <%= f.text_field :learning_language, autofocus: true ,class:"form-control",placeholder:"language"  %>
-      </div>
+        <div class="field">
+          <%= f.label :native_language%><br />
+          <%= f.text_field :native_language, autofocus: true ,class:"form-control",placeholder:"language"  %>
+        </div>
 
-      <div class="field">
-        <%= f.label :hobby%><br />
-        <%= f.text_field :hobby, autofocus: true,class:"form-control",placeholder:"hobby"   %>
-      </div>
+        <div class="field">
+          <%= f.label :learning_language%><br />
+          <%= f.text_field :learning_language, autofocus: true ,class:"form-control",placeholder:"language"  %>
+        </div>
+
+        <div class="field">
+          <%= f.label :hobby%><br />
+          <%= f.text_field :hobby, autofocus: true,class:"form-control",placeholder:"hobby"   %>
+        </div>
 
       <!-- <div class="field form-group form-group-lg">
         <%# <%= f.label :tag_list, class: "sr-only control-label" %> %>
         <%# <%= text_field_tag 'users[tag_list]', @user.tag_list.join(","), class: "form-control" %> %>
       </div> -->
 
+        <div class="field">
+          <%= f.label :email %><br/>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control" %>
+        </div>
 
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control" %>
-      </div>
-
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
-
-      <div class="field">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-        <%= f.password_field :password, autocomplete: "new-password",class:"form-control" %>
-        <% if @minimum_password_length %>
-          <br />
-          <em><%= @minimum_password_length %> characters minimum</em>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
-      </div>
+
+        <div class="field">
+          <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+          <%= f.password_field :password, autocomplete: "new-password",class:"form-control" %>
+            <% if @minimum_password_length %><br/>
+              <em><%= @minimum_password_length %> characters minimum</em>
+            <% end %>
+        </div>
 
       <div class="field">
         <%= f.label :password_confirmation %><br />
@@ -74,17 +73,17 @@
       </div>
     </div>
 
-
     <div class="actions field">
       <%= f.submit "Update" %>
     </div>
   <% end %>
 
     <div class="field">
-  <h3>Cancel my account</h3>
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-  <%= link_to "Back", :back %>
-  </div>
-</div>
 
+      <p>退会しますか？<%= button_to "アカウントの削除", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,class:"btn btn-danger" %></p>
+      <%= link_to "Back", :back %>
+    </div>
+
+
+  </div>
 </div>

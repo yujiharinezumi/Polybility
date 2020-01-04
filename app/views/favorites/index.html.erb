@@ -14,7 +14,9 @@
           <p>title:<%= f.post.title %></p>
           <p>content:<%= f.post.content %></p>
         </div>
+        <div class="post-button">
           <span><%= link_to '詳細', post_path(f.post.id),class:"btn btn-info" %></span>
+        </div>
       </div>
     </div>
 <% end %>

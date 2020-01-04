@@ -12,7 +12,7 @@
           <div class="post-card__inner">
             <div class="post-thumb">
               <% if post.image.url %>
-                <p><%=link_to image_tag(post.image.url),post_path(post.id)%></p>
+                <p><%=link_to image_tag(post.image.url,class:"index-img"),post_path(post.id)%></p>
                 <% end %>
             </div>
             <div class="post-content">
@@ -20,8 +20,8 @@
               <%= link_to post.user.name,user_path(post.user.id) %>
             </div>
 
-            <p>title:<%= post.title %></p>
-            <p>content:<%= post.content %></p>
+            <p><%= post.title %></p>
+            <p><%= post.content %></p>
           </div>
           <div class="post-button">
             <span><%= link_to '詳細', post_path(post.id),class:"btn btn-info" %></span>

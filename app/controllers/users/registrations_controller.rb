@@ -11,10 +11,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  def edit
-    @countries = Country.all
-
-  end
+  # def edit
+  #   @countries = Country.all
+  #
+  # end
 
   # GET /resource/sign_up
   # def new

@@ -3,16 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-// .flex-container {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-
-
 // posts index view
-
-
-
 .post-card{
   height: 550px;
   width: 100%;
@@ -40,9 +31,17 @@
  z-index: 0;
 }
 
+.index-img{
+  border-radius: 50%;
+}
+
 .post-button {
   width:10%;
   margin:auto;
+}
+
+.post.post-button span {
+  background-color: yellow;
 }
 
 .post-card__inner{
@@ -66,7 +65,7 @@
     margin-right: auto;
     margin-top: 20px;
     background: #FFE9A6;
-   border-radius: 10%;
+    border-radius: 10%;
 }
 
 .post-thumb img{
@@ -117,6 +116,7 @@
   margin-top:20px;
    max-width: 300px;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 .post-show-container p{
@@ -124,7 +124,7 @@
 }
 
 
-// .flex-container {
-//   display: flex;
-//   flex-wrap: wrap;
+// .btn-info {
+//   background-color: #aad67b;
+//   border-color: #aad67a;
 // }
