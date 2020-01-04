@@ -186,23 +186,21 @@ p .profile-card {
   left:210px;
   box-shadow: 0 0 8px #fdb8b8;
   border-radius: 30px;
+  margin-bottom: 40px;
 
 }
 
 .pr-edit-container .form-control {
   width: 70%;
-  margin-left:130px;
+  margin:auto;
 }
 
 .pr-edit-container .field {
   text-align: center;
-  margin:10px;
+  margin:auto;
+  width:50%
 }
 
-.pr-edit-container .age {
-  margin-left:20px;
-  width:20%;
-}
 //フォローのshow
 
 .follow-parent{
