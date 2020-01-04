@@ -13,3 +13,9 @@ CSV.foreach('db/csv/country.csv', headers: true) do |row|
     country: row['country']
   )
 end
+
+CSV.foreach('db/csv/language.csv', headers: true) do |row|
+  Language.create(
+    language: row['language']
+  )
+end
