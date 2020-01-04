@@ -10,12 +10,12 @@ require "csv"
 
 CSV.foreach('db/csv/country.csv', headers: true) do |row|
   Country.create(
-    country: row['country']
+    country: row['name']
   )
 end
 
 CSV.foreach('db/csv/language.csv', headers: true) do |row|
   Language.create(
-    language: row['language']
+    language: row['name']
   )
 end
