@@ -14,7 +14,7 @@
           <%= f.text_field :name, autofocus: true,class:"form-control",placeholder:"name"   %>
         </div>
 
-        <div class="field">
+        <div class="field age">
           <%= f.label :age%><br />
           <%= f.number_field :age, autofocus: true,class:"form-control"  %>
         </div>
@@ -25,19 +25,19 @@
         </div>
 
         <div class="field">
+
           <%= f.label :country%><br />
-          <%= f.text_field :country, autofocus: true,class:"form-control",placeholder:"country" %>
-          <%# <%= f.select :country,@countries.country,class:"form-control" %> %>
+           <%= f.select :country,@countries.collect {|c| [c.name]} , {include_blank: true}, {class: 'form-control'} %>
         </div>
 
         <div class="field">
           <%= f.label :native_language%><br />
-          <%= f.text_field :native_language, autofocus: true ,class:"form-control",placeholder:"language"  %>
+          <%= f.select :native_language,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control'} %>
         </div>
 
         <div class="field">
           <%= f.label :learning_language%><br />
-          <%= f.text_field :learning_language, autofocus: true ,class:"form-control",placeholder:"language"  %>
+          <%= f.select :learning_language,@languages.collect {|ll| [ll.name]} , {include_blank: true}, {class: 'form-control'} %>
         </div>
 
         <div class="field">

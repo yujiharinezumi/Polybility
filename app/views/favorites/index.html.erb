@@ -11,8 +11,8 @@
             <%= link_to image_tag(f.user.icon.url,class:"post-icon"),user_path(f.post.user.id) %>
             <%= link_to f.post.user.name,user_path(f.post.user.id) %>
           </div>
-          <p>title:<%= f.post.title %></p>
-          <p>content:<%= f.post.content %></p>
+            <p><%= f.post.title %></p>
+            <p><%= f.post.content %></p>
         </div>
         <div class="post-button">
           <span><%= link_to '詳細', post_path(f.post.id),class:"btn btn-info" %></span>
