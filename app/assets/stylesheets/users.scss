@@ -197,5 +197,25 @@ p .profile-card {
 .pr-edit-container .field {
   text-align: center;
   margin:10px;
+}
 
+
+
+//フォローのshow
+
+.follow-parent{
+  display: flex;
+}
+
+.follow-icon {
+  border-radius: 50%;
+  height: 170px;
+  width: 68%;
+  border:solid 3px white;
+  background-color: white;
+}
+
+.follow-children {
+  text-align: center;
+  margin:20px;
 }

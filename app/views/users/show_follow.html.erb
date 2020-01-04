@@ -1,9 +1,9 @@
-<% @user.following.each do |user| %>
-  <table>
-    <tr>
-      <td>  <%= image_tag user.icon.url %> </td>
-      <td>  <%= user.name %> </td>
-      <td><%= link_to '詳細', user_path(user) %></td>
-    </tr>
-  </table>
-<% end %>
+<div class="follow-parent">
+  <% @user.following.each do |user| %>
+    <div class="follow-children">
+      <p><%=link_to image_tag(user.icon.url,class:"follow-icon"),user_path(user.id) %></p>
+      <p><%= link_to user.name,user_path(user.id) %>
+      <p><%= link_to '詳細', user_path(user),class:"btn btn-info" %></p>
+    </div>
+  <% end %>
+</div>
