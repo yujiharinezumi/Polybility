@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// プロフィールカード
+// プロフィールカード index
 p .profile-card {
   text-align: center;
 }
@@ -82,6 +82,37 @@ p .profile-card {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.user-buttons{
+  display: flex;
+
+}
+.btn{
+  margin:10px;
+}
+
+.search_form {
+  width:70%;
+  margin:auto;
+}
+
+.search_button{
+  text-align: center;
+}
+
+.search_lang {
+  width:40%;
+}
+
+.lang_search {
+  width:70%;
+
+}
+
+
+.hobby_field {
+  
 }
 //------ここまで
 
@@ -181,12 +212,13 @@ p .profile-card {
 .pr-edit-container {
   position: relative;
   background-color: #ffeaea;
-  width:70%;
+  width:60%;
+  margin:auto;
   height:1090px;
-  left:210px;
   box-shadow: 0 0 8px #fdb8b8;
   border-radius: 30px;
   margin-bottom: 40px;
+
 
 }
 

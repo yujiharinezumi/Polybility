@@ -38,12 +38,12 @@
 
         <div class="field">
           <%= f.label :hobby%><br />
-          <%= f.text_field :hobby, autofocus: true,class:"form-control",placeholder:"hobby"   %>
+          <%= f.text_field :hobby, autofocus: true,class:"form-control",placeholder:"hobby" %>
         </div>
 
         <div class="field">
           <%= f.label :introduction %><br />
-          <%= f.text_field :introduction, autofocus: true,class:"form-control introduction"   %>
+          <%= f.text_field :introduction, autofocus: true,class:"form-control introduction" %>
         </div>
 
       <!-- <div class="field form-group form-group-lg">
@@ -74,13 +74,12 @@
       </div>
     </div>
 
-    <div class="actions field">
-      <%= f.submit "Update" %>
+    <div class="actions field update">
+      <%= f.submit "Update",class:"btn btn-info" %>
     </div>
   <% end %>
 
     <div class="field">
-
       <p>退会しますか？<%= button_to "アカウントの削除", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,class:"btn btn-danger" %></p>
       <%= link_to "プロフィールに戻る", user_path(@user.id) %>
     </div>

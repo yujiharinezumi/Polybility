@@ -4,6 +4,13 @@
 
 
 // posts index view
+
+.post-index-top {
+
+  text-align: center;
+
+}
+
 .post-card{
   height: 550px;
   width: 100%;
@@ -14,7 +21,7 @@
   overflow: hidden;
   margin:30px;
   padding:10px;
-  margin-left:440px;
+  margin:auto;
   margin-bottom:40px;
   border-radius: 10%;
 }
@@ -36,13 +43,12 @@
 }
 
 .post-button {
-  width:10%;
+  display: flex;
   margin:auto;
+  width:50%;
 }
 
-.post.post-button span {
-  background-color: yellow;
-}
+
 
 .post-card__inner{
  position: relative;
@@ -99,6 +105,11 @@
   background-color:white;
 }
 
+.post-index-detail {
+  margin: auto;
+  width:13%;
+}
+
 //post show views
 
 .post-show-container {
@@ -123,8 +134,13 @@
   text-align: center;
 }
 
+.post-show-menu{
+  display: flex;
+  margin:10px;
+  margin-top:20px;
+}
 
-// .btn-info {
-//   background-color: #aad67b;
-//   border-color: #aad67a;
-// }
+.post-show-menu p {
+  margin:auto;
+
+}

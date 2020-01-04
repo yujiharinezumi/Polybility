@@ -7,18 +7,19 @@
   <p><%= @post.title %></p>
   <p><%= @post.content %></p>
 
-<p>お気に入りの数:<%= @favorite_count %></p>
-  <% if @favorite.present? %>
-    <p><%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete %></p>
-  <% else %>
-    <p><%= link_to 'お気に入りする', favorites_path(post_id: @post.id), method: :post %></p>
-  <% end %>
+  <div class="post-show-menu">
+    <p>お気に入りの数:<%= @favorite_count %></p>
+      <% if @favorite.present? %>
+        <p><%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete %></p>
+      <% else %>
+        <p><%= link_to 'お気に入りする', favorites_path(post_id: @post.id), method: :post %></p>
+      <% end %>
 
-<% if current_user.id == @post.user.id %>
-  <p><%= link_to '編集する', edit_post_path(@post) %></p>
-  <p><%= link_to '削除する', post_path(@post), method: :delete %></p>
-<% end %>
-
+    <% if current_user.id == @post.user.id %>
+      <p><%= link_to '編集する', edit_post_path(@post),class:"btn btn-info" %></p>
+      <p><%= link_to '削除する', post_path(@post), method: :delete,class:"btn btn-danger" %></p>
+    <% end %>
+  </div>
 </div>
 
 <p>コメント一覧</p>

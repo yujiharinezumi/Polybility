@@ -1,21 +1,23 @@
 <h1>ユーザー一覧</h1>
 
+
 <%= search_form_for @search do |f| %>
 
   <%= f.label :hobby_cont, "趣味の検索" %>
-  <%= f.search_field :hobby_cont %>
-
+  <%= f.search_field :hobby_cont,class:"hobby_field" %>
+<div class="search_form">
   <%= f.label :native_language_cont, "母国語の検索" %>
-  <%= f.search_field :native_language_cont %>
+  <%= f.select :native_language_cont,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control language'} %>
 
   <%= f.label :learning_language_cont, "学習言語の検索" %>
-  <%= f.search_field :learning_language_cont %>
-
-  <div class="actions">
+  <%= f.select :learning_language_cont,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control language'} %>
+</div>
+  <div class="actions search_button">
     <%= f.submit "検索",name:'search' %>
     <p><%= link_to '検索を元に戻す', users_path %></p>
   </div>
 <% end %>
+
 
 
 <div class="flex-container">
@@ -33,8 +35,10 @@
            <p>母国語:<%= result.native_language %></p>
            <p>学習している言語:<%= result.learning_language %></p>
            <p>趣味:<%= result.hobby %></p>
-           <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: result.id), method: :post %>
+          <div class="user-buttons">
+           <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-success", method: :post %>
            <%= render 'follow_form', user: result %>
+          </div>
           </div>
         </div>
       </div>

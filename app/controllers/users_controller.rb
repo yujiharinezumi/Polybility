@@ -7,6 +7,8 @@ class UsersController < ApplicationController
     else
       @users = User.all.includes(:tags)
     end
+
+    @languages = Language.all
   end
 
   def show

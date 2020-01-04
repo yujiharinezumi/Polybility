@@ -20,6 +20,12 @@
 @import 'font-awesome';
  */
 
+
+p {
+  color:#735c09;
+}
+
+
 body {
   position: relative;
   padding-bottom: 60px;
