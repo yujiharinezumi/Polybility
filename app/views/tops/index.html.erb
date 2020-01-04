@@ -5,10 +5,10 @@
           <nav>
             <ul>
               <li><a href="#">トップページ</a></li>
-              <li id="polybility"><a href="#">Polybilityとは</a></li>
-              <li><a href="#">アプリ内容</a></li>
-              <li><a href="#">NEWS</a></li>
-              <li><a href="#">Let's get started!</a></li>
+              <li><a href="#polybility">Polybilityとは</a></li>
+              <li><a href="#contents">アプリ内容</a></li>
+              <li><a href="#news">NEWS</a></li>
+              <li><a href="#start">Let's get started!</a></li>
             </ul>
           </nav>
       </div>
@@ -21,7 +21,7 @@
     </section>
 
     <main>
-      <section class="top-greeting">
+      <section class="top-greeting" id="polybility">
         <div class="top-content-wrapper">
           <div class="top-contents">
             <figure><%= image_tag "top2.jpeg" %></figure>
@@ -39,7 +39,7 @@
         </div>
       </section>
 
-      <section class="top-work">
+      <section class="top-work" id="contents">
         <div class="top-content-wrapper">
           <h2>アプリ内容<h2>
           <ul>
@@ -73,7 +73,7 @@
           </ul>
       </div>
       </section>
-      <section class="top-news">
+      <section class="top-news" id="news">
       <div class="top-content-wrapper">
         <h2>NEWS</h2>
           <ul>
@@ -84,7 +84,7 @@
           </ul>
       </div>
       </section>
-       <section class="top-recruit">
+       <section class="top-recruit" id="start">
          <div class="top-recruit-img"><%= image_tag "top6.jpeg" %></div>
            <h2><a href="#">Let's get strated!</a></h2>
            <div class="top-bg2"></div>
