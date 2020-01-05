@@ -17,6 +17,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   end
 
+  # def build_resource(hash={})
+  #   hash[:uid] = User.create_unique_string
+  #   super
+  # end
+
+
+
   # GET /resource/sign_up
   # def new
   #   super
