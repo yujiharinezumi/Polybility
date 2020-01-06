@@ -34,7 +34,9 @@
       <div class="post-content">
         <p>title:<%= user.title %></p>
         <p>content:<%= user.content %></p>
-        <span class="detail-button"><%= link_to '詳細', post_path(user.id),class:"btn btn-success" %></span>
+        <div class="detail-button">
+          <span><%= link_to '詳細', post_path(user.id),class:"btn btn-success" %></span>
+        </div>
         <div class="user-show-post-buttons">
           <% if @user == current_user %>
             <span><%= link_to '編集', edit_post_path(user.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></span>

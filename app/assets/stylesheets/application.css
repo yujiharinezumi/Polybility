@@ -21,6 +21,10 @@
  */
 
 
+h1 {
+  text-align: center;
+}
+
 p {
   color:#735c09;
 }

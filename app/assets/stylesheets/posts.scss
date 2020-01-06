@@ -4,11 +4,8 @@
 
 
 // posts index view
-
 .post-index-top {
-
   text-align: center;
-
 }
 
 .post-card{
@@ -27,15 +24,15 @@
 }
 
 .post-card:before{
- width:184%;
- height:500px;
- content:"";
- transform:skew(-5deg,42deg);
- background: #FFE6A5; /*斜め背景の色*/
- position:  absolute;
- top:-30%;
- left:-26%;
- z-index: 0;
+  width:184%;
+  height:500px;
+  content:"";
+  transform:skew(-5deg,42deg);
+  background: #FFE6A5; /*斜め背景の色*/
+  position:  absolute;
+  top:-30%;
+  left:-26%;
+  z-index: 0;
 }
 
 .index-img{
@@ -47,9 +44,6 @@
   margin:auto;
   width:26%;
 }
-
-
-
 .post-card__inner{
  position: relative;
  width:240px;
@@ -61,35 +55,30 @@
 }
 
 .post-thumb{
-
-    overflow: hidden;
-    width: 280px;
-    height: 260px;
-    // border: #fff 3px solid;
-    // border-radius: 55px;
-    margin-left: -10px;
-    margin-right: auto;
-    margin-top: 20px;
-    background: #FFE9A6;
-    border-radius: 10%;
+  overflow: hidden;
+  width: 280px;
+  height: 260px;
+  // border: #fff 3px solid;
+  // border-radius: 55px;
+  margin-left: -10px;
+  margin-right: auto;
+  margin-top: 20px;
+  background: #FFE9A6;
+  border-radius: 10%;
 }
 
 .post-thumb img{
   display: block;
-    width: 350px;
-    height: 270px;
-    border-radius: 5px 5px 0 0;
-    max-width: 100%;
-   object-fit: contain;
-
-
+  width: 350px;
+  height: 270px;
+  border-radius: 5px 5px 0 0;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .post-content{
   padding: 15px;
 }
-
-
 
 .profile-content span{
   display: block;
@@ -125,7 +114,7 @@
 .show-img img {
   text-align: center;
   margin-top:20px;
-   max-width: 300px;
+  max-width: 300px;
   object-fit: contain;
   border-radius: 50%;
   border: solid 3px #ffe2da;
@@ -146,5 +135,4 @@
 
 .post-show-menu p {
   margin:auto;
-
 }

@@ -3,32 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
-// /*========= base ===========*/
-//
-// html {
-//   margin: 0;
-//   padding:0;
-// }
-//
-// body {
-//   margin: 0;
-//   padding: 0;
-//   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
-//   font-weight: 500;
-//   color: #333;
-//   line-height: 2.0;
-// }
-
 .top-content-wrapper p  {
-    color:#7d6006;
+  color:#7d6006;
 }
 
 .top-content-wrapper h2,h3,h4,h5 {
   margin: 0;
   padding: 0;
   color:#7d6006;
-
 }
 
 .top-content-wrapper img {
@@ -61,64 +43,66 @@ section {
 }
 
 .whole {
+  //背景の色
   // background-color: white;
   position: relative;
   height: 3200px;
 }
 
 .top-content-wrapper {
-   width: 1400px;
-   margin: 0 auto;
- }
+  width: 1400px;
+  margin: 0 auto;
+}
 
  /*========= header ===========*/
 
- .top-header {
+.top-header {
     width: 100%;
- }
+}
 
-  .top-header-nav {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
+.top-header-nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
- .top-header nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
+.top-header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
- .top-header nav ul li {
-    margin-right: 50px;
- }
+.top-header nav ul li {
+  margin-right: 50px;
+}
 
- .top-mainvisual {
-   position: relative;
-   height: 600px;
+.top-mainvisual {
+  position: relative;
+  height: 600px;
 }
 
 .top-mainvisual img {
-   width: 70%;
-   height: 500px;
-   object-fit: cover;
-   margin-left: 30%;
-   border-radius: 60px;
+  width: 70%;
+  height: 500px;
+  object-fit: cover;
+  margin-left: 30%;
+  border-radius: 60px;
 }
 
 .top-mainvisual h2 {
-   position: absolute;
-   top: 30%;
-   left: 20%;
-   background: rgba(255, 227, 144, 0.75);
-   font-size: 3rem;
-   padding: 1rem;
-   border-radius: 30px;
-   color:#ec6976;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  background: rgba(255, 227, 144, 0.75);
+  font-size: 3rem;
+  padding: 1rem;
+  border-radius: 30px;
+  color:#ec6976;
 }
 
+// 四角を作るためのコード
 // .top-bg1 {
 //    background: #ec7a1b29;
 //    height: 700px;
@@ -161,6 +145,7 @@ section {
   position: relative;
 }
 
+// 四角を作るためのコード
 // .top-work::before {
 //   content: '';
 //   background: #ff969640;
@@ -194,7 +179,6 @@ section {
 .top-work ul li p {
   font-size: 1rem;
   color: #7d6006;
-
 }
 
 .top-news .top-content-wrapper{
@@ -206,23 +190,20 @@ section {
 .top-news h2 {
   margin-bottom: 50px;
   text-align: center;
-
 }
 
 .top-news li {
   border-bottom: dotted 2px #e2d5ad;
-
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .top-news li a {
-    color:#7d6006;
+  color:#7d6006;
 }
 
 .top-news li a:hover{
   opacity: 0.6;
-
 }
 
 .top-news li time {
@@ -242,7 +223,6 @@ section {
   margin-right:20%;
   object-fit: cover;
   border-radius: 60px;
-
 }
 
 // .top-recruit-img::after {
@@ -270,7 +250,6 @@ section {
   text-align: center;
   color:#a75005;
   border-radius: 40px;
-
 }
 
 // .top-bg2 {
@@ -285,10 +264,10 @@ section {
 // }
 
 footer .top-content-wrapper {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
 }
 
 .top-address {
