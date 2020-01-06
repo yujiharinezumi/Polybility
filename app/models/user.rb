@@ -35,17 +35,20 @@ class User < ApplicationRecord
       active_relationships.find_by(followed_id: other_user.id).destroy
     end
 
-# ダイバーでのやり方
-    # def self.create_unique_string
-    #   SecureRandom.uuid
-    # end
-    #
-    # def self.guest
-    #   find_or_create_by!(email: 'guest@example.com') do |user|
-    #     user.password = SecureRandom.urlsafe_base64
-    #     # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
-    #   end
-    # end
+
+    def self.guest
+      find_or_create_by!(email: 'guest@example.com') do |user|
+        user.password = SecureRandom.urlsafe_base64
+        # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+      end
+    end
+
+
+    # ダイバーでのやり方
+    #     def self.create_unique_string
+    #       SecureRandom.uuid
+    #     end
+    # 
     #
     # def self.find_for_google(auth)
     #   user = User.find_by(email: auth.info.email)
