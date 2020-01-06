@@ -13,8 +13,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   acts_as_taggable
 
-  enum gender: { 回答しない: 0, 男性: 1, 女性: 2}
-  # enum country: {}
+  # enum gender: { 回答しない: 0, 男性: 1, 女性: 2}
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -48,7 +47,7 @@ class User < ApplicationRecord
     #     def self.create_unique_string
     #       SecureRandom.uuid
     #     end
-    # 
+    #
     #
     # def self.find_for_google(auth)
     #   user = User.find_by(email: auth.info.email)

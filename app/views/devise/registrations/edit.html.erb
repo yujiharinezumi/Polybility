@@ -20,7 +20,8 @@
         </div>
         <div class="field">
           <%= f.label :gender%><br />
-          <%= f.select :gender, User.genders, {include_blank: '性別'} %>
+          <label><%= f.radio_button :gender, "男性" %>男性</label>
+          <label><%= f.radio_button :gender, "女性" %> 女性</label>
         </div>
 
         <div class="field">

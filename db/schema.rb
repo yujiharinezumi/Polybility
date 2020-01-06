@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_04_040729) do
+ActiveRecord::Schema.define(version: 2020_01_06_043357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -124,7 +124,7 @@ ActiveRecord::Schema.define(version: 2020_01_04_040729) do
     t.string "name", default: "", null: false
     t.string "icon"
     t.integer "age", default: 0
-    t.integer "gender", default: 0
+    t.string "gender", default: "回答しない"
     t.string "country", default: ""
     t.string "native_language", default: ""
     t.string "learning_language", default: ""

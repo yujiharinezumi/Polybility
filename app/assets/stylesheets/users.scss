@@ -176,7 +176,7 @@ p .profile-card {
 .pr-container {
   background-color: #ffeaea;
   width:70%;
-  height:750px;
+  height:800px;
   position: relative;
   margin:auto;
   border-radius: 30px;
@@ -208,6 +208,12 @@ p .profile-card {
 .user-show-post-buttons{
   display: flex;
   width:50%;
+  margin:auto;
+}
+
+.age_gender {
+  display: flex;
+  width:16%;
   margin:auto;
 }
 
