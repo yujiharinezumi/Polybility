@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
+  validates :name, presence: true
   acts_as_taggable
 
   enum gender: { 回答しない: 0, 男性: 1, 女性: 2}
