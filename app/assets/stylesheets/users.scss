@@ -93,30 +93,28 @@ p .profile-card {
 }
 
 .search_form {
-  width:70%;
+  width:50%;
   margin:auto;
 }
 
 .search_button{
   text-align: center;
+  margin:10px;
 }
 
-.search_lang {
-  width:40%;
-}
-
-.lang_search {
-  width:70%;
-
+.hobby_form {
+  width:15%;
+  margin:auto;
+  margin-bottom: 15px;
 }
 
 
-.hobby_field {
-  
+.search_form .select_language {
+  width:60%;
+  margin:10px;
 }
-//------ここまで
 
-
+// ------ここまで
 
 
 // signup
@@ -180,7 +178,7 @@ p .profile-card {
   width:70%;
   height:750px;
   position: relative;
-  left:210px;
+  margin:auto;
   border-radius: 30px;
   box-shadow: 0 0 8px #fdb8b8;
   margin-bottom: 20px;
@@ -206,6 +204,13 @@ p .profile-card {
 .pr-container span {
   text-align: center;
 }
+
+.user-show-post-buttons{
+  display: flex;
+  width:50%;
+  margin:auto;
+}
+
 
 
 // ユーザー編集画面
