@@ -85,7 +85,6 @@ gem 'cancancan'
 #sort function
 gem 'ransack'
 # labeling function
-gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'omniauth'
 gem 'omniauth-facebook'

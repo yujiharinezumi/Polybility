@@ -10,17 +10,16 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
-  validates :name, presence: true
-  acts_as_taggable
 
-  # enum gender: { 回答しない: 0, 男性: 1, 女性: 2}
+  # acts_as_taggable
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-         # ,:omniauthable,
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook]
           # omniauth_providers: %i[facebook twitter google]
+
 
     def follow!(other_user)
       active_relationships.create!(followed_id: other_user.id)
@@ -41,6 +40,20 @@ class User < ApplicationRecord
         # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
       end
     end
+
+
+    def self.from_omniauth(auth)
+      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+        user.email = auth.info.email
+        user.password = Devise.friendly_token[0,20]
+        user.name = auth.info.name   # assuming the user model has a name
+        user.icon = auth.info.icon # assuming the user model has an image
+        # If you are using confirmable and the provider(s) you use validate emails,
+        # uncomment the line below to skip the confirmation emails.
+        # user.skip_confirmation!
+      end
+    end
+
 
 
     # ダイバーでのやり方
