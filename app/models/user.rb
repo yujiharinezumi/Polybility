@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  # paginates_per 8
+
   mount_uploader :icon, ImageUploader
   has_many :posts, dependent: :destroy
   has_many :favorites, dependent: :destroy
@@ -10,14 +12,10 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
-
-  # acts_as_taggable
-
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook]
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook,:google]
           # omniauth_providers: %i[facebook twitter google]
 
 
@@ -54,6 +52,21 @@ class User < ApplicationRecord
       end
     end
 
+
+    def self.find_for_google(auth)
+      user = User.find_by(email: auth.info.email)
+
+      unless user
+      user = User.create(name:     auth.info.name,
+                        email: auth.info.email,
+                        provider: auth.provider,
+                        uid:      auth.uid,
+                        token:    auth.credentials.token,
+                        password: Devise.friendly_token[0, 20],
+                        meta:     auth.to_yaml)
+      end
+          user
+    end
 
 
     # ダイバーでのやり方

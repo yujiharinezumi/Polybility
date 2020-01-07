@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new,:edit,:update,:destroy]
+
+
   def index
      if params[:search]
        @users = User.ransack(params[:q])
     else
-      @users = User.all.includes(:tags)
+      # binding.pry
+      @results = User.all.page(params[:page]).per(8)
     end
 
     @languages = Language.all

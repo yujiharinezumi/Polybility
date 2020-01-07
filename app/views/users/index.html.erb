@@ -36,16 +36,19 @@
             <div class="profile-content">
               <span class="profile-name"><%= link_to result.name,user_path(result.id) %></span>
             </div>
-           <p>母国語:<%= result.native_language %></p>
-           <p>学習している言語:<%= result.learning_language %></p>
-           <p>趣味:<%= result.hobby %></p>
-          <div class="user-buttons">
-           <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-success", method: :post %>
-           <%= render 'follow_form', user: result %>
-          </div>
+            <p>母国語:<%= result.native_language %></p>
+            <p>学習している言語:<%= result.learning_language %></p>
+            <p>趣味:<%= result.hobby %></p>
+            <div class="user-buttons">
+             <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-success", method: :post %>
+             <%= render 'follow_form', user: result %>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
   <% end %>
+</div>
+<div class="page">
+  <%= paginate @results %>
 </div>

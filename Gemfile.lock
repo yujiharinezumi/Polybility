@@ -151,6 +151,9 @@ GEM
     kaminari-activerecord (1.1.1)
       activerecord
       kaminari-core (= 1.1.1)
+    kaminari-bootstrap (3.0.1)
+      kaminari (>= 0.13.0)
+      rails
     kaminari-core (1.1.1)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -381,6 +384,8 @@ DEPENDENCIES
   faker
   font-awesome-sass (~> 5.11.2)
   jbuilder (~> 2.5)
+  kaminari
+  kaminari-bootstrap (~> 3.0.1)
   launchy
   letter_opener_web
   listen (>= 3.0.5, < 3.2)
