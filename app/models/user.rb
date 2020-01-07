@@ -1,7 +1,4 @@
 class User < ApplicationRecord
-
-  # paginates_per 8
-
   mount_uploader :icon, ImageUploader
   has_many :posts, dependent: :destroy
   has_many :favorites, dependent: :destroy
@@ -17,7 +14,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook,:google]
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook,:google_oauth2]
           # omniauth_providers: %i[facebook twitter google]
 
 
@@ -54,77 +51,20 @@ class User < ApplicationRecord
       end
     end
 
-
-    def self.find_for_google(auth)
-      user = User.find_by(email: auth.info.email)
-
-      unless user
-      user = User.create(name:     auth.info.name,
-                        email: auth.info.email,
-                        provider: auth.provider,
-                        uid:      auth.uid,
-                        token:    auth.credentials.token,
-                        password: Devise.friendly_token[0, 20],
-                        meta:     auth.to_yaml)
-      end
-          user
+    protected
+# 以下を追加
+  def self.from_omniauth(access_token)
+    data = access_token.info
+    user = User.where(email: data['email']).first
+    # Uncomment the section below if you want users to be created if they don't exist
+    unless user
+      user = User.create(name: data['name'],
+          email: data['email'],
+          password: Devise.friendly_token[0,20]
+          )
     end
-
-
-    # ダイバーでのやり方
-    #     def self.create_unique_string
-    #       SecureRandom.uuid
-    #     end
-    #
-    #
-    # def self.find_for_google(auth)
-    #   user = User.find_by(email: auth.info.email)
-    #
-    #   unless user
-    #     user = User.new(email: auth.info.email,
-    #                     provider: auth.provider,
-    #                     uid:      auth.uid,
-    #                     password: Devise.friendly_token[0, 20],
-    #                              )
-    #   end
-    #   user.save
-    #   user
-    # end
-
-
-
-    # def self.from_omniauth(auth)
-    #   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-    #     user.email = auth.info.email
-    #     user.password = Devise.friendly_token[0,20]
-    #   end
-    # end
-
-  #   def self.from_omniauth(auth)
-  #   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-  #     user.provider = auth.provider
-  #     user.uid = auth.uid
-  #     user.name = auth.name
-  #     user.email = auth.info.email
-  #     user.password = Devise.friendly_token[0, 20] # ランダムなパスワードを作成
-  #     user.image = auth.info.image.gsub("_normal","") if user.provider == "twitter"
-  #     user.image = auth.info.image.gsub("picture","picture?type=large") if user.provider == "facebook"
-  #   end
-  # end
-
-  # def self.find_for_oauth(auth)
-  #     user = User.where(uid: auth.uid, provider: auth.provider).first
-  #
-  #     unless user
-  #       user = User.create(
-  #         uid:      auth.uid,
-  #         provider: auth.provider,
-  #         email:    auth.info.email,
-  #         password: Devise.friendly_token[0, 20]
-  #       )
-  #     end
-  #     user
-  # end
+    user
+  end
 
 
 
