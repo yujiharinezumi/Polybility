@@ -6,9 +6,8 @@ class UsersController < ApplicationController
 
   def index
      if params[:search]
-       @users = User.ransack(params[:q])
+       @results = User.ransack(params[:q]).result.page(params[:page]).per(8)
     else
-      # binding.pry
       @results = User.all.page(params[:page]).per(8)
     end
 
