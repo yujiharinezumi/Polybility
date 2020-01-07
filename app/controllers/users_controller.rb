@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     end
 
     @languages = Language.all
+    @labels = Label.all
   end
 
   def show
