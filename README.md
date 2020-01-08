@@ -32,6 +32,11 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKlw8s/edit#gid=2030893948
 
 # 使用gem一覧
+
+## フロント
+* font-awesome-sass
+* kaminari-bootstrap
+
 ## ログイン機能
 * devise
 * omniauth
@@ -53,9 +58,6 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 
 ## 検索機能
 * ransack
-
-## ラベル機能
-* acts-as-taggable-on
 
 ## デバッグ
 * pry-rails
