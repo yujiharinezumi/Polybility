@@ -17,6 +17,7 @@ p .profile-card {
   padding:30px;
   margin-left: 40px;
   border-radius: 30px;
+  max-height: 420px;
 }
 
 .profile-card:before{
@@ -114,6 +115,15 @@ p .profile-card {
   margin:10px;
 }
 
+.search_form .select_hobby {
+  width:30%;
+  margin:auto;
+}
+
+label .hobby_label {
+  text-align: center;
+}
+
 .page {
   width:15%;
   margin:auto;
@@ -163,8 +173,9 @@ p .profile-card {
   width:38%;
   height:auto;
   max-height: 140px;
-
 }
+
+
 
 // ログインフォーム
 .box2 {

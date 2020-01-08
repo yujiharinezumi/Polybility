@@ -12,7 +12,9 @@
     <p>出身国 : <%= @user.country %></p>
     <p>母国語 : <%= @user.native_language %></p>
     <p>勉強している言語 : <%= @user.learning_language %></p>
-    <p>趣味 : <%= @user.hobby %></p>
+    <p>趣味: <%@user.labels.each do |label| %>
+  <%= label.hobby %>
+  <% end %></p>
     <p>自己紹介 : <%= @user.introduction %></p>
   </div>
 

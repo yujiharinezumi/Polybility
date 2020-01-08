@@ -7,11 +7,14 @@ class ApplicationController < ActionController::Base
 
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :icon])
-      devise_parameter_sanitizer.permit(:account_update, keys: [:name, :icon, :age, :gender, :country, :native_language, :learning_language, :hobby, :tag_list])
+      devise_parameter_sanitizer.permit(:account_update, keys: [:name, :icon, :age, :gender, :country, :native_language, :learning_language,:introduction,
+       :label_ids ])
+
+      # binding.irb
     end
 
     def after_sign_in_path_for(resource)
-      posts_path
+      users_path
     end
 
     def set_search

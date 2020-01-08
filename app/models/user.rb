@@ -14,7 +14,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook,:google_oauth2]
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook,:google_oauth2,:twitter]
           # omniauth_providers: %i[facebook twitter google]
 
 
@@ -30,7 +30,7 @@ class User < ApplicationRecord
       active_relationships.find_by(followed_id: other_user.id).destroy
     end
 
-
+# ゲストユーザーのログインのメソッド
     def self.guest
       find_or_create_by!(email: 'guest@example.com') do |user|
         user.password = SecureRandom.urlsafe_base64
@@ -51,21 +51,11 @@ class User < ApplicationRecord
       end
     end
 
-    protected
-# 以下を追加
-  def self.from_omniauth(access_token)
-    data = access_token.info
-    user = User.where(email: data['email']).first
-    # Uncomment the section below if you want users to be created if they don't exist
-    unless user
-      user = User.create(name: data['name'],
-          email: data['email'],
-          password: Devise.friendly_token[0,20]
-          )
+
+    private
+
+    def self.dummy_email(auth)
+      "#{auth.uid}-#{auth.provider}@example.com"
     end
-    user
-  end
-
-
 
 end

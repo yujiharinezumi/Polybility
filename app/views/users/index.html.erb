@@ -2,18 +2,20 @@
 
 
 <%= search_form_for @search do |f| %>
-<div class="hobby_form">
-  <%= f.label :hobby_cont, "趣味の検索" %>
-  <%= f.search_field :hobby_cont,class:"hobby_field" %>
-</div>
+
 
 <div class="search_form">
-  <div class="form-inline">
-    <%= f.label :native_language_cont, "母国語の検索",class:"language_label" %>
-    <%= f.select :native_language_cont,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language'} %>
+  <div class="label_form">
+    <%= f.label :labels_id_eq, "趣味の検索",class:"hobby_label" %>
+    <%= f.select :labels_id_eq, @labels.collect {|label| [label.hobby,label.id]} , {include_blank: true}, {class: 'form-control select_hobby'} %>
+  </div>
 
-    <%= f.label :learning_language_cont, "学習言語の検索" %>
-    <%= f.select :learning_language_cont,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language'} %>
+  <div class="form-inline">
+    <%= f.label :native_language_eq, "母国語の検索",class:"language_label" %>
+    <%= f.select :native_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language'} %>
+
+    <%= f.label :learning_language_eq, "学習言語の検索" %>
+    <%= f.select :learning_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language'} %>
   </div>
 </div>
   <div class="actions search_button">
@@ -21,8 +23,6 @@
     <p><%= link_to '検索を元に戻す', users_path %></p>
   </div>
 <% end %>
-
-
 
 <div class="flex-container">
   <% @results.each do |result| %>
@@ -38,10 +38,17 @@
             </div>
             <p>母国語:<%= result.native_language %></p>
             <p>学習している言語:<%= result.learning_language %></p>
-            <p>趣味:<%= result.hobby %></p>
+            <%# binding.pry %>
+              <p>趣味:<%result.labels.each do |label| %>
+
+              <%= label.hobby %></p>
+              <% end %>
+
+
+
             <div class="user-buttons">
-             <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-success", method: :post %>
-             <%= render 'follow_form', user: result %>
+              <%= render 'follow_form', user: result %>
+              <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-success", method: :post %>
             </div>
           </div>
         </div>

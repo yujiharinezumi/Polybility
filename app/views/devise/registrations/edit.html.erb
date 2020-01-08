@@ -38,15 +38,15 @@
         </div>
 
         <div class="field">
-          <%= f.label :hobby%><br />
-          <%= f.text_field :hobby, autofocus: true,class:"form-control",placeholder:"hobby" %>
+            <%= f.label :label_ids,"趣味" %><br />
+            <%= f.select :label_ids,@labels.collect {|label| [label.hobby, label.id]} , {include_blank: true}, {class: 'form-control'} %>
         </div>
 
         <div class="field">
           <%= f.label :introduction %><br />
           <%= f.text_field :introduction, autofocus: true,class:"form-control introduction" %>
         </div>
-        
+
 
         <div class="field">
           <%= f.label :email %><br/>

@@ -14,9 +14,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def edit
     @countries = Country.all
     @languages = Language.all
-
+    @labels = Label.all
   end
-
+#
   # def build_resource(hash={})
   #   hash[:uid] = User.create_unique_string
   #   super
@@ -76,6 +76,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
+  # ログインした後の遷移先
    def after_sign_up_path_for(resource)
      edit_user_registration_url(current_user.id)
    end
