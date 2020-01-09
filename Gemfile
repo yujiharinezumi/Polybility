@@ -79,6 +79,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 #login system
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 #admin function
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'

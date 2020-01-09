@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :labelings, dependent: :destroy
   has_many :labels, through: :labelings
 
+  validates :name, presence: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

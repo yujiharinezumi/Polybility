@@ -1,19 +1,30 @@
 FactoryBot.define do
-  factory :user do
-    name { "first_user" }
-    email { "1@example.com" }
-    password { "111111" }
+  factory :user_first,class: User do
+    name { 'a' }
+    email { 'a@gmail.com' }
+    password {'aaaaaa'}
+    password_confirmation {'aaaaaa'}
+
   end
 
-  factory :second_user, class: User do
-    name { "second_user" }
-    email { "2@example.com" }
-    password { "2222222" }
+  factory :user_second,class: User do
+    name { 'b' }
+    email { 'b@gmail.com' }
+    password {'bbbbbb'}
+    password_confirmation {'bbbbbb'}
   end
 
-  factory :third_user, class: User do
-    name { "thrid_user" }
-    email { "3@example.com" }
-    password { "333333" }
+  factory :user_third,class:User do
+    name { 'c' }
+    email { 'c@gmail.com' }
+    password {'cccccc'}
+    password_confirmation {'cccccc'}
+  end
+
+  factory :admin_user,class: User do
+    name { 'yuji' }
+    email { 'yuji@gmail.com' }
+    password {'yujiyuji'}
+    password_confirmation {'yujiyuji'}
   end
 end
