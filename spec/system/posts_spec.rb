@@ -13,7 +13,6 @@ RSpec.describe 'Posts', type: :system do
      log_in @user1
    end
 
-
    it 'ユーザーが投稿するテスト' do
      click_on "投稿"
      click_on "新規投稿"
