@@ -4,6 +4,9 @@ FactoryBot.define do
     email { 'a@gmail.com' }
     password {'aaaaaa'}
     password_confirmation {'aaaaaa'}
+    native_language {'Japanese'}
+    learning_language {'English'}
+
 
   end
 
@@ -12,12 +15,16 @@ FactoryBot.define do
     email { 'b@gmail.com' }
     password {'bbbbbb'}
     password_confirmation {'bbbbbb'}
+    native_language {'English'}
+    learning_language {'Japanese'}
   end
 
-  factory :user_third,class:User do
+  factory :user_third,class: User do
     name { 'c' }
     email { 'c@gmail.com' }
     password {'cccccc'}
+    native_language {'Chinese'}
+    learning_language {'Thai'}
     password_confirmation {'cccccc'}
   end
 

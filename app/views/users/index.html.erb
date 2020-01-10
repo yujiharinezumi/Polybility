@@ -12,10 +12,10 @@
 
   <div class="form-inline">
     <%= f.label :native_language_eq, "母国語の検索",class:"language_label" %>
-    <%= f.select :native_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language'} %>
+    <%= f.select :native_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language',id:"native"} %>
 
     <%= f.label :learning_language_eq, "学習言語の検索" %>
-    <%= f.select :learning_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language'} %>
+    <%= f.select :learning_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language',id:"learning"} %>
   </div>
 </div>
   <div class="actions search_button">
