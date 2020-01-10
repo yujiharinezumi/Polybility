@@ -77,13 +77,6 @@ RSpec.describe 'Users', type: :system do
        # @label1 = FactoryBot.create(:label_first)
        # @label2 = FactoryBot.create(:label_second)
        # @label3 = FactoryBot.create(:label_third)
-
-       # user = FactoryBot.create(:user)
-       # @user = FactoryBot.create(:user)
-       # visit new_user_session_path
-       # fill_in('user_email', with: @user.email)
-       # fill_in('user_password', with: @user.password)
-       # click_on 'commit'
      end
 
      it 'ログイン失敗のテスト' do
