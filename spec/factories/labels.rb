@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :label_first,class: Label do
-    hobby { "sports" }
+    hobby { "Sports" }
   end
 
   factory :label_second,class: Label do
