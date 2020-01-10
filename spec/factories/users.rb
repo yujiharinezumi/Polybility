@@ -1,13 +1,11 @@
 FactoryBot.define do
   factory :user_first,class: User do
-    name { 'a' }
+    name { 'testtest' }
     email { 'a@gmail.com' }
     password {'aaaaaa'}
     password_confirmation {'aaaaaa'}
     native_language {'Japanese'}
     learning_language {'English'}
-
-
   end
 
   factory :user_second,class: User do

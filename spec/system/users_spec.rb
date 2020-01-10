@@ -129,7 +129,7 @@ RSpec.describe 'Users', type: :system do
      fill_in('user_email',with: "a@gmail.com")
      fill_in('user_password', with:'aaaaaa')
      click_on 'commit'
-     click_on 'aさん'
+     click_on 'testtestさん'
      expect(page).to have_content 'プロフィール'
    end
 
@@ -139,7 +139,7 @@ RSpec.describe 'Users', type: :system do
      fill_in('user_email',with: "a@gmail.com")
      fill_in('user_password', with:'aaaaaa')
      click_on 'commit'
-     click_on 'aさん'
+     click_on 'testtestさん'
      click_on 'プロフィールを編集する'
      fill_in('user_name',with: "aaaaaa")
      fill_in('user_age',with:20)
@@ -160,7 +160,7 @@ RSpec.describe 'Users', type: :system do
      fill_in('user_email',with: "a@gmail.com")
      fill_in('user_password', with:'aaaaaa')
      click_on 'commit'
-     click_on 'aさん'
+     click_on 'testtestさん'
       click_on 'プロフィールを編集する'
      click_button 'アカウントの削除'
      page.driver.browser.switch_to.alert.accept
