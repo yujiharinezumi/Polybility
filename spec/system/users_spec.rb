@@ -154,7 +154,6 @@ RSpec.describe 'Users', type: :system do
      expect(page).to have_content 'aaaaaaさん'
    end
 
-
    it 'ユーザーの削除するテスト' do
      visit root_path
      click_on 'ログイン'
