@@ -15,9 +15,8 @@
  *= require_self
  */
 
-/* fontawsomeの読み込み */
-@import 'font-awesome-sprockets';
-@import 'font-awesome';
+/* @import 'font-awesome-sprockets';
+@import 'font-awesome'; */
 
 
 

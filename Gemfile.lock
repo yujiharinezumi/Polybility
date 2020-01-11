@@ -120,8 +120,6 @@ GEM
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.11.3)
-    font-awesome-sass (5.11.2)
-      sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     haml (5.1.2)
@@ -387,7 +385,6 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   faker
-  font-awesome-sass (~> 5.11.2)
   jbuilder (~> 2.5)
   kaminari
   kaminari-bootstrap (~> 3.0.1)

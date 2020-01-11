@@ -91,7 +91,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
-gem 'font-awesome-sass', '~> 5.11.2'
+# gem 'font-awesome-sass', '~> 5.11.2'
 
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
