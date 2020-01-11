@@ -37,7 +37,7 @@
               <span class="profile-name"><%= link_to result.name,user_path(result.id) %></span>
             </div>
             <p>母国語:<%= result.native_language %></p>
-            <p>学習している言語:<%= result.learning_language %></p>
+            <p>学習言語:<%= result.learning_language %></p>
             <%# binding.pry %>
               <p>趣味:<%result.labels.each do |label| %>
 
