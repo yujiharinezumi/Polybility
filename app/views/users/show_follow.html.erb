@@ -4,7 +4,7 @@
     <div class="follow-children">
       <p><%=link_to image_tag(user.icon.url,class:"follow-icon"),user_path(user.id) %></p>
       <p><%= link_to user.name,user_path(user.id) %>
-      <p><%= link_to t('users.detail'), user_path(user),class:"btn btn-info" %></p>
+      <p><%= link_to t('common.detail'), user_path(user),class:"btn btn-info" %></p>
     </div>
   <% end %>
 </div>

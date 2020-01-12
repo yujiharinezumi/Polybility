@@ -1,4 +1,4 @@
-<h1>投稿詳細画面</h1>
+<h1><%= t('posts.show') %></h1>
 
 <div class="post-show-container">
   <div class="show-img">
@@ -12,15 +12,15 @@
   <div class="post-show-menu">
     <p>お気に入りの数:<%= @favorite_count %></p>
       <% if @favorite.present? %>
-        <p><%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete %></p>
+        <p><%= link_to t('posts.delete_favorite'), favorite_path(id: @favorite.id), method: :delete %></p>
       <% else %>
-        <p><%= link_to 'お気に入りする', favorites_path(post_id: @post.id), method: :post %></p>
+        <p><%= link_to t('posts.do_favorite'), favorites_path(post_id: @post.id), method: :post %></p>
       <% end %>
   </div>
   <div class="post-show-menu">
     <% if current_user.id == @post.user.id %>
-      <p><%= link_to '編集する', edit_post_path(@post),class:"btn btn-info" %></p>
-      <p><%= link_to '削除する', post_path(@post), method: :delete,class:"btn btn-danger" %></p>
+      <p><%= link_to t('common.edit'), edit_post_path(@post),class:"btn btn-info" %></p>
+      <p><%= link_to t('common.destroy'), post_path(@post), method: :delete,class:"btn btn-danger" %></p>
     <% end %>
   </div>
 </div>
@@ -31,4 +31,4 @@
 
 <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
 
-<%= link_to '投稿一覧に戻る', posts_path %>
+<%= link_to t('posts.back_post'), posts_path %>

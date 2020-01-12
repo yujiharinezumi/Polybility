@@ -1,7 +1,7 @@
 <%= form_with(model: @post, local: true) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= @post.errors.count %>件のエラーがあります。</h2>
+      <h2><%= @post.errors.count %><%= t('common.have_errors') %></h2>
       <ul>
         <% @post.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -24,4 +24,4 @@
   <%= f.submit %>
 <% end %>
 
-<%= link_to '投稿一覧画面にもどる', posts_path %>
+<%= link_to t('posts.back_post'), posts_path %>

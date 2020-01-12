@@ -37,12 +37,12 @@
         <p>title:<%= user.title %></p>
         <p>content:<%= user.content %></p>
         <div class="detail-button">
-          <span><%= link_to t('users.detail'), post_path(user.id),class:"btn btn-success" %></span>
+          <span><%= link_to t('common.detail'), post_path(user.id),class:"btn btn-success" %></span>
         </div>
         <div class="user-show-post-buttons">
           <% if @user == current_user %>
-            <span><%= link_to t('users.edit'), edit_post_path(user.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></span>
-            <span><%= link_to t('users.destroy'), post_path(user.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class:"btn btn-danger" %></span>
+            <span><%= link_to t('common.edit'), edit_post_path(user.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></span>
+            <span><%= link_to t('common.destroy'), post_path(user.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class:"btn btn-danger" %></span>
           <% end %>
         </div>
       </div>

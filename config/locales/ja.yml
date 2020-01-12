@@ -204,7 +204,12 @@ ja:
       default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       long: "%Y/%m/%d %H:%M"
       short: "%m/%d %H:%M"
-    pm: 午後
+    pm: 午
+  common:
+    detail: "詳細"
+    edit: "編集"
+    destroy: 削除"
+    have_errors: "件のエラーがあります。"
   users:
     index: "ユーザ一覧"
     hobby_search: 趣味の検索
@@ -216,9 +221,6 @@ ja:
     learning: "学習言語"
     hobby: "趣味"
     message: "メッセージ"
-    detail: "詳細"
-    edit: "編集"
-    destroy: 削除""
     followed_index: "フォロー一覧"
     follower_index: "フォロワー一覧"
     profile: "プロフィール"
@@ -233,3 +235,11 @@ ja:
     followers: "フォロワー"
     following_user: "フォローする"
     cancel: "キャンセル"
+  posts:
+    index: "投稿一覧"
+    new_post: "新規投稿する"
+    edit_post: "投稿を編集する"
+    back_post: "一覧に戻る"
+    show: "投稿詳細"
+    do_favorite: "お気に入りする"
+    delete_favorite: "お気に入り解除する"
