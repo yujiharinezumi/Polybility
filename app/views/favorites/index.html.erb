@@ -1,4 +1,4 @@
-<h1>お気に入り一覧</h1>
+<h1><%= t('favorite.index') %></h1>
 
 <% @favorites.each do |f| %>
     <div class="f-container">
@@ -15,7 +15,7 @@
             <p><%= f.post.content %></p>
         </div>
         <div class="favorite-post-button">
-          <span><%= link_to '詳細', post_path(f.post.id),class:"btn btn-info" %></span>
+          <span><%= link_to t('common.detail'), post_path(f.post.id),class:"btn btn-info" %></span>
         </div>
       </div>
     </div>

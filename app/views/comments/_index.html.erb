@@ -6,7 +6,7 @@
       </div>
       <div class="content">
           <div class="header">
-            <strong><%= comment.user.name %>さん</strong>
+            <strong><%= comment.user.name %><%= t('nav.mr_ms')%></strong>
           </div>
           <div class="list">
             <i class="right triangle icon"></i>
@@ -14,7 +14,7 @@
           </div>
       </div>
       <% if comment.user.id == current_user.id %>
-        <%= link_to '削除', post_comment_path(comment.post_id, comment.id), method: :delete, remote: true %>
+        <%= link_to t('common.destroy'), post_comment_path(comment.post_id, comment.id), method: :delete, remote: true %>
       <% end %>
     </div>
   <% end %>

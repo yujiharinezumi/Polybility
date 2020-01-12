@@ -8,29 +8,29 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item nav-link ">
-          <%= link_to "ユーザー", users_path,class:"white" %>
+          <%= link_to t('nav.user'), users_path,class:"white" %>
         </li>
         <li class="nav-item nav-link">
-           <%= link_to "投稿", posts_path,class:"white" %>
+           <%= link_to t('nav.post'), posts_path,class:"white" %>
         </li>
         <li class="nav-item nav-link ">
-          <%= link_to "お気に入り", favorites_path,class:"white" %>
+          <%= link_to t('nav.favorite'), favorites_path,class:"white" %>
         </li>
         <li class="nav-item nav-link ">
-          <%= link_to "トークルーム", conversations_path,class:"white" %>
+          <%= link_to t('nav.chat'), conversations_path,class:"white" %>
         </li>
         <li class="nav-item nav-link ">
-          <%= link_to "フォロー", following_user_path(current_user),class:"white" %>
+          <%= link_to t('nav.following'), following_user_path(current_user),class:"white" %>
         </li>
         <li class="nav-item nav-link ">
-          <%= link_to "フォロワー", followers_user_path(current_user),class:"white" %>
+          <%= link_to t('nav.follower'), followers_user_path(current_user),class:"white" %>
         </li>
       <% else %>
         <li class="nav-item nav-link ">
-          <%= link_to "新規登録", new_user_registration_path,class:"white" %>
+          <%= link_to t('nav.signup'), new_user_registration_path,class:"white" %>
         </li>
         <li class="nav-item nav-link ">
-          <%= link_to "ログイン", new_user_session_path,class:"white" %>
+          <%= link_to t('nav.login'), new_user_session_path,class:"white" %>
         </li>
       <% end %>
     </ul>
@@ -39,7 +39,7 @@
       <ul class="navbar-nav mr-auto">
         <% if current_user.try(:admin?) %>
           <li class="nav-item nav-link white">
-            <%= link_to "管理者",rails_admin_path %>
+            <%= link_to t('nav.admin'),rails_admin_path %>
           </li>
         <% end %>
         <% if user_signed_in? %>
@@ -47,14 +47,14 @@
              <%=link_to image_tag(current_user.icon.url,class:"nav-icon"),user_path(current_user.id) %>
           </li>
           <li class="nav-item nav-link ">
-            <%= link_to "#{current_user.name}さん", user_path(current_user.id),class:"white" %>
+            <%= link_to current_user.name + t('nav.mr_ms'), user_path(current_user.id),class:"white" %>
           </li>
           <li class="nav-item nav-link">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"white" %>
+            <%= link_to t('nav.logout'), destroy_user_session_path, method: :delete,class:"white" %>
           </li>
         <% else %>
           <li class="nav-item nav-link navbar-right ">
-            <%= link_to "ゲストユーザーでログイン", users_guest_sign_in_path, method: :post,class:"white" %>
+            <%= link_to t('nav.guest_login') ,users_guest_sign_in_path, method: :post,class:"white" %>
           </li>
         <% end %>
       </ul>

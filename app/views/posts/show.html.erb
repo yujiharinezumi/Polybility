@@ -10,7 +10,7 @@
   <p><%= @post.content %></p>
 
   <div class="post-show-menu">
-    <p>お気に入りの数:<%= @favorite_count %></p>
+    <p><%= t('posts.count_favorite') %>:<%= @favorite_count %></p>
       <% if @favorite.present? %>
         <p><%= link_to t('posts.delete_favorite'), favorite_path(id: @favorite.id), method: :delete %></p>
       <% else %>
