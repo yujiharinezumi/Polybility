@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:account_update, keys: [:name, :icon, :age, :gender, :country, :native_language, :learning_language,:introduction,
        :label_ids ])
 
-      # binding.irb
+
     end
 
     def after_sign_in_path_for(resource)

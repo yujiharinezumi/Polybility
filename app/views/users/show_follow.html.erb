@@ -1,10 +1,10 @@
-<h1>フォロー一覧</h1>
+<h1><%= t('users.followed_index') %></h1>
 <div class="follow-parent">
   <% @user.following.each do |user| %>
     <div class="follow-children">
       <p><%=link_to image_tag(user.icon.url,class:"follow-icon"),user_path(user.id) %></p>
       <p><%= link_to user.name,user_path(user.id) %>
-      <p><%= link_to '詳細', user_path(user),class:"btn btn-info" %></p>
+      <p><%= link_to t('users.detail'), user_path(user),class:"btn btn-info" %></p>
     </div>
   <% end %>
 </div>

@@ -1,4 +1,4 @@
-<h1>ユーザー一覧</h1>
+<h1><%= t('users.index') %></h1>
 
 
 <%= search_form_for @search do |f| %>
@@ -6,21 +6,21 @@
 
 <div class="search_form">
   <div class="label_form">
-    <%= f.label :labels_id_eq, "趣味の検索",class:"hobby_label" %>
+    <%= f.label :labels_id_eq, t('users.hobby_search'),class:"hobby_label" %>
     <%= f.select :labels_id_eq, @labels.collect {|label| [label.hobby,label.id]} , {include_blank: true}, {class: 'form-control select_hobby',id:"hobby"} %>
   </div>
 
   <div class="form-inline">
-    <%= f.label :native_language_eq, "母国語の検索",class:"language_label" %>
+    <%= f.label :native_language_eq,t('users.native_search'),class:"language_label" %>
     <%= f.select :native_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language',id:"native"} %>
 
-    <%= f.label :learning_language_eq, "学習言語の検索" %>
+    <%= f.label :learning_language_eq, t('users.learning_search') %>
     <%= f.select :learning_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control select_language',id:"learning"} %>
   </div>
 </div>
   <div class="actions search_button">
-    <%= f.submit "検索",name:'search',class:"btn btn-info" %>
-    <p><%= link_to '検索を元に戻す', users_path %></p>
+    <%= f.submit t('users.search'),name:'search',class:"btn btn-info" %>
+    <p><%= link_to t('users.return_search'), users_path %></p>
   </div>
 <% end %>
 
@@ -36,10 +36,9 @@
             <div class="profile-content">
               <span class="profile-name"><%= link_to result.name,user_path(result.id) %></span>
             </div>
-            <p>母国語:<%= result.native_language %></p>
-            <p>学習言語:<%= result.learning_language %></p>
-            <%# binding.pry %>
-              <p>趣味:<%result.labels.each do |label| %>
+            <p><%= t('users.native') %>:<%= result.native_language %></p>
+            <p><%= t('users.learning') %>:<%= result.learning_language %></p>
+              <p><%= t('users.hobby') %>:<%result.labels.each do |label| %>
 
               <%= label.hobby %></p>
               <% end %>
@@ -48,7 +47,7 @@
 
             <div class="user-buttons">
               <%= render 'follow_form', user: result %>
-              <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-success", method: :post %>
+              <%= link_to t('users.message'), conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-success", method: :post %>
             </div>
           </div>
         </div>
