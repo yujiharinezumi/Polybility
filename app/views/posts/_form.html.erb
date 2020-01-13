@@ -9,19 +9,22 @@
       </ul>
     </div>
   <% end %>
-  <div class="blog_title">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+
+  <div class="form-group2">
+    <div class="post_image">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
+    <div class="blog_title">
+      <%= f.label :title %>
+      <%= f.text_field :title,class:"form-control title" %>
+    </div>
+    <div class="post_content">
+      <%= f.label :content %>
+      <%= f.text_field :content,class:"form-control content" %>
+    </div>
+    <%= f.submit class:"post-button btn btn-info" %>
   </div>
-  <div class="post_content">
-    <%= f.label :content %>
-    <%= f.text_field :content %>
-  </div>
-  <div class="post_image">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-  </div>
-  <%= f.submit %>
-<% end %>
+  <% end %>
 
 <%= link_to t('posts.back_post'), posts_path %>
