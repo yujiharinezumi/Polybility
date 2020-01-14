@@ -19,7 +19,7 @@
   </div>
 
   <% if current_user == @user %>
-    <p><%= link_to t('users.edit_profile'), edit_user_registration_url %></p>
+    <p><%= link_to t('users.edit_profile'), edit_user_registration_url,id:"edit_button" %></p>
   <% end %>
   <p><%= link_to t('users.back_user'), users_path %></p>
 </div>

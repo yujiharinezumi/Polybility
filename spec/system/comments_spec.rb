@@ -13,17 +13,17 @@ RSpec.describe 'Comments', type: :system do
 
    it '投稿にコメントをするテスト' do
       visit post_path(@post3)
-     expect(page).to have_content('投稿詳細画面')
+     expect(page).to have_content('投稿詳細')
      fill_in('comment_content',with:"いいね！")
-     click_on 'Create Comment'
+     click_on 'post_comment'
      expect(page).to have_content('いいね！')
    end
 
     it 'コメントを削除するテスト' do
       visit post_path(@post3)
-      expect(page).to have_content('投稿詳細画面')
+      expect(page).to have_content('投稿詳細')
       fill_in('comment_content',with:"いいね！")
-      click_on 'Create Comment'
+      click_on 'post_comment'
       click_on '削除'
     end
 end

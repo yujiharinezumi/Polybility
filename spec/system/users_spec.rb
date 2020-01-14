@@ -74,9 +74,9 @@ RSpec.describe 'Users', type: :system do
        @lang2 = FactoryBot.create(:lang_second)
        @lang3 = FactoryBot.create(:lang_third)
 
-       # @label1 = FactoryBot.create(:label_first)
-       # @label2 = FactoryBot.create(:label_second)
-       # @label3 = FactoryBot.create(:label_third)
+       @label1 = FactoryBot.create(:label_first)
+       @label2 = FactoryBot.create(:label_second)
+       @label3 = FactoryBot.create(:label_third)
      end
 
      it 'ログイン失敗のテスト' do
@@ -140,14 +140,13 @@ RSpec.describe 'Users', type: :system do
      fill_in('user_password', with:'aaaaaa')
      click_on 'commit'
      click_on 'testtestさん'
-     click_on 'プロフィールを編集する'
+     click_on 'edit_button'
      fill_in('user_name',with: "aaaaaa")
      fill_in('user_age',with:20)
      choose 'user_gender_女性'
      select 'Japan', from: 'user_country'
      select 'Japanese', from: 'user_native_language'
      select 'Thai', from: 'user_learning_language'
-     # select '2', from: "user_label_ids"
      fill_in('user_introduction',with: "こんにちは！")
      click_button 'Update'
      expect(page).to have_content 'アカウント情報を変更しました。'
@@ -161,7 +160,7 @@ RSpec.describe 'Users', type: :system do
      fill_in('user_password', with:'aaaaaa')
      click_on 'commit'
      click_on 'testtestさん'
-      click_on 'プロフィールを編集する'
+      click_on 'edit_button'
      click_button 'アカウントの削除'
      page.driver.browser.switch_to.alert.accept
      expect(page).to have_content 'アカウントを削除しました。またのご利用をお待ちしております。'
@@ -192,7 +191,7 @@ RSpec.describe 'Users', type: :system do
      visit root_path
      click_on 'ゲストユーザーでログイン'
      click_on 'guestさん'
-     click_on 'プロフィールを編集する'
+     click_on 'edit_button'
      fill_in('user_name',with: 'Ruby')
      fill_in('user_email',with: 'change@gmail.com')
      fill_in('user_password',with: 'aaaaaa')
@@ -205,7 +204,7 @@ RSpec.describe 'Users', type: :system do
      visit root_path
      click_on 'ゲストユーザーでログイン'
      click_on 'guestさん'
-     click_on 'プロフィールを編集する'
+     click_on 'edit_button'
      click_button 'アカウントの削除'
      page.driver.browser.switch_to.alert.accept
      expect(page).to have_content 'ゲストユーザーの変更・削除はできません。'

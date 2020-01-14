@@ -29,8 +29,8 @@ RSpec.describe 'Posts', type: :system do
 
    it 'ユーザーが投稿編集するテスト' do
       visit post_path(@post1)
-      expect(page).to have_content('投稿詳細画面')
-      click_on "編集する"
+      expect(page).to have_content('投稿詳細')
+      click_on "edit_post"
       fill_in('post_title', with:"helooo")
       fill_in('post_content', with:"gooooodbye")
       click_on "commit"
@@ -39,7 +39,7 @@ RSpec.describe 'Posts', type: :system do
 
     it 'ユーザーが投稿を削除するテスト' do
       visit post_path(@post2)
-      click_on "削除する"
+      click_on "delete_post"
       expect(page).to have_content('投稿を削除しました！')
     end
 end

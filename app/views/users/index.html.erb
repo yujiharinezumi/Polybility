@@ -6,7 +6,7 @@
 
 <div class="search_form">
   <div class="label_form">
-    <%= f.label :labels_id_eq, t('users.hobby_search'),class:"hobby_label" %>
+      <%= f.label :labels_id_eq, t('users.hobby_search'),class:"hobby_label" %>
     <%= f.select :labels_id_eq, @labels.collect {|label| [label.hobby,label.id]} , {include_blank: true}, {class: 'form-control select_hobby',id:"hobby"} %>
   </div>
 
@@ -38,13 +38,11 @@
             </div>
             <p><%= t('users.native') %>:<%= result.native_language %></p>
             <p><%= t('users.learning') %>:<%= result.learning_language %></p>
-              <p><%= t('users.hobby') %>:<%result.labels.each do |label| %>
-
-              <%= label.hobby %></p>
+            <p>
+              <%= t('users.hobby') %>:<%result.labels.each do |label| %>
+                <%= label.hobby %>
               <% end %>
-
-
-
+            </p>
             <div class="user-buttons">
               <%= render 'follow_form', user: result %>
               <%= link_to t('users.message'), conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-success", method: :post %>
