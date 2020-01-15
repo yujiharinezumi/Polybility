@@ -70,5 +70,3 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 * launchy
 * capybara
 * webdrivers
-
-![テスト]  (app/assets_images/default.png)
