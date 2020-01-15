@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
     end
 
     def create
-      @messages = @conversation.messages
+      @messages = @conversation.messages.order(:created_at)
       @message = @conversation.messages.build(message_params)
       @message.user_id = current_user.id
       respond_to do |format|
@@ -36,38 +36,22 @@ class MessagesController < ApplicationController
       end
     end
 
-
-    def edit
-    #     # @message = @conversation.messages.find(params[:id])
-    end
-    #
-    #
-    def update
-    #   @message = @conversation.message.find(params[:id])
-    #
-    #   respond_to do |format|
-    #     if @message.update(comment_params)
-    #       format.js { render :index}
-    #     else
-    #       format.js { render :errors }
-    #     end
-    #   end
-
-    end
-
     def destroy
-      @message = Message.find(params[:id])
-      @message.destroy
-      redirect_to conversation_messages_path,notice:"メッセージを削除しました！"
-    end
+     @message = Message.find(params[:id])
+     respond_to do |format|
+       if @message.destroy
+         format.html {}
+         format.js { render :destroy }
+       else
+         format.html {redirect_to conversation_messages_path(@conversation)}
+       end
+     end
+   end
+
 
     private
 
     def message_params
       params.require(:message).permit(:body, :user_id)
-    end
-
-    def set_message
-
     end
 end

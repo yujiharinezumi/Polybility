@@ -1,23 +1,25 @@
 <div class="ui segment">
   <% @messages.each do |message| %>
     <% if message.body.present? %>
-      <% if current_user.id == message.user.id %>
-        <div class="balloon3">
-      <% else %>
-        <div class="balloon4">
-      <% end %>
-          <div class="content">
-            <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
-            <div class="list">
-              <div><%= link_to image_tag(message.user.icon.url,class:"icon"),user_path(message.user.id) %></div>
-                <%= message.body %>
-                <% if message.user == current_user %>
-                  <%= message.read ? t('messages.read') : t('messages.unread') %>
-                  <%= link_to "メッセージを削除", conversation_message_path(message.conversation.id,message.id),method: :delete %>
-                <% end %>
-            </div>
+      <div class="balloon_container">
+        <% if current_user.id == message.user.id %>
+          <div class="balloon4" id="mycomment<%=message.id %>">
+        <% else %>
+          <div class="balloon3">
+        <% end %>
+        <div class="content">
+          <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
+          <div class="list">
+            <div><%= link_to image_tag(message.user.icon.url,class:"icon"),user_path(message.user.id) %></div>
+            <span id="message<%= @message.id %>"><%= message.body %></span>
+            <% if message.user == current_user %>
+              <%= message.read ? t('messages.read') : t('messages.unread') %>
+              <%= link_to "削除", conversation_message_path(message.conversation.id,message.id),remote: true,method: :delete %>
+            <% end %>
           </div>
         </div>
+      </div>
+      </div>
     <% end %>
   <% end %>
 </div>
