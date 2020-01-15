@@ -16,16 +16,11 @@ class CommentsController < ApplicationController
   end
 
   def edit
-
     @comment = @post.comments.find(params[:id])
-    # respond_to do |format|
-    #   format.js { render :edit }
-    # end
   end
 
   def update
     @comment = @post.comments.find(params[:id])
-
     respond_to do |format|
       if @comment.update(comment_params)
         format.js { render :index}
@@ -38,7 +33,6 @@ class CommentsController < ApplicationController
   def destroy
     @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
-
     respond_to do |format|
       if current_user.id == @comment.user.id
         @comment.destroy

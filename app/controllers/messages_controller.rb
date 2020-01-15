@@ -24,12 +24,35 @@ class MessagesController < ApplicationController
     end
 
     def create
+      @messages = @conversation.messages
       @message = @conversation.messages.build(message_params)
-      if @message.save
-        redirect_to conversation_messages_path(@conversation)
-      else
-        render 'index'
+      @message.user_id = current_user.id
+      respond_to do |format|
+        if @message.save
+          format.js { render :index }
+        else
+          format.html { redirect_to conversation_messages_path, notice: '投稿できませんでした...' }
+        end
       end
+    end
+
+
+    def edit
+    #     # @message = @conversation.messages.find(params[:id])
+    end
+    #
+    #
+    def update
+    #   @message = @conversation.message.find(params[:id])
+    #
+    #   respond_to do |format|
+    #     if @message.update(comment_params)
+    #       format.js { render :index}
+    #     else
+    #       format.js { render :errors }
+    #     end
+    #   end
+
     end
 
     def destroy
@@ -42,5 +65,9 @@ class MessagesController < ApplicationController
 
     def message_params
       params.require(:message).permit(:body, :user_id)
+    end
+
+    def set_message
+
     end
 end

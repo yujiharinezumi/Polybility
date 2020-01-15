@@ -2,38 +2,10 @@
   <%= link_to t('messages.last'), '?m=all' %>
 <% end %>
 
-<div class="ui segment">
-  <% @messages.each do |message| %>
-    <% if message.body.present? %>
-      <% if current_user.id == message.user.id %>
-        <div class="balloon3">
-      <% else %>
-        <div class="balloon4">
-      <% end %>
-        <div class="content">
-          <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
-            <div class="list">
-              <div><%= link_to image_tag(message.user.icon.url,class:"icon"),user_path(message.user.id) %></div>
-                <%= message.body %> /
-                <% if message.user == current_user %>
-                  <%= message.read ? t('messages.read') : t('messages.unread') %>
-                  <%= link_to "メッセージを削除", conversation_message_path(message.conversation.id,message.id),method: :delete %>
-                <% end %>
-            </div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
+<!-- 全てのメッセージを表示させるパーシャル -->
+<div id="message_area">
+  <%= render partial: 'messages/index', locals: { messages: @messages, conversation: @converation } %>
 </div>
 
-<%= form_with(model: [@conversation, @message]) do |f| %>
-<div class="message-form">
-  <div>
-    <%= f.text_area :body, class: "form-control" %>
-  </div>
-    <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-  <div class="m-button">
-    <%= f.submit t('messages.send'),class:"btn btn-warning" %>
-  </div>
-</div>
-<% end %>
+<!-- メッセージの入力欄を作るためのパーシャル -->
+ <%= render partial: 'messages/form', locals: { message: @message, conversation: @converation } %>

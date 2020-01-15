@@ -1,0 +1,23 @@
+<div class="ui segment">
+  <% @messages.each do |message| %>
+    <% if message.body.present? %>
+      <% if current_user.id == message.user.id %>
+        <div class="balloon3">
+      <% else %>
+        <div class="balloon4">
+      <% end %>
+          <div class="content">
+            <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
+            <div class="list">
+              <div><%= link_to image_tag(message.user.icon.url,class:"icon"),user_path(message.user.id) %></div>
+                <%= message.body %>
+                <% if message.user == current_user %>
+                  <%= message.read ? t('messages.read') : t('messages.unread') %>
+                  <%= link_to "メッセージを削除", conversation_message_path(message.conversation.id,message.id),method: :delete %>
+                <% end %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  <% end %>
+</div>

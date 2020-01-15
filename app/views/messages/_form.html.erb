@@ -1,0 +1,10 @@
+<%= form_with(model: [@conversation,@message]) do |form| %>
+  <div class="message-form">
+    <div class="field">
+      <p><%= form.text_area :body %></p>
+    </div>
+    <div class="actions">
+      <p><%= form.submit class:"btn btn-warning",id:"post_message" %></p>
+    </div>
+  </div>
+<% end %>
