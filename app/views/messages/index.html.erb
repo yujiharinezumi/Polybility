@@ -17,7 +17,6 @@
                 <%= message.body %> /
                 <% if message.user == current_user %>
                   <%= message.read ? t('messages.read') : t('messages.unread') %>
-                  <%#= link_to "メッセージを削除", url: "/conversations/#{message.conversation.id}/messages/#{message.id}",method: :delete %>
                   <%= link_to "メッセージを削除", conversation_message_path(message.conversation.id,message.id),method: :delete %>
                 <% end %>
             </div>
