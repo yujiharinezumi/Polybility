@@ -32,11 +32,11 @@ class MessagesController < ApplicationController
       end
     end
 
-    # def destroy
-    #   @message = Message.find(params[:id])
-    #   @message.destroy
-    #   redirect_to conversation_messages_path(@conversation)
-    # end
+    def destroy
+      @message = Message.find(params[:id])
+      @message.destroy
+      redirect_to conversation_messages_path,notice:"メッセージを削除しました！"
+    end
 
     private
 

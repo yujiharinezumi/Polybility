@@ -10,10 +10,11 @@
           </div>
           <div class="list">
             <i class="right triangle icon"></i>
-            <%= comment.content %>
+            <span id="<%=comment.id %>"><%= comment.content %></span>
           </div>
       </div>
       <% if comment.user.id == current_user.id %>
+        <%= link_to '編集', edit_post_comment_path(comment.post, comment), remote:true %>
         <%= link_to t('common.destroy'), post_comment_path(comment.post_id, comment.id), method: :delete, remote: true %>
       <% end %>
     </div>
