@@ -1,9 +1,5 @@
 class LabelsController < ApplicationController
   before_action :set_label,only: [:destroy]
-  def index
-    @labels = Label.all
-  end
-
   def new
     @label = Label.new
   end
