@@ -18,6 +18,15 @@ RSpec.describe 'Messages', type: :system do
      expect(page).to have_content('お元気ですか？')
   end
 
+  it '自分のメッセージを削除するテスト' do
+    click_on 'メッセージ'
+    fill_in('message_body',with:"お元気ですか？")
+    click_on 'commit'
+    click_on '削除'
+    expect(page).not_to have_content('お元気ですか？')
+
+ end
+
   it 'メッセージを見た後既読になるかのテスト' do
     click_on 'メッセージ'
     fill_in('message_body',with:"お元気ですか？")

@@ -14,7 +14,7 @@
             <span id="message<%= @message.id %>"><%= message.body %></span>
             <% if message.user == current_user %>
               <%= message.read ? t('messages.read') : t('messages.unread') %>
-              <%= link_to "削除", conversation_message_path(message.conversation.id,message.id),remote: true,method: :delete %>
+              <%= link_to t('common.destroy'), conversation_message_path(message.conversation.id,message.id),remote: true,method: :delete,id:"message_destroy" %>
             <% end %>
           </div>
         </div>
