@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>Polybility - Page Not Found</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .error {
     padding-top: 16%
   }
-  p{
+
+  h1 {
+    text-align: center;
+    color:#ff7d55
+  }
+
+  .footer{
+    background-color: #FFC109;
+    height: 60px;
+    width: 100%;
+     position: fixed;
+    bottom:0;
+  }
+
+  .footer p {
+    font-size: 1rem;
+    color: #fff;
+    padding-top:5px;
     text-align: center;
   }
-  img{
-    display: block;
-    margin: 0 auto;
-  }
+
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/500.html -->
   <div class="error">
-    <img src="/500.png">
     <p>一時的なエラーが発生しました。</p>
+    <p>We're sorry, but something went wrong.</p>
   </div>
+
+
+  <footer class="footer">
+    <p>Copyright © 2020 Polybility Yuji Sugaya.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+  <script>
+    bubbly({
+      colorStart: "#fff4e6",
+      colorStop: "#ffe9e4",
+      blur: 2,
+      bubbles: 40,
+      compose: "source-over",
+      bubbleFunc:() => `hsla(${Math.random() * 50}, 100%, 50%, .3)`
+    });
+  </script>
+
 </body>
 </html>
