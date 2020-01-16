@@ -262,22 +262,3 @@ label .hobby_label {
   margin:auto;
   width:50%
 }
-
-//フォローのshow
-
-.follow-parent{
-  display: flex;
-}
-
-.follow-icon {
-  border-radius: 50%;
-  height: 170px;
-  max-width: 75%;
-  border:solid 3px white;
-  background-color: white;
-}
-
-.follow-children {
-  text-align: center;
-  margin:20px;
-}

@@ -1,3 +1,26 @@
 // Place all the styles related to the Relationships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//フォローのshow
+
+.follow-parent{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.follow-icon {
+  border-radius: 50%;
+  height: 170px;
+  max-width:170px;
+  border:solid 3px white;
+  background-color: white;
+}
+
+.follow-children {
+  width:25%;
+  margin:auto;
+  margin-top:30px;
+  margin-left:20px;   
+}
