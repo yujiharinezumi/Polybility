@@ -9,19 +9,19 @@
 require "csv"
 
 CSV.foreach('db/csv/country.csv', headers: true) do |row|
-  Country.create(
+  Country.create!(
     name: row['name']
   )
 end
 
 CSV.foreach('db/csv/language.csv', headers: true) do |row|
-  Language.create(
+  Language.create!(
     name: row['name']
   )
 end
 
 CSV.foreach('db/csv/hobby.csv', headers: true) do |row|
-  Label.create(
+  Label.create!(
     hobby: row['hobby']
   )
 end
