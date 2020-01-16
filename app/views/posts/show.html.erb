@@ -11,10 +11,12 @@
 
   <div class="post-show-menu">
     <p><%= t('posts.count_favorite') %>:<%= @favorite_count %></p>
-      <% if @favorite.present? %>
-        <p><%= link_to t('posts.delete_favorite'), favorite_path(id: @favorite.id), method: :delete %></p>
-      <% else %>
-        <p><%= link_to t('posts.do_favorite'), favorites_path(post_id: @post.id), method: :post %></p>
+      <% if @post.user.id != current_user.id %>
+        <% if @favorite.present? %>
+          <p><%= link_to t('posts.delete_favorite'), favorite_path(id: @favorite.id), method: :delete %></p>
+        <% else %>
+          <p><%= link_to t('posts.do_favorite'), favorites_path(post_id: @post.id), method: :post %></p>
+        <% end %>
       <% end %>
   </div>
   <div class="post-show-menu">
