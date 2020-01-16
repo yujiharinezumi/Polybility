@@ -7,6 +7,36 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+
+
+OmniAuth.configure do |c|
+  c.test_mode = true
+  c.mock_auth[:facebook] = OmniAuth::AuthHash.new({
+    provider: 'facebook',
+    uid: '1234567890',
+    info: {
+      name: "facebook_user",
+      email: "email"
+    },
+    credentials: {
+      token: 'hogepiyo1234'
+    }
+  })
+  c.mock_auth[:line] = OmniAuth::AuthHash.new({
+    provider: 'line',
+    uid: '1234567890',
+    info: {
+      name: "line_user",
+      email: "email"
+    },
+    credentials: {
+      token: 'hogepiyo1234'
+    }
+  })
+end
+
+
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -39,6 +69,7 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
+
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
@@ -64,4 +95,8 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+
+  # テストモードをtrueにするとomniautのテストができるようになる
+  # OmniAuth.config.test_mode = true
+  # config.include OmniauthMacros
 end

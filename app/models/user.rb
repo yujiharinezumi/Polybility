@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
   has_many :labelings, dependent: :destroy
   has_many :labels, through: :labelings
+  has_many :messages, dependent: :destroy
 
   validates :name, presence: true,length: {maximum: 35}
   # Include default devise modules. Others available are:
