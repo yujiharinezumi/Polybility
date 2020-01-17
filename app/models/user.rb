@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :labels, through: :labelings
   has_many :messages, dependent: :destroy
 
+  has_many :sender_conversations, foreign_key: 'sender_id', class_name: 'Conversation', dependent: :destroy
+  has_many :recipient_conversations, foreign_key: 'recipient_id', class_name: 'Conversation', dependent: :destroy
 
   validates :name, presence: true,length: {maximum: 35}
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
