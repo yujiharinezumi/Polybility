@@ -1,15 +1,14 @@
 <% comments.each do |comment| %>
   <% if comment.content.present? %>
     <div class="balloon1">
-      <div class="icon">
+
         <%= link_to image_tag(comment.user.icon.url,class:"icon"),user_path(comment.user.id) %>
-      </div>
+
       <div class="content">
           <div class="header">
             <strong><%= comment.user.name %><%= t('nav.mr_ms')%></strong>
           </div>
           <div class="list">
-            <i class="right triangle icon"></i>
             <span id="<%=comment.id %>"><%= comment.content %></span>
           </div>
       </div>

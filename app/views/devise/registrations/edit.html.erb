@@ -23,20 +23,20 @@
         </div>
         <div class="field">
           <%= f.label :country%><br />
-          <%= f.select :country,@countries.collect {|c| [c.name]} , {include_blank: true}, {class: 'form-control country'} %>
+          <%= f.select :country,Country.all.collect {|c| [c.name]} , {include_blank: true}, {class: 'form-control country'} %>
         </div>
         <div class="field">
           <%= f.label :native_language%><br />
-          <%= f.select :native_language,@languages.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control language'} %>
+          <%= f.select :native_language,Language.all.collect {|nl| [nl.name]} , {include_blank: true}, {class: 'form-control language'} %>
         </div>
         <div class="field">
           <%= f.label :learning_language%><br />
-          <%= f.select :learning_language,@languages.collect {|ll| [ll.name]} , {include_blank: true}, {class: 'form-control language'} %>
+          <%= f.select :learning_language,Language.all.collect {|ll| [ll.name]} , {include_blank: true}, {class: 'form-control language'} %>
         </div>
         <div class="field">
           <%= f.label :label_ids,"趣味" %><br />
-          <%= f.select :label_ids,@labels.collect {|label| [label.hobby, label.id]} , {include_blank: true}, { multiple: true,class: 'form-control js-searchable hobby_select'} %>
-          <%#= f.collection_select(:label_ids, @labels, :id, :hobby,{:prompt => "趣味を選択してください"}, {:multiple => true}) %>
+          <%= f.select :label_ids,Label.all.collect {|label| [label.hobby, label.id]} , {include_blank: true}, { multiple: true,class: 'form-control js-searchable hobby_select'} %>
+
         </div>
         <div class="field">
           <%= f.label :introduction %><br />

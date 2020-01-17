@@ -11,11 +11,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  def edit
-    @countries = Country.all
-    @languages = Language.all
-    @labels = Label.all
-  end
 #
   # def build_resource(hash={})
   #   hash[:uid] = User.create_unique_string

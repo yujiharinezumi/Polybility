@@ -14,6 +14,8 @@ class User < ApplicationRecord
 
 
   validates :name, presence: true,length: {maximum: 35}
+  validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -63,5 +65,5 @@ class User < ApplicationRecord
 
     # def last_admin_not_delete
     #   throw(:abort) if User.where(admin: true).length == 1 && self.admin?
-    # end 
+    # end
 end
