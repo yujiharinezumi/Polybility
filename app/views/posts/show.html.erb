@@ -6,16 +6,7 @@
   <p><%= @post.title %></p>
   <p><%= @post.content %></p>
   <div class="post-show-menu">
-    <p><%= t('posts.count_favorite') %>:<%= @favorite_count %></p>
-      <% if @post.user.id != current_user.id %>
-        <% if @favorite.present? %>
-          <p><%= link_to t('posts.delete_favorite'), favorite_path(id: @favorite.id), method: :delete %></p>
-        <% else %>
-          <p><%= link_to t('posts.do_favorite'), favorites_path(post_id: @post.id), method: :post %></p>
-        <% end %>
-      <% end %>
-  </div>
-  <div class="post-show-menu">
+    <%= render partial: 'favorites/favorite' %>
     <% if current_user.id == @post.user.id %>
       <p><%= link_to t('common.edit'), edit_post_path(@post),class:"btn btn-info",id:"edit_post" %></p>
       <p><%= link_to t('common.destroy'), post_path(@post), method: :delete,class:"btn btn-danger",id:"delete_post" %></p>
