@@ -1,10 +1,16 @@
 <h1><%= t('conversation.talkroom') %></h1>
-<div class="conversation-parent">
+<div class="flex-container">
   <% @conversations.each do |conversation| %>
     <% if conversation.target_user(current_user).present? %>
-      <div class="conversation-chilidren">
-        <p class="conversation-p"><%= link_to image_tag(conversation.target_user(current_user).icon.url,class:"conversation-icon"), conversation_messages_path(conversation)%></p>
-        <p class="conversation-p"><%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%></p>
+      <div class="f-container">
+          <div class="profile-card-follow">
+            <div class="profile-card__inner-follow">
+              <div class="profile-thumb-follow">
+                <p class="conversation-p"><%= link_to image_tag(conversation.target_user(current_user).icon.url,class:"conversation-icon"), conversation_messages_path(conversation)%></p>
+              </div>
+            </div>
+            <p class="conversation-p"><%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%></p>
+          </div
       </div>
     <% end %>
   <% end %>
