@@ -12,7 +12,7 @@ RSpec.describe 'Users', type: :system do
       fill_in('user_password', with: 'password')
       fill_in('user_password_confirmation', with: 'password')
       click_button 'commit'
-      expect(page).to have_content('エラーが発生したため ユーザー は保存されませんでした:')
+      expect(page).to have_content('名前を入力してください')
     end
 
     it 'emailが空欄でエラーメッセージが出るテスト' do
@@ -23,7 +23,7 @@ RSpec.describe 'Users', type: :system do
       fill_in('user_password', with: 'password')
       fill_in('user_password_confirmation', with: 'password')
       click_button 'commit'
-      expect(page).to have_content('エラーが発生したため ユーザー は保存されませんでした:')
+      expect(page).to have_content('メールアドレスを入力してください')
     end
 
     it 'passwordが空欄でエラーメッセージが出るテスト' do
@@ -34,7 +34,7 @@ RSpec.describe 'Users', type: :system do
       fill_in('user_password', with: '')
       fill_in('user_password_confirmation', with: 'password')
       click_button 'commit'
-      expect(page).to have_content('エラーが発生したため ユーザー は保存されませんでした:')
+      expect(page).to have_content('パスワードを入力してください')
     end
 
     it 'password_confirmationが空欄でエラーメッセージが出るテスト' do
@@ -45,7 +45,7 @@ RSpec.describe 'Users', type: :system do
       fill_in('user_password', with: 'password')
       fill_in('user_password_confirmation', with: '')
       click_button 'commit'
-      expect(page).to have_content('エラーが発生したため ユーザー は保存されませんでした:')
+      expect(page).to have_content('確認用パスワードとパスワードの入力が一致しません')
     end
 
 
@@ -89,20 +89,12 @@ RSpec.describe 'Users', type: :system do
      end
 
      it 'ログイン成功のテスト' do
-       visit root_path
-       click_on 'ログイン'
-       fill_in('user_email',with: "a@gmail.com")
-       fill_in('user_password', with:'aaaaaa')
-       click_on 'commit'
+       log_in @user1
        expect(page).to have_content 'ログインしました。'
      end
 
      it 'ログアウトのテスト' do
-       visit root_path
-       click_on 'ログイン'
-       fill_in('user_email',with: "a@gmail.com")
-       fill_in('user_password', with:'aaaaaa')
-       click_on 'commit'
+       log_in @user1
        click_on 'ログアウト'
        expect(page).to have_content 'ログアウトしました。'
     end
@@ -124,21 +116,13 @@ RSpec.describe 'Users', type: :system do
      end
 
    it 'ユーザーの詳細画面に遷移するテスト' do
-     visit root_path
-     click_on 'ログイン'
-     fill_in('user_email',with: "a@gmail.com")
-     fill_in('user_password', with:'aaaaaa')
-     click_on 'commit'
+     log_in @user1
      click_on 'testtestさん'
      expect(page).to have_content 'プロフィール'
    end
 
    it 'ユーザーの編集するテスト' do
-     visit root_path
-     click_on 'ログイン'
-     fill_in('user_email',with: "a@gmail.com")
-     fill_in('user_password', with:'aaaaaa')
-     click_on 'commit'
+     log_in @user1
      click_on 'testtestさん'
      click_on 'edit_button'
      fill_in('user_name',with: "aaaaaa")
@@ -154,11 +138,7 @@ RSpec.describe 'Users', type: :system do
    end
 
    it 'ユーザーの削除するテスト' do
-     visit root_path
-     click_on 'ログイン'
-     fill_in('user_email',with: "a@gmail.com")
-     fill_in('user_password', with:'aaaaaa')
-     click_on 'commit'
+     log_in @user1
      click_on 'testtestさん'
       click_on 'edit_button'
      click_button 'アカウントの削除'
@@ -167,11 +147,7 @@ RSpec.describe 'Users', type: :system do
    end
 
    it 'ログインユーザーが新規登録画面に遷移させないテスト' do
-     visit root_path
-     click_on 'ログイン'
-     fill_in('user_email',with: "a@gmail.com")
-     fill_in('user_password', with:'aaaaaa')
-     click_on 'commit'
+     log_in @user1
      visit new_user_session_path
      expect(page).to have_content 'すでにログインしています。'
    end

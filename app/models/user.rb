@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :labels, through: :labelings
   has_many :messages, dependent: :destroy
 
+
   validates :name, presence: true,length: {maximum: 35}
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -60,10 +61,7 @@ class User < ApplicationRecord
       "#{auth.uid}-#{auth.provider}@example.com"
     end
 
-    # def must_not_destroy_last_admin
-    #   throw(:abort)
-    #   User.where(admin:true).count < 1
-      # throw(:abort) if (tasks.user.admin < 1)
-      # errors.add :base,"admin0人まで削除することができません"
-    # end
+    # def last_admin_not_delete
+    #   throw(:abort) if User.where(admin: true).length == 1 && self.admin?
+    # end 
 end
