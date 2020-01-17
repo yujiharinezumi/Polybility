@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'tops#index'
   resources :relationships, only: [:create, :destroy]
-  resources :favorites
+  resources :favorites,only: [:create,:destroy,:index]
   resources :posts do
     resources :comments
   end
 
-  resources :conversations do
-    resources :messages
+  resources :conversations,only: [:index,:create] do
+    resources :messages,only: [:index,:new,:create,:destroy]
   end
 
 
