@@ -27,7 +27,12 @@ RSpec.describe User, type: :model do
     expect(user).not_to be_valid
   end
 
-  it "名前とメールアドレスとパスワードに内容が記載されていればバリデーションが通る" do
+  it "ageがマイナスならバリデーションが通らない" do
+    user = User.new(name: 'テスト', email: 'testtest@t.com', password: '111111',age:-1)
+    expect(user).not_to be_valid
+  end
+
+  it "ageとmailとpasswordに内容が記載されていればバリデーションが通る" do
     user = User.create(name: 'name', email: 'a@example.com', password: 'password')
     expect(user).to be_valid
   end
