@@ -1,16 +1,14 @@
 <% comments.each do |comment| %>
   <% if comment.content.present? %>
     <div class="balloon1">
-
-        <%= link_to image_tag(comment.user.icon.url,class:"icon"),user_path(comment.user.id) %>
-
+      <%= link_to image_tag(comment.user.icon.url,class:"icon"),user_path(comment.user.id) %>
       <div class="content">
-          <div class="header">
-            <strong><%= comment.user.name %><%= t('nav.mr_ms')%></strong>
-          </div>
-          <div class="list">
-            <span id="<%=comment.id %>"><%= comment.content %></span>
-          </div>
+        <div class="header">
+          <strong><%= comment.user.name %><%= t('nav.mr_ms')%></strong>
+        </div>
+        <div class="list">
+          <span id="<%=comment.id %>"><%= comment.content %></span>
+        </div>
       </div>
       <% if comment.user.id == current_user.id %>
         <%= link_to t('common.edit'), edit_post_comment_path(comment.post, comment), remote:true %>

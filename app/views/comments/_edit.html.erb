@@ -1,11 +1,9 @@
 <%= form_with(model: [@post, @comment]) do |form| %>
   <p id="error-massage"></p>
-
   <div class="field">
     <%= form.text_field :content, class: "input", id: "edit_comment" %>
   </div>
-
   <div class="actions">
-    <%= form.submit "更新する" %>
+    <%= form.submit t('common.update') %>
   </div>
 <% end %>

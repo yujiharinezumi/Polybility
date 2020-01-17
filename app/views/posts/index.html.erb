@@ -2,32 +2,29 @@
   <h1><%= t('posts.index') %></h1>
   <%= link_to t('posts.new_post'), new_post_path,class:"btn btn-success",id:"create_post" %>
 </div>
-
-  <% @posts.each do |post| %>
-      <div class="f-container">
-        <div class="post-card">
-          <div class="post-card__inner">
-            <div class="post-thumb">
-              <% if post.image.url %>
-                <p><%=link_to image_tag(post.image.url,class:"index-img"),post_path(post.id)%></p>
-                <% end %>
-            </div>
-            <div class="post-content">
-              <%= link_to image_tag(post.user.icon.url,class:"post-icon"),user_path(post.user.id) %>
-              <%= link_to post.user.name,user_path(post.user.id) %>
-            </div>
-
-            <p><%= post.title %></p>
-            <p><%= post.content %></p>
+<% @posts.each do |post| %>
+    <div class="f-container">
+      <div class="post-card">
+        <div class="post-card__inner">
+          <div class="post-thumb">
+            <% if post.image.url %>
+              <p><%=link_to image_tag(post.image.url,class:"index-img"),post_path(post.id)%></p>
+            <% end %>
           </div>
-
-            <div class="post-index-detail"><%= link_to t('common.detail'), post_path(post.id),class:"btn btn-success" %></div>
-            <div class="post-button">
-              <% if post.user.id == current_user.id %>
-                <span><%= link_to t('common.edit'), edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></span>
-                <span><%= link_to t('common.destroy'), post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class:"btn btn-danger" %></span>
-              <% end %>
+          <div class="post-content">
+            <%= link_to image_tag(post.user.icon.url,class:"post-icon"),user_path(post.user.id) %>
+            <%= link_to post.user.name,user_path(post.user.id) %>
           </div>
+          <p><%= post.title %></p>
+          <p><%= post.content %></p>
+        </div>
+        <div class="post-index-detail"><%= link_to t('common.detail'), post_path(post.id),class:"btn btn-success" %></div>
+        <div class="post-button">
+          <% if post.user.id == current_user.id %>
+            <span><%= link_to t('common.edit'), edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></span>
+            <span><%= link_to t('common.destroy'), post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class:"btn btn-danger" %></span>
+          <% end %>
         </div>
       </div>
+    </div>
   <% end %>

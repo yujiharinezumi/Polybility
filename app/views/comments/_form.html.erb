@@ -1,12 +1,11 @@
 <%= form_with(model: [post, comment]) do |form| %>
-
-<div class="comment-form">
-  <div class="field">
-    <p><%= form.label :content %></p>
-    <p><%= form.text_area :content %></p>
+  <div class="comment-form">
+    <div class="field">
+      <p><%= form.label :content %></p>
+      <p><%= form.text_area :content %></p>
+    </div>
+    <div class="actions">
+      <p><%= form.submit class:"btn btn-warning",id:"post_comment" %></p>
+    </div>
   </div>
-  <div class="actions">
-    <p><%= form.submit class:"btn btn-warning",id:"post_comment" %></p>
-  </div>
-</div>
 <% end %>

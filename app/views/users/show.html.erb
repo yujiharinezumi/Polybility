@@ -1,5 +1,4 @@
-<h2>プロフィール</h2>
-
+<h2><%= t('users.profile') %></h2>
 <div class="pr-container">
   <div class="pr-icon">
     <p><%= image_tag(@user.icon.url,class:"proicon") %></p>
@@ -13,11 +12,10 @@
     <p><%= t('users.native') %>: <%= @user.native_language %></p>
     <p><%= t('users.learning') %> : <%= @user.learning_language %></p>
     <p><%= t('users.hobby') %>: <%@user.labels.each do |label| %>
-  <%= label.hobby %>
-  <% end %></p>
+      <%= label.hobby %>
+    <% end %></p>
     <p><%= t('users.introduction') %>: <%= @user.introduction %></p>
   </div>
-
   <% if current_user == @user %>
     <p><%= link_to t('users.edit_profile'), edit_user_registration_url,id:"edit_button" %></p>
   <% end %>
@@ -25,28 +23,28 @@
 </div>
 
 <% @users.each do |user| %>
-<div class="f-container">
-  <div class="post-card">
-    <div class="post-card__inner">
-      <div class="post-thumb">
-        <% if user.image.url %>
-          <p><%=link_to image_tag(user.image.url),post_path(user.id)%></p>
-        <% end %>
-      </div>
-      <div class="post-content">
-        <p>title:<%= user.title %></p>
-        <p>content:<%= user.content %></p>
-        <div class="detail-button">
-          <span><%= link_to t('common.detail'), post_path(user.id),class:"btn btn-success" %></span>
-        </div>
-        <div class="user-show-post-buttons">
-          <% if @user == current_user %>
-            <span><%= link_to t('common.edit'), edit_post_path(user.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></span>
-            <span><%= link_to t('common.destroy'), post_path(user.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class:"btn btn-danger" %></span>
+  <div class="f-container">
+    <div class="post-card">
+      <div class="post-card__inner">
+        <div class="post-thumb">
+          <% if user.image.url %>
+            <p><%=link_to image_tag(user.image.url),post_path(user.id)%></p>
           <% end %>
+        </div>
+        <div class="post-content">
+          <p>title:<%= user.title %></p>
+          <p>content:<%= user.content %></p>
+          <div class="detail-button">
+            <span><%= link_to t('common.detail'), post_path(user.id),class:"btn btn-success" %></span>
+          </div>
+          <div class="user-show-post-buttons">
+            <% if @user == current_user %>
+              <span><%= link_to t('common.edit'), edit_post_path(user.id), data: { confirm: '本当に編集していいですか？' },class:"btn btn-info" %></span>
+              <span><%= link_to t('common.destroy'), post_path(user.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class:"btn btn-danger" %></span>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 <% end %>

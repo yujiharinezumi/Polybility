@@ -1,14 +1,11 @@
-<h1>トークルーム</h1>
+<h1><%= t('conversation.talkroom') %></h1>
 <div class="conversation-parent">
-
-<% @conversations.each do |conversation| %>
-
-  <% if conversation.target_user(current_user).present? %>
-  <div class="conversation-chilidren">
-    <p class="conversation-p"><%= link_to image_tag(conversation.target_user(current_user).icon.url,class:"conversation-icon"), conversation_messages_path(conversation)%></p>
-    <p class="conversation-p"><%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%></p>
-  </div>
-
+  <% @conversations.each do |conversation| %>
+    <% if conversation.target_user(current_user).present? %>
+      <div class="conversation-chilidren">
+        <p class="conversation-p"><%= link_to image_tag(conversation.target_user(current_user).icon.url,class:"conversation-icon"), conversation_messages_path(conversation)%></p>
+        <p class="conversation-p"><%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%></p>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 </div>

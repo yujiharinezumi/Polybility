@@ -1,14 +1,10 @@
 <h1><%= t('posts.show') %></h1>
-
 <div class="post-show-container">
   <div class="show-img">
-
     <p><%= image_tag @post.image.url %></p>
-
   </div>
   <p><%= @post.title %></p>
   <p><%= @post.content %></p>
-
   <div class="post-show-menu">
     <p><%= t('posts.count_favorite') %>:<%= @favorite_count %></p>
       <% if @post.user.id != current_user.id %>
@@ -26,11 +22,8 @@
     <% end %>
   </div>
 </div>
-
 <div id="comments_area">
   <%= render partial: 'comments/index', locals: { comments: @comments, post: @post } %>
 </div>
-
 <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
-
 <%= link_to t('posts.back_post'), posts_path %>

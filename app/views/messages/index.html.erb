@@ -1,11 +1,9 @@
 <% if @over_ten %>
   <%= link_to t('messages.last'), '?m=all' %>
 <% end %>
-
 <!-- 全てのメッセージを表示させるパーシャル -->
 <div id="message_area">
   <%= render partial: 'messages/index', locals: { messages: @messages, conversation: @converation } %>
 </div>
-
 <!-- メッセージの入力欄を作るためのパーシャル -->
  <%= render partial: 'messages/form', locals: { message: @message, conversation: @converation } %>
