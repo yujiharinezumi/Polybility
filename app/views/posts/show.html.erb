@@ -17,4 +17,7 @@
   <%= render partial: 'comments/index', locals: { comments: @comments, post: @post } %>
 </div>
 <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
-<%= link_to t('posts.back_post'), posts_path %>
+
+<p class="post-index">
+  <%= link_to t('posts.back_post'), posts_path %>
+</p>

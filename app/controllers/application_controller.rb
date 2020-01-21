@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   before_action :set_search
   before_action :configure_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
+  before_action :set_locale
+
 
   protected
 
@@ -20,5 +22,14 @@ class ApplicationController < ActionController::Base
     def set_search
       @search = User.ransack(params[:q])
       @results = @search.result
+    end
+
+    def set_locale
+      I18n.locale = locale
+    end
+
+    def locale
+      # ここで言語の切り替えを行う
+      @locale ||= params[:locale] || I18n.default_locale
     end
 end
