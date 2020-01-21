@@ -47,6 +47,8 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'fog-aws'
 
 gem 'dotenv-rails'
+gem 'unicorn' # アプリケーションサーバのunicorn
+ gem 'mini_racer', platforms: :ruby # デプロイ時に必要
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -58,6 +60,11 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'factory_bot_rails'
   gem 'launchy'
+  gem 'capistrano', '3.6.0' # capistranoのツール一式
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
