@@ -211,6 +211,8 @@ ja:
     destroy: "削除"
     have_errors: "件のエラーがあります。"
     update: "更新"
+    edit?: "本当に編集していいですか？"
+    delete?: "本当に削除していいですか"
   users:
     index: "ユーザ一覧"
     hobby_search: 趣味の検索
