@@ -30,7 +30,7 @@ set :rbenv_type, :system
 # ただし挙動をしっかり確認したいのであれば :debug に設定する。
 set :log_level, :info
 
-set :bundle_gemfile,  "server/Gemfile"
+# set :bundle_gemfile,  "server/Gemfile"
 
 namespace :deploy do
   desc 'Restart application'
