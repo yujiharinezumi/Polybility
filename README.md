@@ -29,8 +29,10 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 ![ER図](app/assets/images/table.png)
 # 画面遷移図
 https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKlw8s/edit#gid=1790406822
+![画面遷移](app/assets/images/screen.png)
 # ワイヤーフレーム
 https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKlw8s/edit#gid=2030893948
+![画面遷移](app/assets/images/wire.png)
 
 # 使用gem一覧
 
