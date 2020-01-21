@@ -5,33 +5,10 @@
 
 //フォローのshow
 
-.follow-parent{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.follow-icon {
-  border-radius: 50%;
-  height: 170px;
-  max-width:170px;
-  border:solid 3px white;
-  background-color: white;
-}
-
-.follow-children {
-  width:25%;
-  margin:auto;
-  margin-top:30px;
-  margin-left:20px;
-}
-
-
-
-
-p .profile-card-follow {
+p .follow-card {
   text-align: center;
 }
-.profile-card-follow{
+.follow-card{
   width: 100%;
   max-width:300px;
   position: relative;
@@ -45,58 +22,51 @@ p .profile-card-follow {
   max-height: 420px;
 }
 
-.profile-card-follow:before{
- width:65%;
- height:274px;
- content:"";
- transform:skew(-51deg,29deg);
- background: #ffe3fc; /*斜め背景の色*/
- position:  absolute;
- top:-30%;
- left:-15%;
- z-index: 0;
+.follow-card:before{
+  width:65%;
+  height:274px;
+  content:"";
+  transform:skew(-51deg,29deg);
+  background: #ffe3fc; /*斜め背景の色*/
+  position:  absolute;
+  top:-30%;
+  left:-15%;
+  z-index: 0;
 }
 
-.profile-card__inner-follow{
+.follow-card__inner{
  position: relative;
  width:240px;
 }
 
-.profile-thumb-follow{
-    overflow: hidden;
-    width: 110px;
-    height: 110px;
-    border: #fff 3px solid;
-    border-radius: 55px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    background: #fff;
+.follow-thumb{
+  overflow: hidden;
+  width: 110px;
+  height: 110px;
+  border: #fff 3px solid;
+  border-radius: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background: #fff;
 }
 
-.profile-thumb-follow img{
+.follow-thumb img{
   display: block;
     width: 100%;
     height: auto;
 }
 
-.profile-content-follow{
+.follow-content{
   padding: 15px;
 }
 
-.profile-content-follow span{
+.follow-content span{
   display: block;
 }
 
-.profile-name-follow{
+.follow-name{
   margin-bottom: 3px;
   font-weight: bold;
   text-align: center;
-}
-
-
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
 }

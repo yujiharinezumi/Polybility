@@ -1,16 +1,15 @@
+<h1><%= t('users.follower_index') %></h1>
 <div class="flex-container">
-    <% @user.followers.each do |user| %>
-    <div class="f-container">
-      <div class="profile-card-follow">
-        <div class="profile-card__inner-follow">
-          <div class="profile-thumb-follow">
+    <% @user.followers.each do |user| %>>
+      <div class="follow-card">
+        <div class="follow-card__inner">
+          <div class="follow-thumb">
             <p><%=link_to image_tag(user.icon.url),user_path(user.id)%></p>
           </div>
-          <div class="profile-content-follow">
-            <span class="profile-name-follow"><%= link_to user.name,user_path(user.id) %></span>
+          <div class="follow-content">
+            <span class="follow-name"><%= link_to user.name,user_path(user.id) %></span>
           </div>
         </div>
       </div>
-    </div>
   <% end %>
 </div>
