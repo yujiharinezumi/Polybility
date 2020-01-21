@@ -1,6 +1,9 @@
 # README
 
 # Polybility
+![アプリ](app/assets/images/poly_1.png)
+![アプリ](app/assets/images/poly_2.png)
+
 
 # 概要
 * 外国語を勉強している日本人と日本語を勉強している外国人を
