@@ -48,9 +48,7 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 ## ログイン機能
 * devise
 * omniauth
-* omniauth-facebook(できれば使いたい)
-* omniauth-twitte(できれば使いたい)
-* omniauth-google
+* omniauth-facebook
 
 ## アドミン機能
 * rails_admin
