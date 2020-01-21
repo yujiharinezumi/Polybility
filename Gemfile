@@ -43,6 +43,11 @@ gem 'omniauth-twitter'
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 
+#AWS
+gem 'fog-aws'
+
+gem 'dotenv-rails'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
@@ -61,7 +66,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener_web'
-  gem 'dotenv-rails'
+
 end
 
 group :test do
