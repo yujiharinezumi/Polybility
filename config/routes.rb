@@ -35,4 +35,8 @@ end
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
+
+  scope '(:locale)', locale: /#{I18n.available_locales.map(&:to_s).join('|')}/ do
+    resources :posts, param: :slug
+  end
 end
