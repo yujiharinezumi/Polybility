@@ -66,6 +66,16 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 ## 検索機能
 * ransack
 
+## AWS
+* dotenv-rails
+* unicorn
+* mini_racer
+* capistrano
+* capistrano-bundler
+* capistrano-rails
+* capistrano-rbenv
+* capistrano3-unicorn
+
 ## デバッグ
 * pry-rails
 
