@@ -1,7 +1,8 @@
 # README
 
 # Polybility
-## https://dry-eyrie-92117.herokuapp.com/
+## https://dry-eyrie-92117.herokuapp.com/ (heroku)
+## http://52.193.252.2/ (EC2)
 ![アプリ](app/assets/images/poly_1.png)
 ![アプリ](app/assets/images/poly_2.png)
 
