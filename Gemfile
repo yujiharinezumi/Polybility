@@ -30,7 +30,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 #admin function
-gem 'rails_admin', '~> 2.0'
+gem 'rails_admin', '~> 2.0.1'
 gem 'cancancan'
 #sort function
 gem 'ransack'

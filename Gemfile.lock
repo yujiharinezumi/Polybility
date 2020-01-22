@@ -468,7 +468,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.3)
-  rails_admin (~> 2.0)
+  rails_admin (~> 2.0.1)
   ransack
   rspec-rails
   sass-rails (~> 5.0)
