@@ -88,6 +88,7 @@ p .profile-card {
 
 .user-buttons{
   display: flex;
+  margin-left:-7px;
 }
 .btn{
   margin:10px;
@@ -190,7 +191,7 @@ label .hobby_label {
 .pr-container {
   background-color: #ffeaea;
   width:70%;
-  height:800px;
+  height:830px;
   position: relative;
   margin:auto;
   border-radius: 30px;
@@ -220,7 +221,7 @@ label .hobby_label {
 
 .user-show-post-buttons{
   display: flex;
-  width:50%;
+  width:70%;
   margin:auto;
 }
 
@@ -232,7 +233,7 @@ label .hobby_label {
 
 .detail-button {
   margin:auto;
-  width:18%;
+  width:35%;
 }
 
 

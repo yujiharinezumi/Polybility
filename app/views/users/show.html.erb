@@ -17,9 +17,9 @@
     <p><%= t('users.introduction') %>: <%= @user.introduction %></p>
   </div>
   <% if current_user == @user %>
-    <p><%= link_to t('users.edit_profile'), edit_user_registration_url,id:"edit_button" %></p>
+    <p><%= link_to t('users.edit_profile'), edit_user_registration_url,id:"edit_button",class:"btn btn-pink" %></p>
   <% end %>
-  <p><%= link_to t('users.back_user'), users_path %></p>
+  <p><%= link_to t('users.back_user'), users_path,class:"btn btn-green" %></p>
 </div>
 
 <% @users.each do |user| %>
@@ -32,8 +32,8 @@
           <% end %>
         </div>
         <div class="post-content">
-          <p>title:<%= user.title %></p>
-          <p>content:<%= user.content %></p>
+          <p><%= user.title %></p>
+          <p><%= user.content %></p>
           <div class="detail-button">
             <span><%= link_to t('common.detail'), post_path(user.id),class:"btn btn-orange" %></span>
           </div>
