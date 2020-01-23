@@ -13,6 +13,46 @@
     <% end %>
   </div>
 </div>
+
+
+
+    <div class="flex-container">
+      <div class="post-card">
+        <div class="post-card__inner">
+          <div class="post-thumb">
+            <% if @post.image.url %>
+                <p><%= image_tag @post.image.url %></p>
+            <% end %>
+          </div>
+          <p><%= @post.title %></p>
+          <p><%= @post.content %></p>
+        </div>
+
+        <%= render partial: 'favorites/favorite' %>
+
+        <div class="post-index-detail"><%= link_to t('common.detail'), post_path(@post.id),class:"btn btn-orange" %></div>
+        <div class="post-button">
+          <% if @post.user.id == current_user.id %>
+            <span><%= link_to t('common.edit'), edit_post_path(@post.id), data: { confirm: t('common.edit?') },class:"btn btn-pink" %></span>
+            <span><%= link_to t('common.destroy'), post_path(@post.id), method: :delete, data: { confirm: t('common.delete?') },class:"btn btn-red" %></span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="comments_area">
   <%= render partial: 'comments/index', locals: { comments: @comments, post: @post } %>
 </div>

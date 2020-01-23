@@ -246,6 +246,8 @@ ja:
     do_favorite: "お気に入りする"
     delete_favorite: "お気に入り解除する"
     count_favorite: "お気に入りの数"
+    type_title: "タイトルを入力してください"
+    type_content: "内容を入力してください"
   messages:
     last: "以前のメッセージ"
     read: "既読"

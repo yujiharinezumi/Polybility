@@ -9,7 +9,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="form-group2">
     <div class="post_image">
       <%= f.label :image %>
@@ -17,18 +16,15 @@
     </div>
     <div class="blog_title">
       <%= f.label :title %>
-      <%= f.text_field :title,class:"form-control title" %>
+      <%= f.text_field :title,class:"form-control title",placeholder:t('posts.type_title') %>
     </div>
     <div class="post_content">
       <%= f.label :content %>
-      <%= f.text_field :content,class:"form-control content" %>
+      <%= f.text_field :content,class:"form-control content",placeholder:t('posts.type_content') %>
     </div>
-    <div class="post-button">
-    <%= f.submit class:" btn btn-green" %>
+    <div class="post-fome-buttons">
+      <%= f.submit class:" btn btn-green" %>
+      <%= link_to t('posts.back_post'), posts_path,class:"btn btn-orange" %>
     </div>
   </div>
-  <% end %>
-
-<div class="back_button">
-  <%= link_to t('posts.back_post'), posts_path,class:"btn btn-orange" %>
-</div>
+<% end %>

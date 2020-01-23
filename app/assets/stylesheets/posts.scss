@@ -103,7 +103,7 @@
 
 .post-show-container {
   position: relative;
-  background-color: white;
+  background-color: #ffead7;
   width:60%;
   height:600px;
   left:280px;
@@ -154,12 +154,6 @@
   margin:auto;
 }
 
-.post-button {
-  width:20%;
-  margin:auto;
-  margin-top:15px;
-}
-
 .post_image {
   width:50%;
   margin:auto;
@@ -169,6 +163,9 @@ h2  {
   text-align: center
 }
 
-.back_button {
-  text-align: center;
+.post-fome-buttons{
+  display: flex;
+  width:55%;
+  margin:auto;
+  margin-top:15px;
 }

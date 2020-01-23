@@ -19,26 +19,24 @@
 <div class="flex-container">
   <% @results.each do |result| %>
     <% if result.id != current_user.id %>
-      <div class="f-container">
-        <div class="profile-card">
-          <div class="profile-card__inner">
-            <div class="profile-thumb">
-              <p><%=link_to image_tag(result.icon.url),user_path(result.id)%></p>
-            </div>
-            <div class="profile-content">
-              <span class="profile-name"><%= link_to result.name,user_path(result.id) %></span>
-            </div>
-            <p><%= t('users.native') %>:<%= result.native_language %></p>
-            <p><%= t('users.learning') %>:<%= result.learning_language %></p>
-            <p>
-              <%= t('users.hobby') %>:<%result.labels.each do |label| %>
-                <%= label.hobby %>
-              <% end %>
-            </p>
-            <div class="user-buttons">
-              <%= render 'follow_form', user: result %>
-              <%= link_to t('users.message'), conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-green", method: :post %>
-            </div>
+      <div class="profile-card">
+        <div class="profile-card__inner">
+          <div class="profile-thumb">
+            <p><%=link_to image_tag(result.icon.url),user_path(result.id)%></p>
+          </div>
+          <div class="profile-content">
+            <span class="profile-name"><%= link_to result.name,user_path(result.id) %></span>
+          </div>
+          <p><%= t('users.native') %>:<%= result.native_language %></p>
+          <p><%= t('users.learning') %>:<%= result.learning_language %></p>
+          <p><%= t('users.hobby') %>:
+            <%result.labels.each do |label| %>
+              <%= label.hobby %>
+            <% end %>
+          </p>
+          <div class="user-buttons">
+            <%= render 'follow_form', user: result %>
+            <%= link_to t('users.message'), conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-green", method: :post %>
           </div>
         </div>
       </div>
