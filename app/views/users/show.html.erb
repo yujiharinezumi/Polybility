@@ -35,12 +35,12 @@
           <p>title:<%= user.title %></p>
           <p>content:<%= user.content %></p>
           <div class="detail-button">
-            <span><%= link_to t('common.detail'), post_path(user.id),class:"btn btn-success" %></span>
+            <span><%= link_to t('common.detail'), post_path(user.id),class:"btn btn-orange" %></span>
           </div>
           <div class="user-show-post-buttons">
             <% if @user == current_user %>
-              <span><%= link_to t('common.edit'), edit_post_path(user.id), data: { confirm: t('common.edit?') },class:"btn btn-info" %></span>
-              <span><%= link_to t('common.destroy'), post_path(user.id), method: :delete, data: { confirm: t('common.delete') },class:"btn btn-danger" %></span>
+              <span><%= link_to t('common.edit'), edit_post_path(user.id), data: { confirm: t('common.edit?') },class:"btn btn-pink" %></span>
+              <span><%= link_to t('common.destroy'), post_path(user.id), method: :delete, data: { confirm: t('common.delete') },class:"btn btn-red" %></span>
             <% end %>
           </div>
         </div>

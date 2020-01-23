@@ -1,6 +1,6 @@
 <div class="post-index-top">
   <h1><%= t('posts.index') %></h1>
-  <%= link_to t('posts.new_post'), new_post_path,class:"btn btn-success",id:"create_post" %>
+  <%= link_to t('posts.new_post'), new_post_path,class:"btn btn-green",id:"create_post" %>
 </div>
 <% @posts.each do |post| %>
     <div class="f-container">
@@ -18,11 +18,11 @@
           <p><%= post.title %></p>
           <p><%= post.content %></p>
         </div>
-        <div class="post-index-detail"><%= link_to t('common.detail'), post_path(post.id),class:"btn btn-success" %></div>
+        <div class="post-index-detail"><%= link_to t('common.detail'), post_path(post.id),class:"btn btn-orange" %></div>
         <div class="post-button">
           <% if post.user.id == current_user.id %>
-            <span><%= link_to t('common.edit'), edit_post_path(post.id), data: { confirm: t('common.edit?') },class:"btn btn-info" %></span>
-            <span><%= link_to t('common.destroy'), post_path(post.id), method: :delete, data: { confirm: t('common.delete?') },class:"btn btn-danger" %></span>
+            <span><%= link_to t('common.edit'), edit_post_path(post.id), data: { confirm: t('common.edit?') },class:"btn btn-pink" %></span>
+            <span><%= link_to t('common.destroy'), post_path(post.id), method: :delete, data: { confirm: t('common.delete?') },class:"btn btn-red" %></span>
           <% end %>
         </div>
       </div>

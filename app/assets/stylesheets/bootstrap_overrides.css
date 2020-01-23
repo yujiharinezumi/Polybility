@@ -1,0 +1,62 @@
+/* 通常のボタン色 */
+.btn-orange,
+.btn-orange.disabled, .btn-orange:disabled {
+  color: #fff;
+  background-color: #fb9238;
+}
+
+.btn-orange:hover {
+  color: #fff;
+}
+
+.btn-pink,
+.btn-pink.disabled, .btn-pink:disabled {
+  color: #fff;
+  background-color: #feaaff;
+}
+
+.btn-pink:hover {
+  color: #fff;
+}
+
+
+.btn-yellow,
+.btn-yellow.disabled, .btn-yellow:disabled {
+  color: #fff;
+  background-color: #cebe4c;
+}
+
+.btn-yellow:hover {
+  color: #fff;
+}
+
+.btn-green,
+.btn-green.disabled, .btn-green:disabled {
+  color: #fff;
+  background-color: #a8c503;
+}
+
+.btn-green:hover {
+  color: #fff;
+}
+
+.btn-blue,
+.btn-blue.disabled, .btn-blue:disabled {
+  color: #fff;
+  background-color: #53cfea;
+}
+
+.btn-blue:hover {
+  color: #fff;
+}
+
+
+.btn-red,
+.btn-red.disabled, .btn-red:disabled {
+  color: #fff;
+  background-color: #f95747;
+}
+
+.btn-red:hover {
+  color: #fff;
+}

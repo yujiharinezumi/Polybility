@@ -11,7 +11,7 @@
   </div>
 </div>
   <div class="actions search_button">
-    <%= f.submit t('users.search'),name:'search',class:"btn btn-info" %>
+    <%= f.submit t('users.search'),name:'search',class:"btn btn-blue" %>
     <p><%= link_to t('users.index'), users_path %></p>
   </div>
 <% end %>
@@ -37,7 +37,7 @@
             </p>
             <div class="user-buttons">
               <%= render 'follow_form', user: result %>
-              <%= link_to t('users.message'), conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-success", method: :post %>
+              <%= link_to t('users.message'), conversations_path(sender_id: current_user.id, recipient_id: result.id),class:"btn btn-green", method: :post %>
             </div>
           </div>
         </div>
