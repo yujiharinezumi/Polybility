@@ -12,7 +12,8 @@
 .btn-pink,
 .btn-pink.disabled, .btn-pink:disabled {
   color: #fff;
-  background-color: #feaaff;
+  background-color: #feb2ff;
+
 }
 
 .btn-pink:hover {
