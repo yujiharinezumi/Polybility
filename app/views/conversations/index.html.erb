@@ -3,13 +3,13 @@
   <% @conversations.each do |conversation| %>
     <% if conversation.target_user(current_user).present? %>
       <div class="follow-card">
-        <div class="follow-card__inner">
-          <div class="follow-thumb">
+        <div class="profile-card__inner">
+          <div class="profile-thumb">
             <p><%= link_to image_tag(conversation.target_user(current_user).icon.url,class:"conversation-icon"), conversation_messages_path(conversation)%></p>
           </div>
         </div>
-        <div class="follow-content">
-          <span class="follow-name"><%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%></span>
+        <div class="profile-content">
+          <span class="profile-name"><%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%></span>
         </div>
       </div>
     <% end %>

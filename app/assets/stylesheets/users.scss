@@ -2,10 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// プロフィールカード index
+// profile card index
 p .profile-card {
   text-align: center;
 }
+
 .profile-card{
   width: 100%;
   max-width:300px;
@@ -92,6 +93,7 @@ p .profile-card {
   margin:10px;
 }
 
+// search_form
 .search_form {
   width:50%;
   margin:auto;
@@ -108,7 +110,6 @@ p .profile-card {
   margin-bottom: 15px;
 }
 
-
 .search_form .select_language {
   width:60%;
   margin:10px;
@@ -123,17 +124,19 @@ label .hobby_label {
   text-align: center;
 }
 
+//pagenation
+
 .page {
   width:30%;
   margin:auto;
 }
 
-// ------ここまで
 
 
-// signup
 
-//背景画像　画面いっぱいに
+// signup view
+
+//背景画像 画面いっぱいに
 .box {
   width: 100vw;
   height: 100vh;
@@ -144,7 +147,8 @@ label .hobby_label {
   position: relative;
 }
 
-//新規登録フォーム
+//signup_form
+
 .box-container {
   opacity: 0.8;
   width: 40%;
@@ -154,6 +158,7 @@ label .hobby_label {
   margin-top:50px;
   margin-right: 50px;
 }
+
 .box-container .field {
   margin:10px;
 }
@@ -161,7 +166,6 @@ label .hobby_label {
 .signup-text {
   margin:auto;
   width:10%
-
 }
 
 .none {
@@ -174,9 +178,7 @@ label .hobby_label {
   max-height: 140px;
 }
 
-
-
-// ログインフォーム
+// login form
 .box2 {
   width: 100vw;
   height: 100vh;
@@ -187,7 +189,7 @@ label .hobby_label {
   position: relative;
 }
 
-//user show 画面
+//user show
 .pr-container {
   background-color: #ffeaea;
   width:70%;
@@ -202,7 +204,6 @@ label .hobby_label {
 .stats {
   text-align: center;
 }
-
 
 .proicon {
   margin-top:20px;
@@ -238,7 +239,7 @@ label .hobby_label {
 }
 
 
-// ユーザー編集画面
+// user_edit view
 .pr-edit-container {
   position: relative;
   background-color: #ffeaea;
@@ -260,7 +261,6 @@ label .hobby_label {
   margin:auto;
   width:50%
 }
-
 
 .serch_box{
   margin-left:150px;

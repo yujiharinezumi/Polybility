@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-//フォローのshow
+//following follower conversation's profilecard show
 
 p .follow-card {
   text-align: center;
@@ -32,41 +32,4 @@ p .follow-card {
   top:-30%;
   left:-15%;
   z-index: 0;
-}
-
-.follow-card__inner{
- position: relative;
- width:240px;
-}
-
-.follow-thumb{
-  overflow: hidden;
-  width: 110px;
-  height: 110px;
-  border: #fff 3px solid;
-  border-radius: 55px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  background: #fff;
-}
-
-.follow-thumb img{
-  display: block;
-    width: 100%;
-    height: auto;
-}
-
-.follow-content{
-  padding: 15px;
-}
-
-.follow-content span{
-  display: block;
-}
-
-.follow-name{
-  margin-bottom: 3px;
-  font-weight: bold;
-  text-align: center;
 }

@@ -2,12 +2,12 @@
 <div class="flex-container">
     <% @user.followers.each do |user| %>>
       <div class="follow-card">
-        <div class="follow-card__inner">
-          <div class="follow-thumb">
+        <div class="profile-card__inner">
+          <div class="profile-thumb">
             <p><%=link_to image_tag(user.icon.url),user_path(user.id)%></p>
           </div>
-          <div class="follow-content">
-            <span class="follow-name"><%= link_to user.name,user_path(user.id) %></span>
+          <div class="profile-content">
+            <span class="profile-name"><%= link_to user.name,user_path(user.id) %></span>
           </div>
         </div>
       </div>
