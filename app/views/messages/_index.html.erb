@@ -8,9 +8,13 @@
           <div class="balloon3">
         <% end %>
         <div class="content">
-          <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
+          <div class="header">
+            <strong><%= message.user.name %></strong><%= message.message_time %>
+          </div>
           <div class="list">
-            <div><%= link_to image_tag(message.user.icon.url,class:"icon"),user_path(message.user.id) %></div>
+            <div>
+              <%= link_to image_tag(message.user.icon.url,class:"icon"),user_path(message.user.id) %>
+            </div>
             <span id="message<%= @message.id %>"><%= message.body %></span>
             <% if message.user == current_user %>
               <%= message.read ? t('messages.read') : t('messages.unread') %>

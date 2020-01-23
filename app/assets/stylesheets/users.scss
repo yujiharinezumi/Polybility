@@ -137,7 +137,7 @@ label .hobby_label {
 //背景画像 画面いっぱいに
 .box {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -179,7 +179,6 @@ label .hobby_label {
 // login form
 .box2 {
   width: 100vw;
-  height: 100vh;
   min-height: 100vh;
   background-size: cover;
   background-position: center;

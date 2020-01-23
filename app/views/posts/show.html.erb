@@ -28,7 +28,6 @@
   <%= render partial: 'comments/index', locals: { comments: @comments, post: @post } %>
 </div>
 <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
-
 <p class="post-back">
   <%= link_to t('posts.back_post'), posts_path,class:"btn btn-orange" %>
 </p>

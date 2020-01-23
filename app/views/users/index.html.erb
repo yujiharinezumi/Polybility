@@ -1,21 +1,19 @@
 <h1><%= t('users.index') %></h1>
 <%= search_form_for @search do |f| %>
-<div class="search_form">
-  <div class="label_form">
-    <%= f.select :labels_id_eq, @labels.collect {|label| [label.hobby,label.id]} , {include_blank: t('users.hobby_search')}, {class: 'form-control select_hobby',id:"hobby"} %>
+  <div class="search_form">
+    <div class="label_form">
+      <%= f.select :labels_id_eq, @labels.collect {|label| [label.hobby,label.id]} , {include_blank: t('users.hobby_search')}, {class: 'form-control select_hobby',id:"hobby"} %>
+    </div>
+    <div class="form-inline serch_box">
+      <%= f.select :native_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: t('users.native_search')}, {class: 'form-control select_language',id:"native"} %>
+      <%= f.select :learning_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: t('users.learning_search')}, {class: 'form-control select_language',id:"learning"} %>
+    </div>
   </div>
-
-  <div class="form-inline serch_box">
-    <%= f.select :native_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: t('users.native_search')}, {class: 'form-control select_language',id:"native"} %>
-    <%= f.select :learning_language_eq,@languages.collect {|nl| [nl.name]} , {include_blank: t('users.learning_search')}, {class: 'form-control select_language',id:"learning"} %>
-  </div>
-</div>
   <div class="actions search_button">
     <%= f.submit t('users.search'),name:'search',class:"btn btn-blue" %>
     <p><%= link_to t('users.index'), users_path,class:"btn btn-green" %></p>
   </div>
 <% end %>
-
 <div class="flex-container">
   <% @results.each do |result| %>
     <% if result.id != current_user.id %>

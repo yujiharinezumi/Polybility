@@ -3,28 +3,30 @@
   <%= link_to t('posts.new_post'), new_post_path,class:"btn btn-green",id:"create_post" %>
 </div>
 <% @posts.each do |post| %>
-    <div class="flex-container">
-      <div class="post-card">
-        <div class="post-card__inner">
-          <div class="post-thumb">
-            <% if post.image.url %>
-              <p><%=link_to image_tag(post.image.url,class:"index-img"),post_path(post.id)%></p>
-            <% end %>
-          </div>
-          <div class="post-content">
-            <%= link_to image_tag(post.user.icon.url,class:"post-icon"),user_path(post.user.id) %>
-            <%= link_to post.user.name,user_path(post.user.id) %>
-          </div>
-          <p><%= post.title %></p>
-          <p><%= post.content %></p>
-        </div>
-        <div class="post-index-detail"><%= link_to t('common.detail'), post_path(post.id),class:"btn btn-orange" %></div>
-        <div class="post-button">
-          <% if post.user.id == current_user.id %>
-            <span><%= link_to t('common.edit'), edit_post_path(post.id), data: { confirm: t('common.edit?') },class:"btn btn-pink" %></span>
-            <span><%= link_to t('common.destroy'), post_path(post.id), method: :delete, data: { confirm: t('common.delete?') },class:"btn btn-red" %></span>
+  <div class="flex-container">
+    <div class="post-card">
+      <div class="post-card__inner">
+        <div class="post-thumb">
+          <% if post.image.url %>
+            <p><%=link_to image_tag(post.image.url,class:"index-img"),post_path(post.id)%></p>
           <% end %>
         </div>
+        <div class="post-content">
+          <%= link_to image_tag(post.user.icon.url,class:"post-icon"),user_path(post.user.id) %>
+          <%= link_to post.user.name,user_path(post.user.id) %>
+        </div>
+        <p><%= post.title %></p>
+        <p><%= post.content %></p>
+      </div>
+      <div class="post-index-detail">
+        <%= link_to t('common.detail'), post_path(post.id),class:"btn btn-orange" %>
+      </div>
+      <div class="post-button">
+        <% if post.user.id == current_user.id %>
+          <span><%= link_to t('common.edit'), edit_post_path(post.id), data: { confirm: t('common.edit?') },class:"btn btn-pink" %></span>
+          <span><%= link_to t('common.destroy'), post_path(post.id), method: :delete, data: { confirm: t('common.delete?') },class:"btn btn-red" %></span>
+        <% end %>
       </div>
     </div>
-  <% end %>
+  </div>
+<% end %>
