@@ -8,6 +8,9 @@
         </div>
         <div class="profile-content">
           <span class="profile-name"><%= link_to user.name,user_path(user.id) %></span>
+          <div class="message_button">
+            <%= link_to t('users.message'), conversations_path(sender_id: current_user.id, recipient_id: user.id),class:"btn btn-green", method: :post %>
+          </div>
         </div>
       </div>
     </div>

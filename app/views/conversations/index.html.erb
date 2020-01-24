@@ -2,7 +2,7 @@
 <div class="flex-container">
   <% @conversations.each do |conversation| %>
     <% if conversation.target_user(current_user).present? %>
-      <div class="follow-card">
+      <div class="chat-card">
         <div class="profile-card__inner">
           <div class="profile-thumb">
             <p><%= link_to image_tag(conversation.target_user(current_user).icon.url,class:"conversation-icon"), conversation_messages_path(conversation)%></p>
