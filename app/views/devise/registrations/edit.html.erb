@@ -64,8 +64,8 @@
         </div>
       <% end %>
       <div class="field">
-        <p><%= t('common.cancel_account') %><%= button_to t('users.delete_account'), registration_path(resource_name), data: { confirm: t('users.are_you_sure') }, method: :delete,class:"btn btn-red" %></p>
-        <%= link_to t(users.back_profile), user_path(@user.id) %>
+        <p><%= t('users.cancel_account') %><%= button_to t('users.delete_account'), registration_path(resource_name), data: { confirm: t('common.are_you_sure') }, method: :delete,class:"btn btn-red" %></p>
+        <%= link_to t('users.back_profile'), user_path(@user.id) %>
       </div>
     </div>
   </div>
