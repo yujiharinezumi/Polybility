@@ -2,11 +2,11 @@ require 'rails_helper'
 require 'support/utilities'
 
 RSpec.describe 'Conversations', type: :system do
-   before do
-     @user1 = FactoryBot.create(:user_first)
-     @user2 = FactoryBot.create(:user_second)
-     log_in @user1
-   end
+  before do
+    @user1 = FactoryBot.create(:user_first)
+    @user2 = FactoryBot.create(:user_second)
+    log_in @user1
+  end
 
   it 'ユーザーを削除した時履歴が消えるテスト' do
     click_on 'メッセージ'

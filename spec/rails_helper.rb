@@ -8,7 +8,7 @@ require File.expand_path('../config/environment', __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 
-
+# sns認証のテストをするための準備
 OmniAuth.configure do |c|
   c.test_mode = true
   c.mock_auth[:facebook] = OmniAuth::AuthHash.new({
@@ -16,21 +16,10 @@ OmniAuth.configure do |c|
     uid: '1234567890',
     info: {
       name: "facebook_user",
-      email: "email"
+      email: "f@gmail.com"
     },
     credentials: {
-      token: 'hogepiyo1234'
-    }
-  })
-  c.mock_auth[:line] = OmniAuth::AuthHash.new({
-    provider: 'line',
-    uid: '1234567890',
-    info: {
-      name: "line_user",
-      email: "email"
-    },
-    credentials: {
-      token: 'hogepiyo1234'
+      token: 'testtest'
     }
   })
 end

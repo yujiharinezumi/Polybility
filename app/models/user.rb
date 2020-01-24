@@ -5,16 +5,13 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :active_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
   has_many :passive_relationships, foreign_key: 'followed_id', class_name: 'Relationship', dependent: :destroy
-
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
   has_many :labelings, dependent: :destroy
   has_many :labels, through: :labelings
   has_many :messages, dependent: :destroy
-
   has_many :sender_conversations, foreign_key: 'sender_id', class_name: 'Conversation', dependent: :destroy
   has_many :recipient_conversations, foreign_key: 'recipient_id', class_name: 'Conversation', dependent: :destroy
-
   validates :name, presence: true,length: {maximum: 35}
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
@@ -45,7 +42,6 @@ class User < ApplicationRecord
       end
     end
 
-
     def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
         user.email = auth.info.email
@@ -57,7 +53,6 @@ class User < ApplicationRecord
         # user.skip_confirmation!
       end
     end
-
 
     private
 

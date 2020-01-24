@@ -12,7 +12,7 @@ RSpec.describe 'Comments', type: :system do
    end
 
    it '投稿にコメントをするテスト' do
-      visit post_path(@post3)
+     visit post_path(@post3)
      expect(page).to have_content('投稿詳細')
      fill_in('comment_content',with:"いいね！")
      click_on 'post_comment'
@@ -20,7 +20,7 @@ RSpec.describe 'Comments', type: :system do
    end
 
    it '自分のコメントを編集して更新するテスト' do
-      visit post_path(@post3)
+     visit post_path(@post3)
      expect(page).to have_content('投稿詳細')
      fill_in('comment_content',with:"いいね！")
      click_on 'post_comment'
@@ -30,7 +30,7 @@ RSpec.describe 'Comments', type: :system do
    end
 
    it '自分のコメントを編集が失敗するテスト' do
-      visit post_path(@post3)
+     visit post_path(@post3)
      expect(page).to have_content('投稿詳細')
      fill_in('comment_content',with:"いいね！")
      click_on 'post_comment'
@@ -38,14 +38,13 @@ RSpec.describe 'Comments', type: :system do
      fill_in('edit_comment',with:"")
      click_on '更新'
      expect(page).to have_content('Contentを入力してください')
-
    end
 
-    it 'コメントを削除するテスト' do
-      visit post_path(@post3)
-      expect(page).to have_content('投稿詳細')
-      fill_in('comment_content',with:"いいね！")
-      click_on 'post_comment'
-      click_on '削除'
-    end
+   it 'コメントを削除するテスト' do
+     visit post_path(@post3)
+     expect(page).to have_content('投稿詳細')
+     fill_in('comment_content',with:"いいね！")
+     click_on 'post_comment'
+     click_on '削除'
+   end
 end

@@ -49,7 +49,7 @@ gem 'dotenv-rails'
 gem 'unicorn' # アプリケーションサーバのunicorn
 gem 'mini_racer', platforms: :ruby # デプロイ時に必要
 
-
+# Other
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'rails-i18n'
 

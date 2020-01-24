@@ -1,12 +1,10 @@
 class UsersController < ApplicationController
-
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-
   def index
-     if params[:search]
-       @results = User.ransack(params[:q]).result.page(params[:page]).per(8)
+    if params[:search]
+      @results = User.ransack(params[:q]).result.page(params[:page]).per(8)
     else
       @results = User.all.page(params[:page]).per(8)
     end
@@ -18,8 +16,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @users = @user.posts
-
-
   end
 
   def following
