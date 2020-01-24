@@ -24,7 +24,6 @@ RSpec.describe Post, type: :model do
       expect(post).not_to be_valid
     end
 
-
   it "title,contentが記載されている場合バリデーションが通る" do
     post = Post.new(title: 'hello', content: 'hellohello', image:"default.jpg",user_id: @user.id)
     expect(post).to be_valid

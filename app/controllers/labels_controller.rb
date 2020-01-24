@@ -7,7 +7,7 @@ class LabelsController < ApplicationController
   def create
     @label = Label.new(label_params)
     if @label.save
-      redirect_to labels_path,success:"ラベルを作成しました。"
+      redirect_to labels_path,success: t('labels.created')
     else
       render :new
     end
@@ -15,7 +15,7 @@ class LabelsController < ApplicationController
 
   def destroy
     @label.destroy
-    redirect_to labels_path,notice:"ラベルを削除しました。"
+    redirect_to labels_path,notice: t('labels.deleted')
   end
 
   private

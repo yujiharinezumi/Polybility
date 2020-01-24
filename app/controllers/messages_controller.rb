@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
       if @message.save
         format.js { render :index }
       else
-        format.html { redirect_to conversation_messages_path, notice: '投稿できませんでした...' }
+        format.html { redirect_to conversation_messages_path, notice: t('messages.cannot') }
       end
     end
   end

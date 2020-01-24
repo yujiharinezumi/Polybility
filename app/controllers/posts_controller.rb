@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to posts_path, notice:"投稿を完了しました！"
+      redirect_to posts_path, notice: t('posts.finished')
     else
       render :new
     end
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to posts_path, notice: "投稿を編集しました！"
+      redirect_to posts_path, notice: t('posts.edited')
     else
       render :edit
     end
@@ -40,12 +40,12 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path, notice:"投稿を削除しました！"
+    redirect_to posts_path, notice: t('posts.deleted')
   end
 
   def check_user
     if @post.user.id != current_user.id
-      redirect_to posts_path, notice:"権限がありません！"
+      redirect_to posts_path, notice: t('posts.not_authenticate')
     end
   end
 

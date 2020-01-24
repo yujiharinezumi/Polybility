@@ -258,11 +258,16 @@ ja:
     count_favorite: "お気に入りの数"
     type_title: "タイトルを入力してください"
     type_content: "内容を入力してください"
+    finished: "投稿を完了しました！"
+    edited: "投稿を編集しました！"
+    deleted: "投稿を削除しました！"
+    not_authenticate: "権限がありません！"
   messages:
     last: "以前のメッセージ"
     read: "既読"
     unread: "未読"
     send: "メッセージを送る"
+    cannot: "送信できませんでした…"
   nav:
     user: "ユーザー"
     post: "投稿"
@@ -278,5 +283,12 @@ ja:
     admin: "管理者"
   favorite:
     index: "お気に入り一覧"
+    favorited: "さんの投稿をお気に入り登録しました"
+    unfavorited: "さんの投稿をお気に入り解除しました"
   conversation:
     talkroom: "トークルーム"
+  labels:
+    created: "ラベルを作成しました。"
+    deleted: "ラベルを削除しました。"
+  comments:
+    cannot: "投稿できませんでした..." 
