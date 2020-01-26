@@ -2,6 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$pc: 1500px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
 // profile card index
 p .profile-card {
   text-align: center;
@@ -22,20 +43,20 @@ p .profile-card {
 }
 
 .profile-card:before{
- width:135%;
- height:257px;
- content:"";
- transform:skew(-5deg,42deg);
- background: #FFD1AE; /*斜め背景の色*/
- position:  absolute;
- top:-30%;
- left:-15%;
- z-index: 0;
+  width:135%;
+  height:257px;
+  content:"";
+  transform:skew(-5deg,42deg);
+  background: #FFD1AE; /*斜め背景の色*/
+  position:  absolute;
+  top:-30%;
+  left:-15%;
+  z-index: 0;
 }
 
 .profile-card__inner{
- position: relative;
- width:240px;
+  position: relative;
+  width:240px;
 }
 
 .profile-thumb{
@@ -136,24 +157,66 @@ label .hobby_label {
 
 //背景画像 画面いっぱいに
 .box {
-  width: 100vw;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-image: image-url("pic1.jpg");
-  position: relative;
+  @include pc {
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: image-url("pic1.jpg");
+    position: relative;
+  };
+  @include sp{
+    width: 100vw;
+    min-height: 110vh;
+    background-size: cover;
+    background-position: center;
+    background-image: image-url("pic1.jpg");
+    position: relative;
+  };
 }
-
 //signup_form
 
 .box-container {
-  opacity: 0.8;
-  width: 40%;
-  height: 380px;
-  margin-left: auto;
-  text-align: center;
-  margin-top:50px;
-  margin-right: 50px;
+  @include pc {
+    opacity: 0.8;
+    width: 40%;
+    height: 380px;
+    margin-left: auto;
+    text-align: center;
+    margin-top:50px;
+    margin-right: 50px;
+  };
+  @include sp {
+    opacity: 0.8;
+    width: 100%;
+    height: 380px;
+    margin-left: auto;
+    text-align: center;
+    margin-right: 45px;
+    margin-top:15px;
+    margin-bottom:100px;
+  };
+}
+
+.box-container2 {
+  @include pc {
+    opacity: 0.8;
+    width: 40%;
+    height: 380px;
+    margin-left: auto;
+    text-align: center;
+    margin-top:50px;
+    margin-right: 50px;
+  };
+  @include sp {
+    opacity: 0.8;
+    width: 80%;
+    height: 380px;
+    margin-left: auto;
+    text-align: center;
+    margin-right: 45px;
+    margin-top:25px;
+  };
 }
 
 .box-container .field {
@@ -161,12 +224,24 @@ label .hobby_label {
 }
 
 .signup-text {
-  margin:auto;
-  width:10%
+  @include pc {
+    margin:auto;
+    width:10%
+  };
+  @include sp {
+    margin:auto;
+    width:100%;
+  };
 }
 
 .none {
-  display: none;
+  @include pc{
+    display: none;
+  };
+  @include sp{
+    display: none;
+    width:90%;
+  };
 }
 
 #img_prev {

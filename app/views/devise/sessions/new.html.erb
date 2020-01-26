@@ -1,9 +1,9 @@
 <div class="box2">
   <h2 class="signup-text"><%= t('users.login') %></h2>
-  <div class="box-container">
+  <div class="box-container2">
     <div class="form-horizontal" role="form">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
+        <div class="field email_form">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control",placeholder:"email" %>
         </div>
