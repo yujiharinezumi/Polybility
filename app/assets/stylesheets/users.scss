@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$pc: 1500px; // PC
+$pc: 1400px; // PC
 $tab: 680px; // タブレット
 $sp: 480px;  // スマホ
 
@@ -24,9 +24,6 @@ $sp: 480px;  // スマホ
 
 
 // profile card index
-p .profile-card {
-  text-align: center;
-}
 
 .profile-card{
   width: 100%;
@@ -85,21 +82,15 @@ p .profile-card {
   display: block;
 }
 
+.profile-card p{
+  text-align: center;
+}
+
+
 .profile-name{
   margin-bottom: 3px;
   font-weight: bold;
   text-align: center;
-}
-
-.profile-job{
-  margin-bottom: 10px;
-  color: #ccc;
-  font-size: 10px;
-  text-align: center;
-}
-
-.profile-intro{
-  font-size: 12px;
 }
 
 .flex-container {
@@ -111,14 +102,21 @@ p .profile-card {
   display: flex;
   margin-left:-7px;
 }
+
 .btn{
   margin:10px;
 }
 
 // search_form
 .search_form {
-  width:50%;
-  margin:auto;
+  @include pc{
+    width:50%;
+    margin:auto;
+  };
+  @include sp{
+    width:100%;
+    margin:auto;
+  };
 }
 
 .search_button{
@@ -133,13 +131,26 @@ p .profile-card {
 }
 
 .search_form .select_language {
-  width:60%;
-  margin:10px;
+  @include pc{
+    width:60%;
+    margin:10px;
+  };
+  @include sp{
+    width:73%;
+    margin:10px;
+  };
 }
 
 .search_form .select_hobby {
-  width:30%;
-  margin:auto;
+  @include pc{
+    width:30%;
+    margin:auto;
+  };
+  @include sp{
+    width:60%;
+    margin:auto;
+  };
+
 }
 
 label .hobby_label {
@@ -149,8 +160,14 @@ label .hobby_label {
 //pagenation
 
 .page {
-  width:30%;
-  margin:auto;
+  @include pc{
+    width:30%;
+    margin:auto;
+  };
+  @include sp{
+    width:50%;
+    margin:auto;
+  };
 }
 
 // signup view
@@ -334,5 +351,11 @@ label .hobby_label {
 }
 
 .serch_box{
-  margin-left:150px;
+  @include pc{
+    margin-left:150px;
+  };
+
+  @include sp{
+    margin-left:65px;
+  };
 }
