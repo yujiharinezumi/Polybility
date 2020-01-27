@@ -22,9 +22,9 @@
       <%= f.label :content %>
       <%= f.text_field :content,class:"form-control content",placeholder:t('posts.type_content') %>
     </div>
-    <div class="post-fome-buttons">
+    <div class="post-form-buttons">
       <%= f.submit class:" btn btn-green" %>
-      <%= link_to t('posts.back_post'), posts_path,class:"btn btn-orange" %>
+      <%= link_to t('posts.back_post'), posts_path,class:"btn btn-orange back-index" %>
     </div>
   </div>
 <% end %>

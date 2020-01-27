@@ -26,17 +26,33 @@ $sp: 480px;  // スマホ
 // profile card index
 
 .profile-card{
-  width: 100%;
-  max-width:300px;
-  position: relative;
-  background: #fdf8ea; /*背景の色*/
-  box-shadow: 0px 1px 3px rgba(0,0,0,.18);
-  overflow: hidden;
-  margin:10px;
-  padding:30px;
-  margin-left: 40px;
-  border-radius: 30px;
-  max-height: 420px;
+  @include pc{
+    width: 100%;
+    max-width:300px;
+    position: relative;
+    background: #fdf8ea; /*背景の色*/
+    box-shadow: 0px 1px 3px rgba(0,0,0,.18);
+    overflow: hidden;
+    margin:10px;
+    padding:30px;
+    margin-left: 40px;
+    border-radius: 30px;
+    max-height: 420px;
+  };
+  @include sp{
+    width: 100%;
+    max-width:300px;
+    position: relative;
+    background: #fdf8ea; /*背景の色*/
+    box-shadow: 0px 1px 3px rgba(0,0,0,.18);
+    overflow: hidden;
+    margin:10px;
+    padding:30px;
+    margin-left: 55px;
+    border-radius: 30px;
+    max-height: 420px;
+  };
+
 }
 
 .profile-card:before{
@@ -279,14 +295,27 @@ label .hobby_label {
 
 //user show
 .pr-container {
-  background-color: #ffeaea;
-  width:70%;
-  height:830px;
-  position: relative;
-  margin:auto;
-  border-radius: 30px;
-  box-shadow: 0 0 8px #fdb8b8;
-  margin-bottom: 20px;
+  @include pc{
+    background-color: #ffeaea;
+    width:70%;
+    height:830px;
+    position: relative;
+    margin:auto;
+    border-radius: 30px;
+    box-shadow: 0 0 8px #fdb8b8;
+    margin-bottom: 20px;
+  };
+  @include sp{
+    background-color: #ffeaea;
+    width:90%;
+    height:790px;
+    position: relative;
+    margin:auto;
+    border-radius: 30px;
+    box-shadow: 0 0 8px #fdb8b8;
+    margin-bottom: 30px;
+  };
+
 }
 
 .stats {
@@ -294,11 +323,21 @@ label .hobby_label {
 }
 
 .proicon {
-  margin-top:20px;
-  max-height: 300px;
-  border-radius: 50%;
-  background-color: white;
-  border: solid 3px #ffd0a5;
+  @include pc{
+    margin-top:20px;
+    max-height: 300px;
+    border-radius: 50%;
+    background-color: white;
+    border: solid 3px #ffd0a5;
+  };
+  @include sp{
+    margin-top:20px;
+    max-height: 250px;
+    border-radius: 50%;
+    background-color: white;
+    border: solid 3px #ffd0a5;
+  };
+
 }
 
 .pr-container p {
@@ -329,14 +368,27 @@ label .hobby_label {
 
 // user_edit view
 .pr-edit-container {
-  position: relative;
-  background-color: #ffeaea;
-  width:60%;
-  margin:auto;
-  height:1150px;
-  box-shadow: 0 0 8px #fdb8b8;
-  border-radius: 30px;
-  margin-bottom: 40px;
+  @include pc{
+    position: relative;
+    background-color: #ffeaea;
+    width:60%;
+    margin:auto;
+    height:1150px;
+    box-shadow: 0 0 8px #fdb8b8;
+    border-radius: 30px;
+    margin-bottom: 40px;
+  };
+  @include sp{
+    position: relative;
+    background-color: #ffeaea;
+    width:90%;
+    margin:auto;
+    height:1220px;
+    box-shadow: 0 0 8px #fdb8b8;
+    border-radius: 30px;
+    margin-bottom: 40px;
+  };
+
 }
 
 .pr-edit-container .form-control {
@@ -345,9 +397,16 @@ label .hobby_label {
 }
 
 .pr-edit-container .field {
-  text-align: center;
-  margin:auto;
-  width:50%
+  @include pc{
+    text-align: center;
+    margin:auto;
+    width:50%
+  };
+  @include sp{
+    text-align: center;
+    margin:auto;
+    width:95%
+  };
 }
 
 .serch_box{
@@ -356,6 +415,7 @@ label .hobby_label {
   };
 
   @include sp{
-    margin-left:65px;
+    margin-left:73px;
+    margin-top:10px;
   };
 }

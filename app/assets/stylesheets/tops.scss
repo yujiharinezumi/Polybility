@@ -174,7 +174,7 @@ section {
     width: 100%;
     justify-content: space-between;
     margin: 0 auto;
-    margin-bottom:100px;
+    // margin-bottom:100px;
     align-items: center;
   };
 }
@@ -241,13 +241,21 @@ section {
 #work1 img{
   @include sp{
     width:100%;
+    border-radius: 0%;
   };
 }
 
 #work2{
   @include sp{
     position: absolute;
-  top:763px;
+    top:763px;
+  };
+}
+
+#work2 img{
+  @include sp{
+    width:100%;
+    border-radius: 0%;
   };
 }
 
@@ -258,6 +266,12 @@ section {
   };
 }
 
+#work3 img{
+  @include sp{
+    width:100%;
+    border-radius: 0%;
+  };
+}
 
 .top-work ul  li figure{
   margin: 0;

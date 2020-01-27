@@ -2,6 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$pc: 1500px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
 
 .balloon1 {
   position: relative;
@@ -76,6 +95,27 @@
 
 // コメント入力欄
 .comment-form {
-  margin:auto;
-  width:15%;
+  @include pc{
+    margin:auto;
+    width:15%;
+  };
+  @include sp {
+    margin:auto;
+    width:70%;
+  };
+}
+
+#post_comment{
+  @include sp{
+    width:100%;
+    height: 38px;
+  };
+}
+
+
+#comment_content {
+  @include sp{
+    width:100%;
+    height:70px;
+  };
 }
