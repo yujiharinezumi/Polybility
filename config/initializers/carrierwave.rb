@@ -23,5 +23,8 @@ CarrierWave.configure do |config|
     when 'development'
       config.fog_directory = 'polybility-develop'
       config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/polybility-develop'
+    when 'test'
+      config.fog_directory = 'polybility-test'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/polybility-test'
   end
 end

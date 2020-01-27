@@ -18,8 +18,8 @@
     </div>
     <div class="post-button">
       <% if @post.user.id == current_user.id %>
-        <span><%= link_to t('common.edit'), edit_post_path(@post.id), data: { confirm: t('common.edit?') },class:"btn btn-pink" %></span>
-        <span><%= link_to t('common.destroy'), post_path(@post.id), method: :delete, data: { confirm: t('common.delete?') },class:"btn btn-red" %></span>
+        <span><%= link_to t('common.edit'), edit_post_path(@post.id), data: { confirm: t('common.edit?') },class:"btn btn-pink",id:"edit_post" %></span>
+        <span><%= link_to t('common.destroy'), post_path(@post.id), method: :delete, data: { confirm: t('common.delete?') },class:"btn btn-red",id:"delete_post" %></span>
       <% end %>
     </div>
   </div>

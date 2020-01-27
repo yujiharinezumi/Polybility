@@ -57,7 +57,7 @@ RSpec.describe 'Users', type: :system do
        click_button 'commit'
        expect(page).to have_content 'アカウント登録が完了しました。プロフィールを充実させましょう！'
      end
-   end
+    end
 
    describe 'ログインのテスト' do
      before do
