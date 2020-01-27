@@ -412,15 +412,3 @@ footer .top-content-wrapper {
 //     @content;
 //   }
 // }
-//
-// .box {
-//   @include pc {
-//     background-color: red;
-//   };
-//   @include tab {
-//     background-color: blue;
-//   };
-//   @include sp {
-//     background-color: yellow;
-//   };
-// }
