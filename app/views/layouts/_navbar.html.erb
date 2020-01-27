@@ -33,6 +33,22 @@
           <%= link_to t('nav.login'), new_user_session_path,class:"white" %>
         </li>
       <% end %>
+
+      <% if I18n.locale.to_s == "en" %>
+        <li class="nav-item nav-link">
+          <%= link_to( t('languages.japanese'), :locale => 'ja',class:"white") %>
+        </li>
+        <li class="nav-item nav-link">
+          <%= link_to( t('languages.chinese'), :locale => 'zh',class:"white") %>
+        </li>
+      <% else %>
+        <li class="nav-item nav-link">
+          <%= link_to( t('languages.english'), :locale => 'en',class:"white") %>
+        </li>
+        <li class="nav-item nav-link">
+          <%= link_to( t('languages.chinese'), :locale => 'zh',class:"white") %>
+        </li>
+      <% end %>
     </ul>
 
     <form class="form-inline my-2 my-lg-0">

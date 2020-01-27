@@ -291,4 +291,8 @@ ja:
     created: "ラベルを作成しました。"
     deleted: "ラベルを削除しました。"
   comments:
-    cannot: "投稿できませんでした..." 
+    cannot: "投稿できませんでした..."
+  languages:
+    japanse: "日本語"
+    english: "英語"
+    chinese: "中国語"

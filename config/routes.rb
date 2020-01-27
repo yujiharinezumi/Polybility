@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  scope '(:locale)', locale: /#{I18n.available_locales.map(&:to_s).join('|')}/ do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'tops#index'
   resources :relationships, only: [:create, :destroy]
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
   resources :conversations,only: [:index,:create] do
     resources :messages,only: [:index,:new,:create,:destroy]
   end
+ end
+
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',
@@ -32,7 +35,5 @@ Rails.application.routes.draw do
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
-  scope '(:locale)', locale: /#{I18n.available_locales.map(&:to_s).join('|')}/ do
-    resources :posts, param: :slug
-  end
+
 end
