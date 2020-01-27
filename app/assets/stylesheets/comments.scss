@@ -23,16 +23,30 @@ $sp: 480px;  // スマホ
 }
 
 .balloon1 {
-  position: relative;
-  padding: 10px;
-  border-radius: 10px;
-  color: #ffffff;
-  background-color: #fd8d2fba;
-  width:50%;
-  margin:auto;
-  margin-top:20px;
-  margin-bottom:10px;
+  @include pc{
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #fd8d2fba;
+    width:50%;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:10px;
+  };
 
+  @include  sp{
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #fd8d2fba;
+    width:76%;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:10px;
+    margin-left:86px;
+  };
 }
 
 .balloon1 .icon{
