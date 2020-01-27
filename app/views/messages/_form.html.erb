@@ -1,10 +1,11 @@
 <%= form_with(model: [@conversation,@message]) do |form| %>
   <div class="message-form">
     <div class="field">
-      <p><%= form.text_area :body %></p>
+      <p><%= form.text_area :body,class:"message_text" %></p>
     </div>
     <div class="actions">
       <p><%= form.submit class:"btn btn-orange",id:"post_message" %></p>
+        <%= link_to "Users index", users_path,class:"btn btn-green" %>
     </div>
   </div>
 <% end %>

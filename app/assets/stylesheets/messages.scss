@@ -2,28 +2,75 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$pc: 1500px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
 .balloon3 {
-  position: relative;
-  padding: 10px;
-  border-radius: 10px;
-  color: #ffffff;
-  background-color: #fd8d2fba;
-  width:60%;
-  margin:auto;
-  margin-bottom: 20px;
-  margin-top:20px;
+  @include pc{
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #fd8d2fba;
+    width:60%;
+    margin:auto;
+    margin-bottom: 20px;
+    margin-top:20px;
+  };
+
+  @include sp{
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #fd8d2fba;
+    width:76%;
+    margin:auto;
+    margin-bottom: 20px;
+    margin-top:20px;
+    margin-right:10px;
+  };
+
 }
 
 
 .balloon3 .icon{
-  position: absolute;
-  left: -110px;
-  top: 0;
-  max-height: 60px;
-  border-radius: 50%;
-  border:solid 3px #fd8d2fba;
-  background-color: white;
+  @include pc{
+    position: absolute;
+    left: -110px;
+    top: 0;
+    max-height: 60px;
+    border-radius: 50%;
+    border:solid 3px #fd8d2fba;
+    background-color: white;
+  };
 
+  @include sp{
+    position: absolute;
+    left: -80px;
+    top: 0;
+    max-height: 60px;
+    border-radius: 50%;
+    border:solid 3px #fd8d2fba;
+    background-color: white;
+  };
 }
 
 .balloon3::before{
@@ -41,31 +88,53 @@
 
 
 .balloon4{
-
-  position: relative;
-  padding: 10px;
-  border-radius: 10px;
-  color: #ffffff;
-  background-color: #f5cc50c4;
-  margin-right: 110px;          /* 右に余白を設ける */
-  width:60%;
-  margin:auto;
-  margin-top:20px;
-  margin-bottom: 20px;
+  @include pc{
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #f5cc50c4;
+    margin-right: 110px;          /* 右に余白を設ける */
+    width:60%;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+  };
+  @include sp{
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #f5cc50c4;
+    margin-right: 110px;          /* 右に余白を設ける */
+    width:76%;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+    margin-left:10px;
+  };
 
 }
 
 .balloon4 .icon{
-  position: absolute;
-  right: -110px;
-  top: 0;
-  max-height: 60px;
-  border-radius: 50%;
-  border:solid 3px #f5cc50c4;
-  background-color: white;
-
-
-
+  @include pc{
+    position: absolute;
+    right: -110px;
+    top: 0;
+    max-height: 60px;
+    border-radius: 50%;
+    border:solid 3px #f5cc50c4;
+    background-color: white;
+  };
+  @include sp{
+    position: absolute;
+    right: -80px;
+    top: 0;
+    max-height: 60px;
+    border-radius: 50%;
+    border:solid 3px #f5cc50c4;
+    background-color: white;
+  };
 }
 
 .balloon4::before{
@@ -98,4 +167,11 @@
 .message_button {
   margin: auto;
   width: 60%;
+}
+
+.message_text {
+  @include sp{
+    width:100%;
+    heigh:80px;
+  };
 }
