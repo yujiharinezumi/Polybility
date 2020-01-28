@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $pc: 1500px; // PC
-$tab: 680px; // タブレット
+$tab: 800px; // タブレット
 $sp: 480px;  // スマホ
 
 @mixin pc {
@@ -129,6 +129,11 @@ $sp: 480px;  // スマホ
     width:50%;
     margin:auto;
   };
+  @include tab{
+    width:100%;
+    margin:auto;
+  };
+
   @include sp{
     width:100%;
     margin:auto;
@@ -373,11 +378,23 @@ label .hobby_label {
     background-color: #ffeaea;
     width:60%;
     margin:auto;
-    height:1150px;
+    height:1220px;
     box-shadow: 0 0 8px #fdb8b8;
     border-radius: 30px;
     margin-bottom: 40px;
   };
+
+  @include tab{
+    position: relative;
+    background-color: #ffeaea;
+    width:90%;
+    margin:auto;
+    height:1220px;
+    box-shadow: 0 0 8px #fdb8b8;
+    border-radius: 30px;
+    margin-bottom: 40px;
+  };
+
   @include sp{
     position: relative;
     background-color: #ffeaea;
@@ -401,6 +418,11 @@ label .hobby_label {
     text-align: center;
     margin:auto;
     width:50%
+  };
+  @include tab{
+    text-align: center;
+    margin:auto;
+    width:80%
   };
   @include sp{
     text-align: center;
