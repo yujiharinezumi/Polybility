@@ -26,7 +26,7 @@
   [ ] ダイレクトメッセージ機能
 - [ ] 検索、絞り込み機能
 - [ ] ページネーション機能
-  [ ] 言語切り替え機能(制作中)
+- [ ] 言語切り替え機能(制作中)
 
 # カタログ設計
 https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKlw8s/edit#gid=0
