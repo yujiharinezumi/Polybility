@@ -1,13 +1,11 @@
 # README
 
-# Polybility
+# Polybility(スマホにも対応しています、タブレットサイズは製作中のため未対応)
 ## https://dry-eyrie-92117.herokuapp.com/ (heroku)
 ## http://52.193.252.2/ (EC2) ドメイン未取得のためfacebook認証使用できません
 ![アプリ](app/assets/images/poly_1.png)
 ![アプリ](app/assets/images/poly_3.png)
 ![アプリ](app/assets/images/poly_4.png)
-
-
 
 # 概要
 * 外国語を勉強している日本人と日本語を勉強している外国人を
@@ -20,12 +18,14 @@
 # 機能一覧
 - [ ] ユーザー登録機能
 - [ ] ログイン機能
+  [ ] Facebookを用いたソーシャルログイン機能
 - [ ] 画像、文章の投稿機能
 - [ ] お気に入り機能
 - [ ] フォロー機能
-- [ ] ラベリング機能
+  [ ] ダイレクトメッセージ機能
 - [ ] 検索、絞り込み機能
 - [ ] ページネーション機能
+  [ ] 言語切り替え機能(制作中)
 
 # カタログ設計
 https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKlw8s/edit#gid=0
@@ -43,9 +43,8 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 
 # 使用gem一覧
 
-## フロント
-* font-awesome-sass
-* kaminari-bootstrap
+## 辞書機能
+* rails-i18n
 
 ## ログイン機能
 * devise
@@ -59,10 +58,11 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 ## 画像機能
 * carrierwave
 * mini_magick
-* fog-aws(S3)
+* fog-aws
 
 ## ページネーション機能
 * kaminari
+* kaminari-bootstrap
 
 ## 検索機能
 * ransack
@@ -79,6 +79,7 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 
 ## デバッグ
 * pry-rails
+* better_errors
 
 ## テスト
 * rspec-rails
@@ -88,3 +89,10 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 * launchy
 * capybara
 * webdrivers
+
+# Set up
+* 1 git clone git@github.com:yujiharinezumi/Polybility.git
+* 2 bundle install
+* 3 rails db:create db:migrate
+* 4 rails db:seed
+* 5 rails s
