@@ -306,7 +306,7 @@ ja:
     explain_polybility3: "言語交換をする機会を作り、語学学習をしながら国際交流を楽しむためのアプリです."
     explain_polybility4: "Polyは複数を表す意味で、多言語話者のことを英語でPolyglotと言います。"
     explain_polybility5: "Bilityは可能性を表す意味で、新しい言語が話せるようになれば"
-    explain_polybility6: "自分の可能性を広げることができると信じていますのでPolybilityと名付けました。"   
+    explain_polybility6: "自分の可能性を広げることができると信じていますのでPolybilityと名付けました。"
     user_function: "ユーザー機能"
     user_explanation: "ユーザー一覧から自分の趣味や言語でマッチする方を検索することができ、直接メッセージも送ることが可能です。"
     post_function: "投稿機能"
@@ -315,7 +315,7 @@ ja:
     favorite_follow_explanation: "お気に入りでは気に入った投稿に対していいねをつけることができ、いいね一覧で投稿を見ることができます。
     フォロー機能では友達になりたい人をフォローすることができる機能です。"
     news1: "Polybility 完成まで後少しですよーーー！"
-    new2: "Polybility 完成しました！ herokuデプロイ成功しました！"
+    news2: "Polybility 完成しました！ herokuデプロイ成功しました！"
     news3: "EC2でもデプロイ成功しました！<"
     news4: "スマホサイズにも対応しました！"
-    news4: "多言語の切り替え機能を実装中！"
+    news5: "多言語の切り替え機能を実装中！"
