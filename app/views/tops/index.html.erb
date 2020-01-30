@@ -1,21 +1,21 @@
 <div class="whole">
   <header class="top-header">
     <div class="top-content-wrapper top-header-nav">
-      <h1 id="top-poly">Polybility</h1>
+      <h1 id="top-poly"><%=t('top.polybility') %></h1>
         <nav>
           <ul>
-            <li><a href="#">トップページ</a></li>
-            <li><a href="#polybility">Polybilityとは</a></li>
-            <li><a href="#contents">アプリ内容</a></li>
-            <li><a href="#news">NEWS</a></li>
-            <li><a href="#start">Let's get started!</a></li>
+            <li><a href="#"><%=t('top.toppage') %></a></li>
+            <li><a href="#polybility"><%=t('top.what_is_polybility') %></a></li>
+            <li><a href="#contents"><%=t('top.content_of_app') %></a></li>
+            <li><a href="#news"><%=t('top.news') %></a></li>
+            <li><a href="#start"><%=t('top.start') %></a></li>
           </ul>
         </nav>
     </div>
   </header>
   <section class="top-mainvisual">
     <%= image_tag "top1.jpeg" %>
-    <h2>外国語を楽しく学びませんか？</h2>
+    <h2><%=t('top.lets_learn_lang') %></h2>
     <div class="top-bg1"></div>
   </section>
   <main>
@@ -24,13 +24,13 @@
         <div class="top-contents">
           <figure class="top-image"><%= image_tag "top2.jpeg" %></figure>
           <div class="top-content">
-            <h2>Polybilityとは</h2>
-            <p>Polybilityとは、外国語を学んでいる日本人と<br>
-            日本語を学んでいる外国人を共通の趣味などを通じ<br>
-            言語交換をする機会を作り、語学学習をしながら国際交流を楽しむためのアプリです.<br>
-            Polyは複数を表す意味で、多言語話者のことを英語でPolyglotと言います。 <br>
-            Bilityは可能性を表す意味で、新しい言語が話せるようになれば<br>
-            自分の可能性を広げることができると信じていますのでPolybilityと名付けました。
+            <h2><%=t('top.what_is_polybility') %></h2>
+            <p><%=t('top.explain_polybility1') %><br>
+            <%=t('top.explain_polybility2') %><br>
+            <%=t('top.explain_polybility3') %><br>
+            <%=t('top.explain_polybility4') %><br>
+            <%=t('top.explain_polybility5') %><br>
+            <%=t('top.explain_polybility6') %>
             </p>
           </div>
         </div>
@@ -38,24 +38,22 @@
     </section>
     <section class="top-work" id="contents">
       <div class="top-content-wrapper">
-        <h2>アプリ内容<h2>
+        <h2><%=t('top.content_of_app') %><h2>
         <ul>
           <li id="work1">
             <figure ><%= image_tag "top3.jpeg" %></figure>
-            <h3>ユーザー機能</h3>
-            <p>ユーザー一覧から自分の趣味や言語でマッチする方を検索することができ、直接メッセージも送ることが可能です。</p>
+            <h3><%=t('top.user_function') %></h3>
+            <p><%=t('top.user_explanation') %></p>
           </li>
           <li id="work2">
             <figure><%= image_tag "top4.jpeg" %></figure>
-            <h3>投稿機能</h3>
-            <p>投稿機能では勉強の共有や言語交換のパートナーとの思い出など、SNSアプリのようにお好きな写真、文章を投稿できます。</p>
+            <h3><%=t('top.post_function') %></h3>
+            <p><%=t('top.post_explanation') %></p>
           </li>
           <li id="work3">
             <figure><%= image_tag "top5.jpeg" %></figure>
-            <h3>お気に入り&フォロー機能</h3>
-            <p>お気に入りでは気に入った投稿に対していいねをつけることができ、いいね一覧で投稿を見ることができます。
-            フォロー機能では友達になりたい人をフォローすることができる機能です。
-            </p>
+            <h3><%=t('top.favorite_follow_function') %></h3>
+            <p><%=t('top.favorite_follow_explanation') %></p>
           </li>
         </ul>
       </div>
@@ -64,17 +62,17 @@
       <div class="top-content-wrapper">
         <h2>NEWS</h2>
           <ul>
-            <li><a href="#"><time>2020-01-16</time>Polybility 完成まで後少しですよーーー！</a></li>
-            <li><a href="#"><time>2020-01-17</time>Polybility 完成しました！ herokuデプロイ成功しました！</a></li>
-            <li><a href="#"><time>2020-01-20</time>EC2でもデプロイ成功しました！</a></li>
-            <li><a href="#"><time>2020-01-27</time>スマホサイズにも対応しました！</a></li>
-            <li><a href="#"><time>2020-01-27</time>多言語の切り替え機能を実装中！</a></li>
+            <li><a href="#"><time>2020-01-16</time><%=t('top.news1') %></a></li>
+            <li><a href="#"><time>2020-01-17</time><%=t('top.news2') %></a></li>
+            <li><a href="#"><time>2020-01-20</time><%=t('top.news3') %></a></li>
+            <li><a href="#"><time>2020-01-27</time><%=t('top.news4') %></a></li>
+            <li><a href="#"><time>2020-01-27</time><%=t('top.news5') %></a></li>
           </ul>
       </div>
     </section>
     <section class="top-recruit" id="start">
       <div class="top-recruit-img"><%= image_tag "top6.jpeg" %></div>
-        <h2><%= link_to "Let's get strated!",new_user_registration_path %></h2>
+        <h2><%= link_to t('top.start'),new_user_registration_path %></h2>
         <div class="top-bg2"></div>
       </section>
   </main>
