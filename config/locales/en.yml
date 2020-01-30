@@ -325,9 +325,6 @@ en:
     unfavorited: "Canceled Like"
   conversation:
     talkroom: "TalkRoom"
-  labels:
-    created: "Created Label"
-    deleted: "Deleted Label"
   comments:
     cannot: "could not post ...."
     languages:

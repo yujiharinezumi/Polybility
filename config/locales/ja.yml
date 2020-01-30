@@ -287,9 +287,6 @@ ja:
     unfavorited: "さんの投稿をお気に入り解除しました"
   conversation:
     talkroom: "トークルーム"
-  labels:
-    created: "ラベルを作成しました。"
-    deleted: "ラベルを削除しました。"
   comments:
     cannot: "投稿できませんでした..."
   languages:
