@@ -5,22 +5,21 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # devise :omniauthable, omniauth_providers: [:twitter]
 
   # You should also create an action method in this controller like this:
-   def facebook
-     callback_for(:facebook)
-   end
-
-    def twitter
-      callback_for(:twitter)
-    end
-
-  def google_oauth2
-    callback_for(:google)
+  def facebook
+    callback_for(:facebook)
   end
+
+  # def twitter
+  #   callback_for(:twitter)
+  # end
+  #
+  # def google_oauth2
+  #   callback_for(:google)
+  # end
 
   def facebook
    # You need to implement the method below in your model (e.g. app/models/user.rb)
    @user = User.from_omniauth(request.env["omniauth.auth"])
-
    if @user.persisted?
      sign_in_and_redirect @user, event: :authentication #this will throw if @user is not activated
      set_flash_message(:notice, :success, kind: "Facebook") if is_navigational_format?
@@ -30,20 +29,18 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
    end
  end
 
-
- def google
-    @user = User.find_for_google(request.env['omniauth.auth'])
-
-    if @user.persisted?
-      flash[:notice] = I18n.t 'devise.omniauth_callbacks.success', kind: 'Google'
-      sign_in_and_redirect @user, event: :authentication
-      session[:user_id] = @user.id #add
-    else
-      session['devise.google_data'] = request.env['omniauth.auth']
-      redirect_to new_user_registration_url
-    end
-  end
-
+  # def google
+  #   @user = User.find_for_google(request.env['omniauth.auth'])
+  #
+  #   if @user.persisted?
+  #     flash[:notice] = I18n.t 'devise.omniauth_callbacks.success', kind: 'Google'
+  #     sign_in_and_redirect @user, event: :authentication
+  #     session[:user_id] = @user.id #add
+  #   else
+  #     session['devise.google_data'] = request.env['omniauth.auth']
+  #     redirect_to new_user_registration_url
+  #   end
+  # end
 
   def callback_from(provider)
    provider = provider.to_s

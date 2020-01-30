@@ -13,5 +13,4 @@ class FavoritesController < ApplicationController
     favorite =  current_user.favorites.find_by(id: params[:id]).destroy
     redirect_to post_path(favorite.post.id), notice: t('favorite.unfavorited')
   end
-
 end

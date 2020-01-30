@@ -5,9 +5,6 @@
 
 //following follower conversation's profilecard show
 
-p .follow-card {
-  text-align: center;
-}
 .follow-card{
   width: 100%;
   max-width:300px;
@@ -32,4 +29,8 @@ p .follow-card {
   top:-30%;
   left:-15%;
   z-index: 0;
+}
+
+p .follow-card {
+  text-align: center;
 }

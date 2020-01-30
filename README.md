@@ -7,6 +7,8 @@
 ![アプリ](app/assets/images/poly_1.png)
 ![アプリ](app/assets/images/poly_3.png)
 ![アプリ](app/assets/images/poly_4.png)
+
++ アプリのQRコードです。
 ![アプリ](app/assets/images/qr.png)
 
 # 概要

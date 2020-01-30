@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-p .chat-card {
-  text-align: center;
-}
 .chat-card{
   width: 100%;
   max-width:300px;
@@ -29,4 +26,8 @@ p .chat-card {
   top:-30%;
   left:-15%;
   z-index: 0;
+}
+
+p .chat-card {
+  text-align: center;
 }

@@ -22,6 +22,7 @@ $sp: 480px;  // スマホ
   }
 }
 
+// コメントの吹き出し
 .balloon1 {
   @include pc{
     position: relative;
@@ -59,6 +60,7 @@ $sp: 480px;  // スマホ
   background-color: white;
 }
 
+// コメントの吹き出し三角を作る
 .balloon1::before{
   content: '';
   position: absolute;
@@ -71,41 +73,6 @@ $sp: 480px;  // スマホ
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
 }
-
-
-.balloon2{
-  margin-top:20px;
-  margin-bottom: 20px;
-  margin-left:600px;
-  position: relative;
-  padding: 10px;
-  border-radius: 10px;
-  color: #ffffff;
-  background-color: #f5cc50c4;
-  margin-right: 110px;          /* 右に余白を設ける */
-  width:50%;
-
-}
-
-.balloon2 .icon{
-  position: absolute;
-  right: -110px;
-  top: 0;
-}
-
-.balloon2::before{
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  right: -15px;
-  top: 20px;
-  border-left: 15px solid #f5cc50c4;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-}
-
 
 // コメント入力欄
 .comment-form {
@@ -125,7 +92,6 @@ $sp: 480px;  // スマホ
     height: 38px;
   };
 }
-
 
 #comment_content {
   @include sp{

@@ -56,7 +56,6 @@ $sp: 480px;  // スマホ
     margin-bottom:40px;
     border-radius: 10%;
   };
-
 }
 
 .post-card:before{
@@ -99,12 +98,12 @@ $sp: 480px;  // スマホ
     margin:auto;
     width:43%;
   };
-
 }
+
 .post-card__inner{
- position: relative;
- width:240px;
- margin:auto;
+  position: relative;
+  width:240px;
+  margin:auto;
 }
 
 .post-card__inner p {
@@ -122,17 +121,16 @@ $sp: 480px;  // スマホ
     background: #FFE9A6;
     border-radius: 10%;
   };
-@include sp{
-  overflow: hidden;
-  width: 250px;
-  height: 200px;
-  margin-left: 0px;
-  margin-right: auto;
-  margin-top: 20px;
-  background: #FFE9A6;
-  border-radius: 10%;
-};
-
+  @include sp{
+    overflow: hidden;
+    width: 250px;
+    height: 200px;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-top: 20px;
+    background: #FFE9A6;
+    border-radius: 10%;
+  };
 }
 
 .post-thumb img{
@@ -152,7 +150,6 @@ $sp: 480px;  // スマホ
     max-width: 100%;
     object-fit: contain;
   };
-
 }
 
 .post-content{
@@ -178,12 +175,10 @@ $sp: 480px;  // スマホ
     margin: auto;
     width:13%;
   };
-
-@include sp{
-  margin: auto;
-  width:22%;
-};
-
+  @include sp{
+    margin: auto;
+    width:22%;
+  };
 }
 
 //post show views
@@ -206,8 +201,6 @@ $sp: 480px;  // スマホ
   border-radius: 10%;
   // border: solid 3px #ffe2da;
 }
-
-
 
 .post-show-container p{
   text-align: center;
@@ -264,7 +257,6 @@ $sp: 480px;  // スマホ
     width:50%;
     margin:auto;
   };
-
 }
 
 .post_image {

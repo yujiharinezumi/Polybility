@@ -43,11 +43,12 @@ class CommentsController < ApplicationController
   end
 
   private
-    def comment_params
-      params.require(:comment).permit(:post_id, :content)
-    end
 
-    def set_post
-      @post = Post.find(params[:post_id])
-    end
+  def comment_params
+    params.require(:comment).permit(:post_id, :content)
   end
+
+  def set_post
+    @post = Post.find(params[:post_id])
+  end
+end
