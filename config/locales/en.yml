@@ -327,7 +327,34 @@ en:
     talkroom: "TalkRoom"
   comments:
     cannot: "could not post ...."
-    languages:
-      japanse: "Japanese"
-      english: "English"
-      chinese: "Chinese"
+  languages:
+    japanse: "Japanese"
+    english: "English"
+    chinese: "Chinese"
+  top:
+    polybility: "Polybility"
+    toppage: "Top page"
+    what_is_polybility: "What is Polybility?"
+    content_of_app: "Contents of App"
+    news: "News"
+    start: "Let's get started!"
+    lets_learn_lang: "Do you wanna learn new language with fun !"
+    explain_polybility1: "Polybility is kind of Language Exchange service, It's can match Japanse who want to learn foreign languages"
+    explain_polybility2: "and foreigner who want to learn Japanse through similar interests "
+    explain_polybility3: "Main purposr the app is possible to give chances to people who really earger to lean language and enjoy interaction with new people"
+    explain_polybility4: "the app name can divide 2 words,'Poly' means many several, "
+    explain_polybility5: "'(a)Bility' means possess some skills "
+    explain_polybility6: "I believe if we are able to speak some languages,We can expand our POSSIBILITES! That's why I named it 'Polybility'"
+    user_function: "User function"
+    user_explanation: "this function can creat my user and serach language partner with seaching languages and similar interests,also we can send message user directly."
+    post_function: "Post function"
+    post_explanation: "this function we can share unforgettabel memories with partner or beneficial tips of learing languages "
+    favorite_follow_function: "favorite & follow function"
+    favorite_follow_explanation: "this function we can save posts that you can really want to keep it,also we can check its in favorites page as well,and we can follow users who you want to be friends"
+
+
+    news1: "It's almost completed making this app !!"
+    news2: "Finally I finished making Polybility,also completed deploying with Heroku as well"
+    news3: "I deployed with EC2 completely!"
+    news4: "I modified this app's design for resposive design correspond to smartphone size"
+    news4: "I tried to multi lingual function (Japanese English Chinese)"
