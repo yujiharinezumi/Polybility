@@ -188,7 +188,7 @@ zh:
     delete?: "你要確定刪除嗎"
     are_you_sure: "你確定了嗎？"
   users:
-    index: "用户账号首頁"
+    index: "帳戶首頁"
     hobby_search: 用愛好搜尋
     native_search: "用母語搜尋"
     learning_search: "用學習語言搜尋"

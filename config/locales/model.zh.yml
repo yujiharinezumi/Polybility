@@ -1,0 +1,25 @@
+zh:
+  activerecord:
+    models:
+      user: "帳戶"
+    attributes:
+      user:
+        name: "名稱"
+        email: "電子郵件"
+        content: "內容"
+        icon: "照片"
+        age:  "年齡"
+        gender: "性別"
+        country: "出生國家"
+        native_language: "母語"
+        learning_language: "學習語言"
+        hobby: "愛好"
+        introduction: "自我介紹"
+        current_password: "目前的密碼"
+        password: "密碼"
+        password_confirmation: "確認密碼"
+        remember_me: "記住登錄"
+      post:
+        title: "標題"
+        content: "內容"
+        image: "照片"

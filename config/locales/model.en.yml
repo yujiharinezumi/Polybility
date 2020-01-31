@@ -1,0 +1,25 @@
+en:
+  activerecord:
+    models:
+      user: "user"
+    attributes:
+      user:
+        name: "name"
+        email: "email"
+        content: "content"
+        icon: "icon"
+        age:  "age"
+        gender: "gender"
+        country: "country"
+        native_language: "mother tongue"
+        learning_language: "learning language"
+        hobby: "hobby"
+        introduction: "introductino"
+        current_password: "current password"
+        password: "password"
+        password_confirmation: "password confirmation"
+        remember_me: "remembe me"
+      post:
+        title: "title"
+        content: "content"
+        image: "image"
