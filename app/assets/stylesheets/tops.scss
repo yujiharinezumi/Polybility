@@ -140,7 +140,7 @@ section {
   };
 @include sp{
   position: absolute;
-  top: 80%;
+  top: 71%;
   left: 0%;
   background: rgba(255, 227, 144, 0.75);
   font-size: 3rem;
@@ -203,7 +203,7 @@ section {
   };
   @include sp{
     width:100%;
-    top: 1167px;
+    top: 1174px;
     position: absolute;
   };
 }
@@ -221,7 +221,7 @@ section {
     text-align: center;
   };
   @include sp{
-    margin-top:157px;
+    margin-top:250px;
     margin-bottom: 60px;
     text-align: left;
   };
@@ -248,7 +248,7 @@ section {
 #work2{
   @include sp{
     position: absolute;
-    top:763px;
+    top:944px;
   };
 }
 
@@ -262,7 +262,7 @@ section {
 #work3{
   @include sp{
     position: absolute;
-    top:1136px;
+    top:1347px;
   };
 }
 
