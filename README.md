@@ -3,7 +3,7 @@
 # Polybility
 ## (スマホにも対応しています、タブレットサイズは製作中のため未対応)
 ## https://dry-eyrie-92117.herokuapp.com/ (heroku)
-## http://52.193.252.2/ (EC2) ドメイン未取得のためfacebook認証使用できません
+## http://polybility.xyz/ (EC2) ドメインがhttpのためfacebook認証使用できません
 ![アプリ](app/assets/images/poly_1.png)
 ![アプリ](app/assets/images/poly_3.png)
 ![アプリ](app/assets/images/poly_4.png)
