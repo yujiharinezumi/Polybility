@@ -1,0 +1,325 @@
+zc:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: '校驗失敗: %{errors}'
+        restrict_dependent_destroy:
+          has_one: 由於 %{record} 需要此記錄，所以無法移除記錄
+          has_many: 由於 %{record} 需要此記錄，所以無法移除記錄
+  date:
+    abbr_day_names:
+    - 周日
+    - 周一
+    - 周二
+    - 周三
+    - 周四
+    - 周五
+    - 周六
+    abbr_month_names:
+    -
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    day_names:
+    - 星期日
+    - 星期一
+    - 星期二
+    - 星期三
+    - 星期四
+    - 星期五
+    - 星期六
+    formats:
+      default: "%Y-%m-%d"
+      long: "%Y年%m月%d日"
+      short: "%m月%d日"
+    month_names:
+    -
+    - 一月
+    - 二月
+    - 三月
+    - 四月
+    - 五月
+    - 六月
+    - 七月
+    - 八月
+    - 九月
+    - 十月
+    - 十一月
+    - 十二月
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: 大約一小時
+        other: 大約 %{count} 小時
+      about_x_months:
+        one: 大約一個月
+        other: 大約 %{count} 個月
+      about_x_years:
+        one: 大約一年
+        other: 大約 %{count} 年
+      almost_x_years:
+        one: 接近一年
+        other: 接近 %{count} 年
+      half_a_minute: 半分鐘
+      less_than_x_seconds:
+        one: 不到一秒
+        other: 不到 %{count} 秒
+      less_than_x_minutes:
+        one: 不到一分鐘
+        other: 不到 %{count} 分鐘
+      over_x_years:
+        one: 一年多
+        other: "%{count} 年多"
+      x_seconds:
+        one: 一秒
+        other: "%{count} 秒"
+      x_minutes:
+        one: 一分鐘
+        other: "%{count} 分鐘"
+      x_days:
+        one: 一天
+        other: "%{count} 天"
+      x_months:
+        one: 一個月
+        other: "%{count} 個月"
+      x_years:
+        one: 一年
+        other: "%{count} 年"
+    prompts:
+      second: 秒
+      minute: 分
+      hour: 時
+      day: 日
+      month: 月
+      year: 年
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: 必須是可被接受的
+      blank: 不能為空白
+      confirmation: 與 %{attribute} 須一致
+      empty: 不能留空
+      equal_to: 必須等於 %{count}
+      even: 必須是偶數
+      exclusion: 是被保留的關鍵字
+      greater_than: 必須大於 %{count}
+      greater_than_or_equal_to: 必須大於或等於 %{count}
+      inclusion: 沒有包含在列表中
+      invalid: 是無效的
+      less_than: 必須小於 %{count}
+      less_than_or_equal_to: 必須小於或等於 %{count}
+      model_invalid: '校驗失敗: %{errors}'
+      not_a_number: 不是數字
+      not_an_integer: 必須是整數
+      odd: 必須是奇數
+      other_than: 不可以是 %{count} 個字
+      present: 必須是空白
+      required: 必須存在
+      taken: 已經被使用
+      too_long:
+        one: 過長（最長是一個字）
+        other: 過長（最長是 %{count} 個字）
+      too_short:
+        one: 過短（最短是一個字）
+        other: 過短（最短是 %{count} 個字）
+      wrong_length:
+        one: 字數錯誤 (必須是一個字)
+        other: 字數錯誤 (必須是 %{count} 個字)
+    template:
+      body: 以下欄位發生問題：
+      header:
+        one: 有 1 個錯誤發生使得「%{model}」無法被儲存。
+        other: 有 %{count} 個錯誤發生使得「%{model}」無法被儲存。
+  helpers:
+    select:
+      prompt: 請選擇
+    submit:
+      create: 新增%{model}
+      submit: 儲存%{model}
+      update: 更新%{model}
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%u%n"
+        precision: 2
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: NT$
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: 十億
+          million: 百萬
+          quadrillion: 千兆
+          thousand: 千
+          trillion: 兆
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: false
+        strip_insignificant_zeros: false
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: 位元組
+            other: 位元組
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ", 和 "
+      two_words_connector: " 和 "
+      words_connector: ", "
+  time:
+    am: 上午
+    formats:
+      default: "%Y年%m月%d日 %A %H:%M:%S %Z"
+      long: "%Y年%m月%d日 %H:%M"
+      short: "%m月%d日 %H:%M"
+    pm: 下午
+  common:
+    detail: "查看"
+    edit: "編輯"
+    destroy: "刪除"
+    have_errors: "个错误发生导致"
+    update: "儲存"
+    edit?: "你要確定編輯嗎"
+    delete?: "你要確定刪除嗎"
+    are_you_sure: "你確定了嗎？"
+  users:
+    index: "帳戶首頁"
+    hobby_search: 用愛好搜尋
+    native_search: "用母語搜尋"
+    learning_search: "用學習語言搜尋"
+    search: "搜尋"
+    native: "母語"
+    learning: "学習言語"
+    hobby: "愛好"
+    message: "訊息"
+    followed_index: "跟隨中"
+    follower_index: "跟隨者"
+    profile: "個人資料"
+    name: "名稱"
+    age: "年齡"
+    gender: "性別"
+    man: "男生"
+    woman: "女生"
+    country: "出生國家"
+    introduction: "自我介紹"
+    edit_profile: "編輯個人資料"
+    back_profile: "返回個人資料喔"
+    back_user: "返回用户账号表"
+    following: "跟隨中"
+    followers: "跟隨者"
+    following_user: "加朋友"
+    cancel: "移除"
+    sign_up: 註冊
+    log_in: "登錄"
+    facebook: "用臉書帳戶註冊"
+    introduce_myself: "請你填寫自我介紹"
+    cancel_account: "你確定停用你的帳戶"
+    delete_account: "刪除帳戶"
+  posts:
+    index: "貼文首頁"
+    new_post: "發佈"
+    edit_post: "編輯貼文"
+    back_post: "返回貼文首頁"
+    show: "查看貼文"
+    do_favorite: "點讚"
+    delete_favorite: "取消讚"
+    count_favorite: "點讚次數"
+    type_title: "請你填寫標題"
+    type_content: "請你填寫內容"
+    finished: "發完貼文了！"
+    edited: "儲存貼文了！"
+    deleted: "刪除貼文了！"
+    not_authenticate: "你沒有訪問權限"
+  messages:
+    last: "以前的訊息"
+    read: "已讀"
+    unread: "未讀"
+    send: "傳送訊息"
+    cannot: "不能傳送訊息"
+  nav:
+    user: "用户账号"
+    post: "貼文"
+    favorite: "喜歡內容"
+    chat: "訊息室"
+    following: "跟隨中"
+    follower: "跟隨者"
+    signup: "註冊"
+    login: "登錄"
+    mr_ms: "(先生/女士)"
+    logout: "登出"
+    guest_login: "簡單登錄"
+    admin: "管理員"
+  favorite:
+    index: "喜歡內容"
+    favorited: "你點讚這件貼文"
+    unfavorited: "你取消點讚這件貼文"
+  conversation:
+    talkroom: "訊息室"
+  comments:
+    cannot: "不能發佈... ."
+  languages:
+    japanese: "日語"
+    english: "英文"
+    chinese: "中文"
+  top:
+    polybility: "Polybility"
+    toppage: "首頁"
+    what_is_polybility: "Polybility是什麼事？"
+    content_of_app: "App内容"
+    news: "消息"
+    start: "讓我們開始吧!"
+    lets_learn_lang: "你想快樂地學習外語嗎！"
+    explain_polybility1: "Polybility 是一種語言交換的APP，這個APP的目的就是給學外語的日本人跟"
+    explain_polybility2: "學日語的外國人一起不但互相學外語的機會，而且可以享受國際交流"
+    explain_polybility3: "因為學習新外語有很多困難，而且沒有說話的機會的話，不容易提高自己的語言水平"
+    explain_polybility4: "Polybility可以分開兩個單字，Poly 意味著很多，有幾個，Bility意味著擁有能力"
+    explain_polybility5: "學習新外語讓我們發現新世界，而且可以交不同國家的朋友互相了解異文化"
+    explain_polybility6: "我認為如果我們學會幾門語言，可以提高自己的可能性跟開闊視野，所以我取名Polybility"
+    user_function: "帳戶機能"
+    user_explanation: “首先我們可以自己的帳戶，然後選自己想學的語言跟愛好搜尋語言交換的partner，如果你想交朋友，也可以傳送訊息"
+    post_function: "貼文機能"
+    post_explanation: "在貼文機能我們用文章和照片可以分享語言交換partner一起學習，玩之類難忘的回憶，或者給朋友們分享學外語的技巧，"
+    favorite_follow_function: "點讚&跟隨機能"
+    favorite_follow_explanation: "在這個機能我們可以保存自己喜歡的貼文，保存的內容在‘喜歡的內容’可以看到。在跟隨機能，如果你找到很想交的朋友，隨便跟隨，傳送訊息交流"
+    news1: "我快完成Polybility了，我要不懈努力完成這個"
+    news2: "我終於完成了！ 但是很多地方我要修改……"
+    news3: "用AWS的EC2完成deploy了"
+    news4: "為了在手機也使用Polybility，修改設計"
+    news5: "為了很多外國人能使用，我修改多語言機能！"

@@ -38,7 +38,10 @@
            <%= link_to('日本語', :locale => 'ja') %>
         </li>
         <li class="nav-item nav-link">
-          <%= link_to('中文', :locale => 'zh') %>
+          <%= link_to('简体中文', :locale => 'zh') %>
+        </li>
+        <li class="nav-item nav-link">
+          <%= link_to('繁体中文', :locale => 'zc') %>
         </li>
       <% elsif I18n.locale.to_s == "zh" %>
         <li class="nav-item nav-link">
@@ -47,12 +50,28 @@
         <li class="nav-item nav-link">
            <%= link_to('English', :locale => 'en') %>
         </li>
+        <li class="nav-item nav-link">
+          <%= link_to('繁体中文', :locale => 'zc') %>
+        </li>
+        <% elsif I18n.locale.to_s == "zc" %>
+          <li class="nav-item nav-link">
+            <%= link_to('日本語', :locale => 'ja') %>
+          </li>
+          <li class="nav-item nav-link">
+             <%= link_to('English', :locale => 'en') %>
+          </li>
+          <li class="nav-item nav-link">
+            <%= link_to('简体中文', :locale => 'zh') %>
+          </li>
       <% else %>
         <li class="nav-item nav-link">
            <%= link_to('English', :locale => 'en') %>
         </li>
         <li class="nav-item nav-link">
-          <%= link_to('中文', :locale => 'zh') %>
+          <%= link_to('简体中文', :locale => 'zh') %>
+        </li>
+        <li class="nav-item nav-link">
+          <%= link_to('繁体中文', :locale => 'zc') %>
         </li>
       <% end %>
     </ul>
