@@ -72,6 +72,10 @@ section {
     position: relative;
     height: 5000px;
   };
+  @include sp{
+    position: relative;
+    height: 3200px;
+  };
 }
 
 .top-content-wrapper {
@@ -197,7 +201,7 @@ section {
     align-items: center;
   };
   @include sp{
-    width: 100%;
+    width: 109%;
     justify-content: space-between;
     margin: 0 auto;
     // margin-bottom:100px;
@@ -244,8 +248,11 @@ section {
     width:100%;
     top: 1174px;
     position: absolute;
+    margin-left:-42px;
   };
 }
+
+
 
 .top-work {
   width: 100%;
@@ -286,6 +293,9 @@ section {
   @include tab{
   width:50%;
   };
+  @include sp{
+  width:29%;
+  };
 }
 
 #work1 img{
@@ -307,7 +317,7 @@ section {
   };
   @include sp{
     position: absolute;
-    top:944px;
+    top:953px;
   };
 }
 
