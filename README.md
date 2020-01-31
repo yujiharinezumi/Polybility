@@ -9,7 +9,7 @@
 ![アプリ](app/assets/images/poly_4.png)
 
 + アプリのQRコードです。
-![アプリ](app/assets/images/QR2.png)
+![アプリ](app/assets/images/QR3.png)
 
 # 概要
 * 外国語を勉強している日本人と日本語を勉強している外国人を
