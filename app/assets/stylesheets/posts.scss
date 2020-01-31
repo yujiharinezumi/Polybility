@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $pc: 1500px; // PC
-$tab: 680px; // タブレット
+$tab: 770px; // タブレット
 $sp: 480px;  // スマホ
 
 @mixin pc {
@@ -121,6 +121,16 @@ $sp: 480px;  // スマホ
     background: #FFE9A6;
     border-radius: 10%;
   };
+  @include tab{
+    overflow: hidden;
+    width: 280px;
+    height: 260px;
+    margin-left: -10px;
+    margin-right: auto;
+    margin-top: 20px;
+    background: #FFE9A6;
+    border-radius: 10%;
+  };
   @include sp{
     overflow: hidden;
     width: 250px;
@@ -135,6 +145,14 @@ $sp: 480px;  // スマホ
 
 .post-thumb img{
   @include pc{
+    display: block;
+    width: 350px;
+    height: 270px;
+    border-radius: 5px 5px 0 0;
+    max-width: 100%;
+    object-fit: contain;
+  };
+  @include tab{
     display: block;
     width: 350px;
     height: 270px;
