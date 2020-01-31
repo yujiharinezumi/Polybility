@@ -104,6 +104,10 @@ section {
 }
 
 #top-poly{
+  @include tab{
+    z-index: 10;
+   color:#7d6006;
+  };
   @include sp{
     z-index: 10;
    color:#7d6006;
