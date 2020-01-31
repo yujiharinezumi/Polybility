@@ -4,7 +4,7 @@
 
 
 $pc: 1500px; // PC
-$tab: 680px; // タブレット
+$tab: 770px; // タブレット
 $sp: 480px;  // スマホ
 
 @mixin pc {
@@ -64,8 +64,14 @@ section {
 }
 
 .whole {
-  position: relative;
-  height: 3200px;
+  @include pc{
+    position: relative;
+    height: 3200px;
+  };
+  @include tab{
+    position: relative;
+    height: 5000px;
+  };
 }
 
 .top-content-wrapper {
@@ -117,36 +123,45 @@ section {
     margin-left: 30%;
     border-radius: 60px;
   };
- @include sp{
-   width:  100%;
-   height: 500px;
-   object-fit: cover;
-   margin-left: 0%;
-   border-radius: 0%;
-   position: absolute;
-   top: -100px;
- };
+  @include tab{
+    width:  100%;
+    height: 500px;
+    object-fit: cover;
+    margin-left: 0%;
+    border-radius: 0%;
+    position: absolute;
+    top: -100px;
+  };
+  @include sp{
+    width:  100%;
+    height: 500px;
+    object-fit: cover;
+    margin-left: 0%;
+    border-radius: 0%;
+    position: absolute;
+    top: -100px;
+  };
 }
 .top-mainvisual h2 {
   @include pc {
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  background: rgba(255, 227, 144, 0.75);
-  font-size: 3rem;
-  padding: 1rem;
-  border-radius: 30px;
-  color:#ec6976;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    background: rgba(255, 227, 144, 0.75);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 30px;
+    color:#ec6976;
   };
-@include sp{
-  position: absolute;
-  top: 71%;
-  left: 0%;
-  background: rgba(255, 227, 144, 0.75);
-  font-size: 3rem;
-  padding: 1rem;
-  border-radius: 0%;
-  color:#ec6976;
+  @include sp{
+    position: absolute;
+    top: 71%;
+    left: 0%;
+    background: rgba(255, 227, 144, 0.75);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 0%;
+    color:#ec6976;
   };
 }
 
@@ -170,6 +185,13 @@ section {
     margin: 0 auto;
     align-items: center;
   };
+  @include tab {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+  };
   @include sp{
     width: 100%;
     justify-content: space-between;
@@ -183,6 +205,9 @@ section {
   @include pc{
      width: 50%;
   };
+  @include tab{
+    width:54%;
+  };
   @include sp{
     width:27%;
   };
@@ -190,6 +215,10 @@ section {
 
 .top-greeting .top-contents figure img {
   @include pc{
+  };
+  @include tab{
+    height:350px;
+    border-radius: 0%;
   };
   @include sp{
     height:350px;
@@ -200,6 +229,12 @@ section {
 .top-greeting .top-content {
   @include pc{
      width: 48%;
+  };
+  @include tab{
+    width:100%;
+    top: 1250px;
+    left:42px;
+    position: absolute;
   };
   @include sp{
     width:100%;
@@ -220,6 +255,11 @@ section {
     margin-bottom: 60px;
     text-align: center;
   };
+  @include tab{
+    margin-top:250px;
+    margin-bottom: 60px;
+    text-align: left;
+  };
   @include sp{
     margin-top:250px;
     margin-bottom: 60px;
@@ -238,7 +278,17 @@ section {
   width: 400px;
 }
 
+#work1{
+  @include tab{
+  width:50%;
+  };
+}
+
 #work1 img{
+  @include tab{
+    width:100%;
+    border-radius: 0%;
+  };
   @include sp{
     width:100%;
     border-radius: 0%;
@@ -246,6 +296,11 @@ section {
 }
 
 #work2{
+  @include tab{
+    position: absolute;
+    top:1224px;
+    width:92%;
+  };
   @include sp{
     position: absolute;
     top:944px;
@@ -253,6 +308,10 @@ section {
 }
 
 #work2 img{
+  @include tab{
+    width:100%;
+    border-radius: 0%;
+  };
   @include sp{
     width:100%;
     border-radius: 0%;
@@ -260,6 +319,11 @@ section {
 }
 
 #work3{
+  @include tab{
+    position: absolute;
+    top:1840px;
+    width:92%;
+  };
   @include sp{
     position: absolute;
     top:1347px;
@@ -267,6 +331,10 @@ section {
 }
 
 #work3 img{
+  @include tab{
+    width:100%;
+    border-radius: 0%;
+  };
   @include sp{
     width:100%;
     border-radius: 0%;
@@ -287,6 +355,11 @@ section {
     width: 1200px;
     margin: 0 auto;
     margin-bottom: 180px;
+  };
+  @include tab{
+    width: 100%;;
+    margin: 0 auto;
+    margin-top: 1375px;
   };
   @include sp{
     width: 100%;;
@@ -333,6 +406,13 @@ section {
     object-fit: cover;
     border-radius: 60px;
   };
+  @include tab{
+    width: 100%;
+    height:500px;
+    margin-right:0%;
+    object-fit: cover;
+    border-radius: 0%;
+  };
   @include sp{
     width: 100%;
     height:500px;
@@ -348,6 +428,21 @@ section {
     top: 45%;
     right: 52%;
     width: 250px;
+    height: 60px;
+    background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+    background: -webkit-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+    background: linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+    opacity: 0.8;
+    line-height: 60px;
+    text-align: center;
+    color:#a75005;
+    border-radius: 40px;
+  };
+  @include tab{
+    position: absolute;
+    top: 38%;
+    right: 20%;
+    width: 270px;
     height: 60px;
     background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
     background: -webkit-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);

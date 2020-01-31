@@ -320,7 +320,7 @@ en:
     guest_login: "Log In As Guest User"
     admin: "Admin"
   favorite:
-    index: "Favorite index"
+    index: "Favorite list"
     favorited: "Liked "
     unfavorited: "Canceled Like"
   conversation:
@@ -351,8 +351,6 @@ en:
     post_explanation: "this function we can share unforgettabel memories with partner or beneficial tips of learing languages "
     favorite_follow_function: "favorite & follow function"
     favorite_follow_explanation: "this function we can save posts that you can really want to keep it,also we can check its in favorites page as well,and we can follow users who you want to be friends"
-
-
     news1: "It's almost completed making this app !!"
     news2: "Finally I finished making Polybility,also completed deploying with Heroku as well"
     news3: "I deployed with EC2 completely!"
