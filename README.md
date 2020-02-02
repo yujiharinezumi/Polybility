@@ -31,6 +31,9 @@
 - [ ] ページネーション機能
 - [ ] 言語切り替え機能
 
+# インフラ aws
+* EC2,S3,Route53,ACM,ELB
+
 # カタログ設計
 https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKlw8s/edit#gid=0
 # テーブル設計
