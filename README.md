@@ -3,7 +3,7 @@
 # Polybility
 ## (スマホにも対応しています、タブレットサイズは製作中のため未対応)
 ## https://dry-eyrie-92117.herokuapp.com/ (heroku)
-## http://polybility.xyz/ (EC2 SSL化に挑戦のため一時使用不可) ドメインがhttpのためfacebook認証使用できません
+## http://polybility.xyz/ (EC2) ドメインがhttpのためfacebook認証使用できません
 ![アプリ](app/assets/images/poly_1.png)
 ![アプリ](app/assets/images/poly_3.png)
 ![アプリ](app/assets/images/poly_4.png)
@@ -32,7 +32,7 @@
 - [ ] 言語切り替え機能
 
 # インフラ aws
-* EC2,S3,Route53,ACM,ELB
+* EC2,S3,Route53,(ACM,ELB挑戦中)
 
 # カタログ設計
 https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKlw8s/edit#gid=0
