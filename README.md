@@ -1,7 +1,7 @@
 # README
 
 # Polybility
-## (スマホにも対応しています、タブレットサイズは製作中のため未対応)
+
 ## https://dry-eyrie-92117.herokuapp.com/ (heroku)
 ## http://polybility.xyz/ (EC2) ドメインがhttpのためfacebook認証使用できません
 ![アプリ](app/assets/images/poly_1.png)
