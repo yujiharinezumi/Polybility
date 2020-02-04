@@ -1,8 +1,10 @@
 <div class="whole">
   <section class="top-mainvisual">
-    <%= image_tag "top1.jpeg" %>
-    <h2><%=t('top.lets_learn_lang') %></h2>
-    <div class="top-bg1"></div>
+    <div class="container">
+      <%= image_tag "top1.jpeg" %>
+      <h2><%=t('top.lets_learn_lang') %></h2>
+      <div class="top-bg1"></div>
+    </div>
   </section>
   <main>
     <section>
@@ -58,7 +60,7 @@
       </div>
     </section>
     <section class="top-news container">
-      <div class="top-content-wrapper">
+      <div class="top-content-wrapper container">
         <h2>NEWS</h2>
         <ul>
           <li><a href="#"><time>2020-01-16</time><%=t('top.news1') %></a></li>
@@ -70,9 +72,11 @@
       </div>
     </section>
     <section class="get_started">
-      <div class="get_started-img"><%= image_tag "top6.jpeg" %></div>
+      <div class="container">
+        <div class="get_started-img"><%= image_tag "top6.jpeg" %></div>
         <h2><%= link_to t('top.start'),new_user_registration_path %></h2>
         <div class="top-bg2"></div>
-      </section>
+      </div>
+    </section>
   </main>
  </div>

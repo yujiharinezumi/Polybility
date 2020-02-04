@@ -134,7 +134,7 @@ section {
   };
   @include sp{
     position: absolute;
-    top: 85%;
+    top: 82%;
     left: 0%;
     background: rgba(255, 227, 144, 0.75);
     font-size: 3rem;
@@ -197,6 +197,12 @@ section {
   };
   @include sp{
     border-radius: 0%;
+  };
+}
+
+.app_discription{
+  @include sp{
+    margin-top:30px;
   };
 }
 // ここまで

@@ -224,6 +224,15 @@ label .hobby_label {
     margin-top:50px;
     margin-right: 50px;
   };
+  @include tab {
+    opacity: 0.8;
+    width: 40%;
+    height: 380px;
+    margin-left: auto;
+    text-align: center;
+    margin-top:50px;
+    margin-right: 120px;
+  };
   @include sp {
     opacity: 0.8;
     width: 100%;
