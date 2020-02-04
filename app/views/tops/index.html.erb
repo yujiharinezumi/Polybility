@@ -1,29 +1,17 @@
 <div class="whole">
-  <header class="top-header">
-    <div class="top-content-wrapper top-header-nav">
-      <h1 id="top-poly"><%=t('top.polybility') %></h1>
-        <nav>
-          <ul>
-            <li><a href="#"><%=t('top.toppage') %></a></li>
-            <li><a href="#polybility"><%=t('top.what_is_polybility') %></a></li>
-            <li><a href="#contents"><%=t('top.content_of_app') %></a></li>
-            <li><a href="#news"><%=t('top.news') %></a></li>
-            <li><a href="#start"><%=t('top.start') %></a></li>
-          </ul>
-        </nav>
-    </div>
-  </header>
   <section class="top-mainvisual">
     <%= image_tag "top1.jpeg" %>
     <h2><%=t('top.lets_learn_lang') %></h2>
     <div class="top-bg1"></div>
   </section>
   <main>
-    <section class="top-greeting" id="polybility">
-      <div class="top-content-wrapper">
-        <div class="top-contents">
-          <figure class="top-image"><%= image_tag "top2.jpeg" %></figure>
-          <div class="top-content">
+    <section>
+      <div class="container">
+        <div class="app_discription row" id="feature">
+          <div class="app_image col-md-6 ">
+              <%= image_tag("top2.jpeg",class:"discription_image")%>
+          </div>
+          <div class="description_text col-md-6">
             <h2><%=t('top.what_is_polybility') %></h2>
             <p><%=t('top.explain_polybility1') %><br>
             <%=t('top.explain_polybility2') %><br>
@@ -36,42 +24,53 @@
         </div>
       </div>
     </section>
-    <section class="top-work" id="contents">
+    <section>
+      <div class="service-list">
+        <h2><%=t('top.content_of_app') %></h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 order-md-1">
+              <img src="assets/top3.jpeg" alt="1枚目" class="service-img">
+            </div>
+            <div class="col-md-6 service-description order-md-2">
+              <h3><%=t('top.user_function') %></h3>
+              <hr color="white">
+              <p><%=t('top.user_explanation') %></p>
+            </div>
+            <div class="col-md-6 service-description order-md-4">
+              <img src="assets/top4.jpeg" alt="2枚目" class="service-img">
+            </div>
+            <div class="col-md-6 order-md-3">
+              <h3><%=t('top.post_function') %></h3>
+              <hr color="white">
+              <p><%=t('top.post_explanation') %></p>
+            </div>
+            <div class="col-md-6 order-md-5">
+              <img src="assets/top5.jpeg" alt="3枚目" class="service-img">
+            </div>
+            <div class="col-md-6 service-description order-md-6">
+              <h3><%=t('top.favorite_follow_function') %></h3>
+              <hr color="white">
+              <p><%=t('top.favorite_follow_explanation') %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="top-news container">
       <div class="top-content-wrapper">
-        <h2><%=t('top.content_of_app') %><h2>
+        <h2>NEWS</h2>
         <ul>
-          <li id="work1">
-            <figure ><%= image_tag "top3.jpeg" %></figure>
-            <h3><%=t('top.user_function') %></h3>
-            <p><%=t('top.user_explanation') %></p>
-          </li>
-          <li id="work2">
-            <figure><%= image_tag "top4.jpeg" %></figure>
-            <h3><%=t('top.post_function') %></h3>
-            <p><%=t('top.post_explanation') %></p>
-          </li>
-          <li id="work3">
-            <figure><%= image_tag "top5.jpeg" %></figure>
-            <h3><%=t('top.favorite_follow_function') %></h3>
-            <p><%=t('top.favorite_follow_explanation') %></p>
-          </li>
+          <li><a href="#"><time>2020-01-16</time><%=t('top.news1') %></a></li>
+          <li><a href="#"><time>2020-01-17</time><%=t('top.news2') %></a></li>
+          <li><a href="#"><time>2020-01-20</time><%=t('top.news3') %></a></li>
+          <li><a href="#"><time>2020-01-27</time><%=t('top.news4') %></a></li>
+          <li><a href="#"><time>2020-01-27</time><%=t('top.news5') %></a></li>
         </ul>
       </div>
     </section>
-    <section class="top-news" id="news">
-      <div class="top-content-wrapper">
-        <h2>NEWS</h2>
-          <ul>
-            <li><a href="#"><time>2020-01-16</time><%=t('top.news1') %></a></li>
-            <li><a href="#"><time>2020-01-17</time><%=t('top.news2') %></a></li>
-            <li><a href="#"><time>2020-01-20</time><%=t('top.news3') %></a></li>
-            <li><a href="#"><time>2020-01-27</time><%=t('top.news4') %></a></li>
-            <li><a href="#"><time>2020-01-27</time><%=t('top.news5') %></a></li>
-          </ul>
-      </div>
-    </section>
-    <section class="top-recruit" id="start">
-      <div class="top-recruit-img"><%= image_tag "top6.jpeg" %></div>
+    <section class="get_started">
+      <div class="get_started-img"><%= image_tag "top6.jpeg" %></div>
         <h2><%= link_to t('top.start'),new_user_registration_path %></h2>
         <div class="top-bg2"></div>
       </section>
