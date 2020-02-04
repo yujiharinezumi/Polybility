@@ -192,6 +192,7 @@ section {
 
 .service-list img{
   @include pc{
+    width:100%;
     border-radius: 85px;
   };
   @include sp{

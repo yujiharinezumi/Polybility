@@ -30,7 +30,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 order-md-1">
-              <img src="assets/top3.jpeg" alt="1枚目" class="service-img">
+              <%= image_tag("top3.jpeg",class:"service-img")%>
             </div>
             <div class="col-md-6 service-description order-md-2">
               <h3><%=t('top.user_function') %></h3>
@@ -38,7 +38,7 @@
               <p><%=t('top.user_explanation') %></p>
             </div>
             <div class="col-md-6 service-description order-md-4">
-              <img src="assets/top4.jpeg" alt="2枚目" class="service-img">
+              <%= image_tag("top4.jpeg",class:"service")%>
             </div>
             <div class="col-md-6 order-md-3">
               <h3><%=t('top.post_function') %></h3>
@@ -46,7 +46,7 @@
               <p><%=t('top.post_explanation') %></p>
             </div>
             <div class="col-md-6 order-md-5">
-              <img src="assets/top5.jpeg" alt="3枚目" class="service-img">
+                <%= image_tag("top5.jpeg",class:"service-img")%>
             </div>
             <div class="col-md-6 service-description order-md-6">
               <h3><%=t('top.favorite_follow_function') %></h3>
