@@ -19,6 +19,7 @@
         <% end %>
         <div class="actions">
           <%= f.submit "Log in",class:"btn btn-blue" %>
+          <%= link_to t('nav.guest_login') ,users_guest_sign_in_path, method: :post,class:"btn btn-green" %>
         </div>
       <% end %>
     </div>

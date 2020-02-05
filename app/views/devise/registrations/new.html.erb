@@ -35,6 +35,7 @@
           </div>
           <div class="actions">
             <%= f.submit "Sign up",class:"btn btn-blue" %>
+            <%= link_to t('nav.guest_login') ,users_guest_sign_in_path, method: :post,class:"btn btn-blue" %>
           </div>
           <%= link_to t('users.facebook'), user_facebook_omniauth_authorize_path,class:"btn btn-blue" %>
         </div>
