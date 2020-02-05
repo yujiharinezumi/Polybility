@@ -14,7 +14,7 @@
     <p><%= t('users.hobby') %>: <%@user.labels.each do |label| %>
       <%= label.hobby %>
     <% end %></p>
-    <p><%= t('users.introduction') %>: <%= @user.introduction %></p>
+    <p><%= t('users.introduction') %>: <br> <%= @user.introduction %></p>
   </div>
   <% if current_user == @user %>
     <p><%= link_to t('users.edit_profile'), edit_user_registration_url,id:"edit_button",class:"btn btn-pink" %></p>
