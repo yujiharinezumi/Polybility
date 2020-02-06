@@ -1,21 +1,31 @@
 <h1><%= t('favorite.index') %></h1>
-<% @favorites.each do |f| %>
-  <div class="flex-container">
-    <div class="post-card">
-      <div class="post-card__inner">
-        <div class="post-thumb">
-          <p><%=link_to image_tag(f.post.image.url),user_path(f.post.user.id)%></p>
+<% if @favorites.present? %>
+  <% @favorites.each do |f| %>
+    <div class="flex-container">
+      <div class="post-card">
+        <div class="post-card__inner">
+          <div class="post-thumb">
+            <p><%=link_to image_tag(f.post.image.url),user_path(f.post.user.id)%></p>
+          </div>
+          <div class="post-content">
+            <%= link_to image_tag(f.user.icon.url,class:"post-icon"),user_path(f.post.user.id) %>
+            <%= link_to f.post.user.name,user_path(f.post.user.id) %>
+          </div>
+          <p><%= f.post.title %></p>
+          <p><%= f.post.content %></p>
         </div>
-        <div class="post-content">
-          <%= link_to image_tag(f.user.icon.url,class:"post-icon"),user_path(f.post.user.id) %>
-          <%= link_to f.post.user.name,user_path(f.post.user.id) %>
+        <div class="favorite-post-button">
+          <span><%= link_to t('common.detail'), post_path(f.post.id),class:"btn btn-orange" %></span>
         </div>
-        <p><%= f.post.title %></p>
-        <p><%= f.post.content %></p>
-      </div>
-      <div class="favorite-post-button">
-        <span><%= link_to t('common.detail'), post_path(f.post.id),class:"btn btn-orange" %></span>
       </div>
     </div>
-  </div>
+  <% end %>
+<% else %>
+  <h3 style="text-align:center">まだお気に入りは登録されてません。お好きな投稿をお気に入りしましょう！</h3>
+    <div class="container favo-cont">
+      <div class="row">
+        <%= image_tag "top5.jpeg",class:"favo-img col-md-6" %>
+        <%= image_tag "top4.jpeg",class:"favo-img col-md-6" %>
+      </div>
+    </div>
 <% end %>

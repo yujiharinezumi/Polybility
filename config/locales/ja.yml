@@ -288,7 +288,7 @@ ja:
   conversation:
     talkroom: "トークルーム"
   comments:
-    cannot: "投稿できませんでした..."
+    cannot: "投稿できませんでした…  1文字以上75文字以内で入力してください。"
   languages:
     japanse: "日本語"
     english: "英語"

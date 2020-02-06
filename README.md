@@ -1,6 +1,6 @@
 # README
 
-# Polybility
+# Polybility(ポリビリティー)
 
 ## https://dry-eyrie-92117.herokuapp.com/ (heroku)
 ## http://polybility.xyz/ (EC2) ドメインがhttpのためfacebook認証使用できません
@@ -24,9 +24,10 @@
 - [ ] ログイン機能
 - [ ] Facebookを用いたソーシャルログイン機能
 - [ ] 画像、文章の投稿機能
+- [ ] 投稿に対するコメント機能(ajaxを使用)
 - [ ] お気に入り機能
 - [ ] フォロー機能
-- [ ] ダイレクトメッセージ機能
+- [ ] ダイレクトメッセージ機能(ajax使用)
 - [ ] 検索、絞り込み機能
 - [ ] ページネーション機能
 - [ ] 言語切り替え機能

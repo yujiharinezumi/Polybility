@@ -33,3 +33,16 @@ $sp: 480px;  // スマホ
     margin:auto;
   };
 }
+
+.favo-img{
+  width:50%;
+  border-radius: 90px;
+  @include sp{
+  margin-bottom:10px;
+  }
+}
+
+.favo-cont{
+  display: flex;
+  flex-wrap:wrap;
+}

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     if params[:search]
       @results = User.ransack(params[:q]).result.page(params[:page]).per(8)
     else
-      @results = User.all.page(params[:page]).per(8)
+      @results = User.all.order(id: "DESC").page(params[:page]).per(8)
     end
 
     @languages = Language.all
