@@ -6,8 +6,6 @@ RSpec.describe 'Posts', type: :system do
     @user1 = FactoryBot.create(:user_first)
     @user2 = FactoryBot.create(:user_second)
     @post1 = FactoryBot.create(:post_first, user_id: @user1.id)
-    @post2 = FactoryBot.create(:post_first, user_id: @user1.id)
-    @post3 = FactoryBot.create(:post_first, user_id: @user2.id)
     log_in @user1
   end
 
@@ -45,7 +43,8 @@ RSpec.describe 'Posts', type: :system do
   end
 
   it 'ユーザーが編集できるテスト' do
-    visit post_path(@post1)
+    visit posts_path
+    click_on "詳細"
     expect(page).to have_content('投稿詳細')
     click_on "edit_post"
     page.driver.browser.switch_to.alert.accept
@@ -56,7 +55,8 @@ RSpec.describe 'Posts', type: :system do
   end
 
   it 'ユーザーが編集失敗するテスト' do
-    visit post_path(@post1)
+    visit posts_path
+    click_on "詳細"
     expect(page).to have_content('投稿詳細')
     click_on "edit_post"
     page.driver.browser.switch_to.alert.accept
@@ -67,7 +67,8 @@ RSpec.describe 'Posts', type: :system do
   end
 
   it 'ユーザーが投稿を削除するテスト' do
-    visit post_path(@post2)
+    visit posts_path
+    click_on "詳細"
     click_on "delete_post"
     page.driver.browser.switch_to.alert.accept
     expect(page).to have_content('投稿を削除しました！')

@@ -283,8 +283,8 @@ ja:
     admin: "管理者"
   favorite:
     index: "お気に入り一覧"
-    favorited: "投稿をお気に入り登録しました"
-    unfavorited: "投稿をお気に入り解除しました"
+    favorited: "投稿をお気に入りしました"
+    unfavorited: "お気に入りを解除しました"
   conversation:
     talkroom: "トークルーム"
   comments:
