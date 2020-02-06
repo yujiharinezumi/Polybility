@@ -254,7 +254,7 @@ ja:
     back_post: "一覧に戻る"
     show: "投稿詳細"
     do_favorite: "お気に入りする"
-    delete_favorite: "お気に入り解除する"
+    delete_favorite: "お気に入りの解除"
     count_favorite: "お気に入りの数"
     type_title: "タイトルを入力してください"
     type_content: "内容を入力してください"

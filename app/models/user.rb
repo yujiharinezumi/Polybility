@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :recipient_conversations, foreign_key: 'recipient_id', class_name: 'Conversation', dependent: :destroy
   validates :name, presence: true,length: {maximum: 35}
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :introduction,length: {maximum: 150}
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

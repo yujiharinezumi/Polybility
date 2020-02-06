@@ -80,6 +80,16 @@ $sp: 480px;  // スマホ
     border:solid 3px #e8a7a7;
     background-color: white;
   };
+  @include sp{
+    position: absolute;
+    left: -85px;
+    top: 5px;
+    max-height: 80px;
+    max-width: 70px;
+    border-radius: 50%;
+    border:solid 3px #e8a7a7;
+    background-color: white;
+  };
 }
 
 // コメントの吹き出し三角を作る
