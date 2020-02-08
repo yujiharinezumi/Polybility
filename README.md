@@ -33,7 +33,7 @@
 - [ ] 言語切り替え機能
 
 # インフラ aws
-* EC2,S3,Route53,(ACM,ELB挑戦中)
+* EC2,S3,Route53
 
 # カタログ設計
 https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKlw8s/edit#gid=0
@@ -98,7 +98,7 @@ https://docs.google.com/spreadsheets/d/1HGmx7fWY8SfSPO0O3gJnoXRUiJE9wdVVGKEANiKl
 * capybara
 * webdrivers
 
-# Set up
+# セットアップ
 * 1 git clone git@github.com:yujiharinezumi/Polybility.git
 * 2 bundle install
 * 3 rails db:create db:migrate
