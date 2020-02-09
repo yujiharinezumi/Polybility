@@ -122,25 +122,20 @@ section {
 }
 
 .top-mainvisual h2 {
+  position: absolute;
+  background: rgba(255, 227, 144, 0.75);
+  font-size: 3rem;
+  padding: 1rem;
+  color:#ec6976;
   @include pc {
-    position: absolute;
     top: 30%;
     left: 20%;
-    background: rgba(255, 227, 144, 0.75);
-    font-size: 3rem;
-    padding: 1rem;
     border-radius: 30px;
-    color:#ec6976;
   };
   @include sp{
-    position: absolute;
     top: 82%;
     left: 0%;
-    background: rgba(255, 227, 144, 0.75);
-    font-size: 3rem;
-    padding: 1rem;
     border-radius: 0%;
-    color:#ec6976;
   };
 }
 
@@ -178,7 +173,6 @@ section {
 
 .service-list h2{
   text-align: center;
-  font-family: "myfont";
   font-size:80px;
 }
 
@@ -283,50 +277,32 @@ section {
 }
 
 .get_started h2 a{
+  position: absolute;
+  background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+  background: -webkit-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+  background: linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+  opacity: 0.8;
+  line-height: 60px;
+  text-align: center;
+  color:#a75005;
+  border-radius: 40px;
   @include pc{
-    position: absolute;
     top: 45%;
     right: 52%;
     width: 250px;
     height: 60px;
-    background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-    background: -webkit-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-    background: linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-    opacity: 0.8;
-    line-height: 60px;
-    text-align: center;
-    color:#a75005;
-    border-radius: 40px;
   };
   @include tab{
-    position: absolute;
     top: 50%;
     right: 20%;
     width: 270px;
     height: 60px;
-    background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-    background: -webkit-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-    background: linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-    opacity: 0.8;
-    line-height: 60px;
-    text-align: center;
-    color:#a75005;
-    border-radius: 40px;
   };
   @include sp{
-    position: absolute;
     top: 53%;
     right: 14%;
     width: 270px;
     height: 60px;
-    background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-    background: -webkit-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-    background: linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-    opacity: 0.8;
-    line-height: 60px;
-    text-align: center;
-    color:#a75005;
-    border-radius: 40px;
   };
 }
 // ここまで

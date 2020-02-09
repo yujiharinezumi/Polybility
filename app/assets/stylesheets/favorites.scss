@@ -23,14 +23,13 @@ $sp: 480px;  // スマホ
 }
 
 .favorite-post-button {
+  margin:auto;
   @include pc{
     width:13%;
-    margin:auto;
   };
 
   @include sp{
     width:20%;
-    margin:auto;
   };
 }
 

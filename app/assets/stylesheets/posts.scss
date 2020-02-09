@@ -28,44 +28,39 @@ $sp: 480px;  // スマホ
 }
 
 .post-card{
+  position: relative;
+  background: #ffc492; /*背景の色*/
+  box-shadow: 0px 1px 3px rgba(0,0,0,.18);
+  overflow: hidden;
+  border-radius: 10%;
   @include pc{
     height: 600px;
     width: 100%;
     max-width:600px;
-    position: relative;
-    background: #ffc492; /*背景の色*/
-    box-shadow: 0px 1px 3px rgba(0,0,0,.18);
-    overflow: hidden;
     margin:30px;
     padding:10px;
     margin:auto;
     margin-bottom:40px;
-    border-radius: 10%;
   };
   @include sp {
     height: 500px;
     width: 90%;
     max-width:600px;
-    position: relative;
-    background: #ffc492; /*背景の色*/
-    box-shadow: 0px 1px 3px rgba(0,0,0,.18);
-    overflow: hidden;
     margin:30px;
     padding:10px;
     margin:auto;
     margin-bottom:40px;
-    border-radius: 10%;
   };
 }
 
 .post-card:before{
+  position:  absolute;
+  background: #FFE6A5; /*斜め背景の色*/
+  content:"";
   @include pc{
     width:184%;
     height:552px;
-    content:"";
     transform:skew(-5deg,43deg);
-    background: #FFE6A5; /*斜め背景の色*/
-    position:  absolute;
     top:-30%;
     left:-26%;
     z-index: 0;
@@ -73,10 +68,7 @@ $sp: 480px;  // スマホ
   @include sp{
     width:184%;
     height:437px;
-    content:"";
     transform:skew(-8deg,53deg);
-    background: #FFE6A5; /*斜め背景の色*/
-    position:  absolute;
     top:-30%;
     left:-26%;
     z-index: 0;
@@ -88,14 +80,12 @@ $sp: 480px;  // スマホ
 }
 
 .post-button {
+  display: flex;
+  margin:auto;
   @include pc{
-    display: flex;
-    margin:auto;
     width:26%;
   };
   @include sp{
-    display: flex;
-    margin:auto;
     width:43%;
   };
 }
@@ -111,62 +101,50 @@ $sp: 480px;  // スマホ
 }
 
 .post-thumb{
-  @include pc{
     overflow: hidden;
+    background: #FFE9A6;
+    border-radius: 10%;
+  @include pc{
     width: 280px;
     height: 260px;
     margin-left: -10px;
     margin-right: auto;
     margin-top: 20px;
-    background: #FFE9A6;
-    border-radius: 10%;
   };
   @include tab{
-    overflow: hidden;
     width: 280px;
     height: 260px;
     margin-left: -10px;
     margin-right: auto;
     margin-top: 20px;
-    background: #FFE9A6;
-    border-radius: 10%;
   };
   @include sp{
-    overflow: hidden;
     width: 250px;
     height: 200px;
     margin-left: 0px;
     margin-right: auto;
     margin-top: 20px;
-    background: #FFE9A6;
-    border-radius: 10%;
   };
 }
 
 .post-thumb img{
+  display: block;
+  border-radius: 5px 5px 0 0;
+  object-fit: contain;
   @include pc{
-    display: block;
     width: 350px;
     height: 270px;
-    border-radius: 5px 5px 0 0;
     max-width: 100%;
-    object-fit: contain;
   };
   @include tab{
-    display: block;
     width: 350px;
     height: 270px;
-    border-radius: 5px 5px 0 0;
     max-width: 100%;
-    object-fit: contain;
   };
   @include sp{
-    display: block;
     width: 350px;
     height: 200px;
-    border-radius: 5px 5px 0 0;
     max-width: 100%;
-    object-fit: contain;
   };
 }
 
@@ -189,12 +167,11 @@ $sp: 480px;  // スマホ
 }
 
 .post-index-detail {
+  margin: auto;
   @include pc{
-    margin: auto;
     width:13%;
   };
   @include sp{
-    margin: auto;
     width:22%;
   };
 }
@@ -243,24 +220,22 @@ $sp: 480px;  // スマホ
 
 // post new
 .form-group2 .title {
+  margin:auto;
   @include pc{
-    margin:auto;
     width:50%;
   };
   @include sp{
-    margin:auto;
     width:100%;
   };
 }
 
 .form-group2 .content {
+  margin:auto;
   @include pc{
-    margin:auto;
     width:50%;
     height: 100px;
   };
   @include sp{
-    margin:auto;
     width:100%;
     height: 140px;
   };

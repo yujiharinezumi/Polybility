@@ -13,9 +13,6 @@
         <%= render partial: 'favorites/favorite' %>
       </div>
     </div>
-    <div class="post-index-detail">
-      <%= link_to t('common.detail'), post_path(@post.id),class:"btn btn-orange" %>
-    </div>
     <div class="post-button">
       <% if @post.user.id == current_user.id %>
         <span><%= link_to t('common.edit'), edit_post_path(@post.id), data: { confirm: t('common.edit?') },class:"btn btn-pink",id:"edit_post" %></span>
