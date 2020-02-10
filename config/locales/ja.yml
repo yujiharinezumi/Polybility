@@ -285,6 +285,7 @@ ja:
     index: "お気に入り一覧"
     favorited: "投稿をお気に入りしました"
     unfavorited: "お気に入りを解除しました"
+    not_yet: "まだお気に入りは登録されてません。お好きな投稿をお気に入りしましょう!"  
   conversation:
     talkroom: "トークルーム"
   comments:

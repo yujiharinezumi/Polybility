@@ -258,6 +258,7 @@ zh:
     index: "喜欢内容"
     favorited: "你按赞这件贴文"
     unfavorited: "你收回赞这件贴文"
+    not_yet: "你还没点赞，找一找自己喜欢的贴文"
   conversation:
     talkroom: "聊天室"
   comments:

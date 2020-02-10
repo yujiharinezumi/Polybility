@@ -323,6 +323,7 @@ en:
     index: "Favorite list"
     favorited: "Liked "
     unfavorited: "Canceled Like"
+    not_yet: "You don't have any favorites post now,Let's check our posts!"
   conversation:
     talkroom: "TalkRoom"
   comments:

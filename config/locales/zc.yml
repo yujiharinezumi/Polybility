@@ -290,6 +290,7 @@ zc:
     index: "喜歡內容"
     favorited: "你按讚這件貼文"
     unfavorited: "你收回點讚這件貼文"
+    not_yet: "你還沒點讚，找一找自己喜歡的貼文"
   conversation:
     talkroom: "聊天室"
   comments:
