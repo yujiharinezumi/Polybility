@@ -12,13 +12,11 @@
 .btn-pink.disabled, .btn-pink:disabled {
   color: #fff;
   background-color: #feb2ff;
-
 }
 
 .btn-pink:hover {
   color: #fff;
 }
-
 
 .btn-yellow,
 .btn-yellow.disabled, .btn-yellow:disabled {
@@ -49,7 +47,6 @@
 .btn-blue:hover {
   color: #fff;
 }
-
 
 .btn-red,
 .btn-red.disabled, .btn-red:disabled {

@@ -71,15 +71,6 @@ body {
   bottom:0;
   z-index: 100;
 }
-/*
-.footer{
-  background-color: #FFC109;
-  height: 60px;
-  width: 100%;
-  position: absolute;
-  bottom:-390px;
-  z-index: 100;
-} */
 
 .footer p {
   font-size: 1rem;

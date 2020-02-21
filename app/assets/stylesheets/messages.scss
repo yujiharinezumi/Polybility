@@ -25,11 +25,11 @@ $sp: 480px;  // スマホ
 
 // current_user以外の吹き出し
 .balloon3 {
-    position: relative;
-    padding: 10px;
-    border-radius: 10px;
-    color: #ffffff;
-    background-color: #fd8d2fba;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #fd8d2fba;
   @include pc{
     width:60%;
     margin:auto;
@@ -92,11 +92,11 @@ $sp: 480px;  // スマホ
 
 // current_userの吹き出しを作る
 .balloon4{
-    position: relative;
-    padding: 10px;
-    border-radius: 10px;
-    color: #ffffff;
-    background-color: #f5cc50c4;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #f5cc50c4;
   @include pc{
     margin-right: 110px;          /* 右に余白を設ける */
     width:60%;
@@ -123,10 +123,10 @@ $sp: 480px;  // スマホ
 }
 
 .balloon4 .icon{
-    position: absolute;
-    border-radius: 50%;
-    border:solid 3px #f5cc50c4;
-    background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  border:solid 3px #f5cc50c4;
+  background-color: white;
   @include pc{
     right: -110px;
     top: 0;
@@ -173,6 +173,6 @@ $sp: 480px;  // スマホ
 .message_text {
   @include sp{
     width:100%;
-    heigh:80px;
+    height:80px;
   };
 }

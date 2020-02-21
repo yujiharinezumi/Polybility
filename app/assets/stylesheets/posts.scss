@@ -101,9 +101,9 @@ $sp: 480px;  // スマホ
 }
 
 .post-thumb{
-    overflow: hidden;
-    background: #FFE9A6;
-    border-radius: 10%;
+  overflow: hidden;
+  background: #FFE9A6;
+  border-radius: 10%;
   @include pc{
     width: 280px;
     height: 260px;
