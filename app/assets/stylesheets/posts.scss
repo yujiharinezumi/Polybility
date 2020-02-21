@@ -83,7 +83,7 @@ $sp: 480px;  // スマホ
   display: flex;
   margin:auto;
   @include pc{
-    width:26%;
+    width:28%;
   };
   @include sp{
     width:43%;
@@ -169,7 +169,7 @@ $sp: 480px;  // スマホ
 .post-index-detail {
   margin: auto;
   @include pc{
-    width:13%;
+    width:14%;
   };
   @include sp{
     width:22%;
@@ -286,7 +286,7 @@ h2  {
 }
 
 .favo-text{
-  width:116%;
+  width:140%;
   margin:auto;
   display: flex;
 }
