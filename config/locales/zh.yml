@@ -220,6 +220,9 @@ zh:
     introduce_myself: "请你填写自我介绍"
     cancel_account: "你确定停用你的账户"
     delete_account: "删除账户"
+    guest_login: "成功简单登录了"
+    guest_authentication: "不可以编辑和删除"
+    guest_error: "出现错误"
   posts:
     index: "贴文首页"
     new_post: "发布"

@@ -35,7 +35,7 @@ class CommentsController < ApplicationController
         @comment.destroy
         format.js { render :index }
       else
-        format.html { redirect_to post_path(@post), notice: '削除できませんでした...' }
+        format.html { redirect_to post_path(@post), notice: t('comments.cannot') }
       end
     end
   end

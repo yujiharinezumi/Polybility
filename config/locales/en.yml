@@ -285,6 +285,9 @@ en:
     introduce_myself: "Would you fill in self introduce"
     cancel_account: "want to unsubscribe this app?"
     delete_account: "delete my your account"
+    guest_login: "successed login as guest user"
+    guest_authentication: "can't change any guet profile"
+    guest_error: "An error has occurred"
   posts:
     index: "Post list"
     new_post: "post new"

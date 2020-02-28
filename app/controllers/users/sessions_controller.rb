@@ -7,10 +7,10 @@ class Users::SessionsController < Devise::SessionsController
   def new_guest
     user = User.guest
     sign_in user
-    redirect_to users_path, notice: 'ゲストユーザーとしてログインしました。'
+    redirect_to users_path, notice: t('users.guest_login')
     rescue ActiveRecord::RecordInvalid => e
     pp e.record&.errors
-    redirect_to root_path, alert: 'エラーが発生しました。'
+    redirect_to root_path, alert: t('users.guest_error')
   end
 
   # GET /resource/sign_in

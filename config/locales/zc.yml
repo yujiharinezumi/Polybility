@@ -252,6 +252,9 @@ zc:
     introduce_myself: "請你填寫自我介紹"
     cancel_account: "你確定停用你的帳戶"
     delete_account: "刪除帳戶"
+    guest_login: "成功簡單登錄了"
+    guest_authentication: "不可以編輯和刪除"
+    guest_error: "出現錯誤"
   posts:
     index: "貼文首頁"
     new_post: "發佈"

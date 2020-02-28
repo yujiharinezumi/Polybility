@@ -247,6 +247,9 @@ ja:
     introduce_myself: "自己紹介を記入してください！"
     cancel_account: "退会しますか？"
     delete_account: "アカウントの削除"
+    guest_login: "ゲストユーザーでログインしました。"
+    guest_authentication: "ゲストユーザーの変更・削除はできません。"
+    guest_error: "エラーが発生しました。"
   posts:
     index: "投稿一覧"
     new_post: "新規投稿する"
@@ -285,7 +288,7 @@ ja:
     index: "お気に入り一覧"
     favorited: "投稿をお気に入りしました"
     unfavorited: "お気に入りを解除しました"
-    not_yet: "まだお気に入りは登録されてません。お好きな投稿をお気に入りしましょう!"  
+    not_yet: "まだお気に入りは登録されてません。お好きな投稿をお気に入りしましょう!"
   conversation:
     talkroom: "トークルーム"
   comments:
@@ -317,6 +320,6 @@ ja:
     フォロー機能では友達になりたい人をフォローすることができる機能です。"
     news1: "Polybility 完成まで後少しですよーーー！"
     news2: "Polybility 完成しました！ herokuデプロイ成功しました！"
-    news3: "EC2でもデプロイ成功しました！<"
+    news3: "EC2でもデプロイ成功しました！"
     news4: "スマホサイズにも対応しました！"
     news5: "多言語の切り替え機能を実装中！"

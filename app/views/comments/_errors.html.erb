@@ -1,7 +1,7 @@
 <div class="errors">
   <% if @comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %>エラーがあります</h2>
+      <h2><%= pluralize(@comment.errors.count, "error") %><%= t('common.have_errors') %></h2>
       <ul>
         <% @comment.errors.full_messages.each do |message| %>
           <li><%= message %></li>
