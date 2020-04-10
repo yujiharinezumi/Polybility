@@ -2,7 +2,6 @@ class CommentsController < ApplicationController
   before_action :set_post
   before_action :set_comment, only:[:edit,:update,:destroy]
 
-
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)

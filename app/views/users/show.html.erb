@@ -24,7 +24,7 @@
 <% @users.each do |user| %>
   <div class="flex-container">
     <div class="post-card">
-      <div class="post-card__inner">
+      <div class="post-card-inner">
         <div class="post-thumb">
           <% if user.image.url %>
             <p><%=link_to image_tag(user.image.url),post_path(user.id)%></p>
@@ -38,8 +38,12 @@
           </div>
           <div class="user-show-post-buttons">
             <% if @user == current_user %>
-              <span><%= link_to t('common.edit'), edit_post_path(user.id), data: { confirm: t('common.edit?') },class:"btn btn-pink" %></span>
-              <span><%= link_to t('common.destroy'), post_path(user.id), method: :delete, data: { confirm: t('common.delete') },class:"btn btn-red" %></span>
+              <span>
+                <%= link_to t('common.edit'), edit_post_path(user.id), data: { confirm: t('common.edit?') },class:"btn btn-pink" %>
+              </span>
+              <span>
+                <%= link_to t('common.destroy'), post_path(user.id), method: :delete, data: { confirm: t('common.delete') },class:"btn btn-red" %>
+              </span>
             <% end %>
           </div>
         </div>
