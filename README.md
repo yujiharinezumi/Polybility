@@ -3,7 +3,9 @@
 # Polybility(ポリビリティー)
 
 ## https://dry-eyrie-92117.herokuapp.com/ (heroku)
-## http://polybility.xyz/ (EC2) ドメインがhttpのためfacebook認証使用できません
+
+## http://polybility.xyz/ (EC2)
+※※※料金が高いのでインスタンスを削除しました。 
 ![アプリ](app/assets/images/poly_1.png)
 ![アプリ](app/assets/images/poly_3.png)
 ![アプリ](app/assets/images/poly_4.png)
